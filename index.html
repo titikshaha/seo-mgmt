@@ -2,22 +2,123 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Builtattic Architecture Resources</title>
 <meta name="description" content="AI architecture resources, guides and tools by Builtattic.">
+<style>
+  :root {
+    --bg: #f4f7fb;
+    --surface: #ffffff;
+    --text: #111111;
+    --line: #d5dee9;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: "Montserrat", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+  }
+
+  h1 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  .cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .card:hover,
+  .card:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(17, 17, 17, 0.08);
+  }
+
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-title {
+    display: block;
+    padding: 0.9rem 0.95rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+</style>
 </head>
 
 <body>
+<main class="wrap">
+  <h1>Builtattic Architecture Resources</h1>
 
-<h1>Builtattic Architecture Resources</h1>
-
-<ul>
-<li><a href="./pages/how-ai-floor-plans-work.html">How AI Floor Plans Work</a></li>
-<li><a href="./pages/is-an-ai-floor-plan-accurate.html">Is an AI Floor Plan Accurate?</a></li>
-<li><a href="./pages/best-architecture-ai-solution-online.html">Best Architecture AI Solution Online</a></li>
-<li><a href="./pages/how-to-generate-floor-plan-online.html">How to Generate a Floor Plan Online</a></li>
-<li><a href="./pages/can-ai-replace-architects-floor-plans.html">Can AI Replace Architects for Floor Plans?</a></li>
-<li><a href="./pages/what-drawings-are-needed-for-construction.html">What Drawings Are Needed for Construction?</a></li>
-</ul>
-
+  <ul class="cards">
+    <li>
+      <a class="card" href="./pages/how-ai-floor-plans-work.html">
+        <img src="./assets/images/how-ai-floor-plan-generator-works.jpg" alt="How AI floor plans work">
+        <span class="card-title">How AI Floor Plans Work</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="./pages/is-an-ai-floor-plan-accurate.html">
+        <img src="./assets/images/accurate-ai-architectural-layout-system.jpg" alt="Is an AI floor plan accurate">
+        <span class="card-title">Is an AI Floor Plan Accurate?</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="./pages/best-architecture-ai-solution-online.html">
+        <img src="./assets/images/ai-house-layout-planning-example.jpg" alt="Best architecture AI solution online">
+        <span class="card-title">Best Architecture AI Solution Online</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="./pages/how-to-generate-floor-plan-online.html">
+        <img src="./assets/images/digital floor plan generator for residential design.jpg" alt="How to generate a floor plan online">
+        <span class="card-title">How to Generate a Floor Plan Online</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="./pages/can-ai-replace-architects-floor-plans.html">
+        <img src="./assets/images/architect and AI collaboration in floor plan design.jpg" alt="Can AI replace architects for floor plans">
+        <span class="card-title">Can AI Replace Architects for Floor Plans?</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="./pages/what-drawings-are-needed-for-construction.html">
+        <img src="./assets/images/AI architecture planning tool generating layouts.jpg" alt="What drawings are needed for construction">
+        <span class="card-title">What Drawings Are Needed for Construction?</span>
+      </a>
+    </li>
+  </ul>
+</main>
 </body>
 </html>
