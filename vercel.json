@@ -10,7 +10,7 @@
           "value": "seo-mgmt.vercel.app"
         }
       ],
-      "destination": "https://www.builtattic.com/$1",
+      "destination": "https://builtattic.in/$1",
       "permanent": true
     }
   ]
