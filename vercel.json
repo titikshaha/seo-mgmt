@@ -1,4 +1,17 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "seo-mgmt.vercel.app"
+        }
+      ],
+      "destination": "https://builtattic.com/$1",
+      "permanent": true
+    }
+  ]
 }
