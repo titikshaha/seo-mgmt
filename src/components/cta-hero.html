@@ -1,0 +1,141 @@
+<!-- ============================================================
+     BUILTATTIC — HERO CTA COMPONENT
+     Variables to swap per product:
+       data-product-name, data-product-tagline, data-cta-href
+     ============================================================ -->
+
+<style>
+/* ── Hero CTA ─────────────────────────────────────── */
+.hero-cta {
+  background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-base) 60%);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: var(--space-20) var(--space-12);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: var(--space-24) 0;
+}
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  top: -120px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 300px;
+  background: radial-gradient(ellipse, rgba(240,165,0,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(240,165,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(240,165,0,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 0%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 0%, transparent 100%);
+}
+.hero-cta__inner { position: relative; z-index: 1; }
+.hero-cta__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+.hero-cta__dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+.hero-cta__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-5);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-cta__title span { color: var(--accent); }
+.hero-cta__sub {
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto var(--space-10);
+  line-height: 1.65;
+}
+.hero-cta__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+.hero-cta__note {
+  margin-top: var(--space-5);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+.hero-cta__note-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.hero-cta__note-item::before {
+  content: '✓';
+  color: var(--accent);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .hero-cta { padding: var(--space-12) var(--space-6); }
+  .hero-cta__actions { flex-direction: column; }
+  .hero-cta__actions .btn { width: 100%; justify-content: center; }
+}
+</style>
+
+<!--
+  ╔══════════════════════════════════════════════════════╗
+  ║  HERO CTA — customise the text below per product    ║
+  ╚══════════════════════════════════════════════════════╝
+-->
+<section class="hero-cta">
+  <div class="hero-cta__inner">
+    <div class="hero-cta__eyebrow">
+      <div class="hero-cta__dot"></div>
+      <span class="badge badge-accent label" data-cta-eyebrow>Now Available · Free to Try</span>
+    </div>
+
+    <h2 class="hero-cta__title" data-cta-title>
+      Generate professional floor plans <span>in seconds</span>
+    </h2>
+
+    <p class="hero-cta__sub" data-cta-sub>
+      Vitruvi uses AI to turn your ideas into detailed floor plans — complete with MEP layouts and 3D views. No draughting skills needed.
+    </p>
+
+    <div class="hero-cta__actions">
+      <a href="https://www.builtattic.com/collections/access" class="btn btn-primary btn-lg" data-cta-primary>
+        Start for Free
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="https://www.builtattic.com/pages/vitruviai" class="btn btn-secondary btn-lg" data-cta-secondary>See How It Works</a>
+    </div>
+
+    <div class="hero-cta__note">
+      <span class="hero-cta__note-item">No credit card required</span>
+      <span class="hero-cta__note-item">Instant access</span>
+      <span class="hero-cta__note-item">Cancel any time</span>
+    </div>
+  </div>
+</section>

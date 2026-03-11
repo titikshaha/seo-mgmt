@@ -1,0 +1,357 @@
+<!-- ============================================================
+     BUILTATTIC — SHARED NAVBAR COMPONENT
+     Usage: copy-paste into any product page, update data-active
+     ============================================================ -->
+
+<!-- NAVBAR STYLES -->
+<style>
+/* ── Announcement Bar ─────────────────────────────── */
+.announcement-bar {
+  background: var(--accent);
+  color: var(--text-inverse);
+  text-align: center;
+  padding: 8px var(--space-6);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+.announcement-bar a { font-weight:700; text-decoration:underline; }
+.announcement-bar a:hover { opacity:0.8; }
+
+/* ── Navbar Shell ─────────────────────────────────── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(12,12,13,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--t-base), box-shadow var(--t-base);
+}
+.navbar.scrolled {
+  background: rgba(12,12,13,0.97);
+  box-shadow: 0 1px 0 var(--border), 0 4px 24px rgba(0,0,0,0.4);
+}
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* ── Logo ─────────────────────────────────────────── */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+.navbar__logo-mark {
+  width: 32px; height: 32px;
+  background: var(--accent);
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+}
+.navbar__logo-mark svg { width:18px; height:18px; }
+
+/* ── Nav Links ────────────────────────────────────── */
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  position: relative;
+}
+.navbar__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  border-radius: var(--r-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--t-fast), background var(--t-fast);
+  white-space: nowrap;
+}
+.navbar__link:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+.navbar__link.active { color: var(--text-primary); }
+
+/* ── Dropdown ─────────────────────────────────────── */
+.navbar__dropdown { position: relative; }
+.navbar__dropdown-toggle { gap: 6px; }
+.navbar__dropdown-toggle svg { width:14px; height:14px; transition:transform var(--t-fast); }
+.navbar__dropdown:hover .navbar__dropdown-toggle svg { transform:rotate(180deg); }
+
+.navbar__dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--space-2);
+  min-width: 300px;
+  box-shadow: var(--shadow-lift);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-8px);
+  transition: opacity var(--t-base), transform var(--t-base);
+}
+.navbar__dropdown:hover .navbar__dropdown-menu {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+.navbar__dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: 10px var(--space-3);
+  border-radius: var(--r-md);
+  transition: background var(--t-fast);
+}
+.navbar__dropdown-item:hover { background: rgba(255,255,255,0.05); }
+.navbar__dropdown-item-icon {
+  width: 32px; height: 32px; flex-shrink: 0;
+  background: var(--accent-glow);
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+  font-size: 0.875rem;
+}
+.navbar__dropdown-item-text { display:flex; flex-direction:column; gap:2px; }
+.navbar__dropdown-item-title { font-size:0.8125rem; font-weight:500; color:var(--text-primary); }
+.navbar__dropdown-item-desc  { font-size:0.75rem; color:var(--text-muted); line-height:1.4; }
+
+/* ── Right Actions ────────────────────────────────── */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+.navbar__region {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  padding: 6px 10px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  transition: border-color var(--t-fast), color var(--t-fast);
+  cursor: pointer;
+}
+.navbar__region:hover { border-color: var(--border-hover); color: var(--text-secondary); }
+
+/* ── Mobile ───────────────────────────────────────── */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+}
+.navbar__hamburger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--text-primary);
+  transition: all var(--t-base);
+}
+.navbar__mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  padding: var(--space-4);
+  gap: var(--space-1);
+}
+.navbar__mobile-link {
+  display: block;
+  padding: 12px var(--space-4);
+  border-radius: var(--r-md);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--t-fast), background var(--t-fast);
+}
+.navbar__mobile-link:hover { color:var(--text-primary); background:rgba(255,255,255,0.05); }
+.navbar__mobile-section { padding: 8px var(--space-4) 4px; font-size:0.75rem; color:var(--text-muted); letter-spacing:0.08em; text-transform:uppercase; }
+.navbar__mobile-divider { border:none; border-top:1px solid var(--border); margin:var(--space-2) 0; }
+
+@media (max-width:900px) {
+  .navbar__nav, .navbar__actions .btn { display:none; }
+  .navbar__hamburger { display:flex; }
+  .navbar__mobile-menu.open { display:flex; }
+}
+@media (max-width:480px) {
+  .navbar__actions { gap:var(--space-2); }
+}
+</style>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+  Join as a Vendor for FREE and grow your business with us — <a href="https://www.builtattic.com/pages/register">Register Here →</a>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar__inner">
+
+      <!-- Logo -->
+      <a href="https://www.builtattic.com/" class="navbar__logo">
+        <div class="navbar__logo-mark">
+          <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 14L9 3L16 14H2Z" fill="#0C0C0D" stroke="#0C0C0D" stroke-width="0.5"/>
+          </svg>
+        </div>
+        Builtattic
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="navbar__nav">
+
+        <!-- Features Dropdown -->
+        <div class="navbar__dropdown">
+          <a href="https://www.builtattic.com/pages/tools" class="navbar__link navbar__dropdown-toggle">
+            Use Features
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="navbar__dropdown-menu">
+            <a href="https://www.builtattic.com/pages/vitruviai" class="navbar__dropdown-item">
+              <div class="navbar__dropdown-item-icon">⬡</div>
+              <div class="navbar__dropdown-item-text">
+                <span class="navbar__dropdown-item-title">Vitruvi — Floor Plan Generator</span>
+                <span class="navbar__dropdown-item-desc">AI floor plans with MEP & 3D views</span>
+              </div>
+            </a>
+            <a href="https://www.builtattic.com/pages/faust" class="navbar__dropdown-item">
+              <div class="navbar__dropdown-item-icon">📍</div>
+              <div class="navbar__dropdown-item-text">
+                <span class="navbar__dropdown-item-title">Faust — Client Leads</span>
+                <span class="navbar__dropdown-item-desc">Find qualified leads in your city</span>
+              </div>
+            </a>
+            <a href="https://matters-prod.vercel.app/" class="navbar__dropdown-item">
+              <div class="navbar__dropdown-item-icon">📋</div>
+              <div class="navbar__dropdown-item-text">
+                <span class="navbar__dropdown-item-title">Construction Management</span>
+                <span class="navbar__dropdown-item-desc">Bills, attendance & progress tracking</span>
+              </div>
+            </a>
+            <a href="https://www.builtattic.com/collections/design-studio" class="navbar__dropdown-item">
+              <div class="navbar__dropdown-item-icon">🏛</div>
+              <div class="navbar__dropdown-item-text">
+                <span class="navbar__dropdown-item-title">Design Studio</span>
+                <span class="navbar__dropdown-item-desc">Shop ready-to-build architectural plans</span>
+              </div>
+            </a>
+            <a href="https://www.builtattic.com/pages/vision" class="navbar__dropdown-item">
+              <div class="navbar__dropdown-item-icon">🔢</div>
+              <div class="navbar__dropdown-item-text">
+                <span class="navbar__dropdown-item-title">Vision — Resource Calculator</span>
+                <span class="navbar__dropdown-item-desc">Hardware & material estimator</span>
+              </div>
+            </a>
+            <a href="https://www.builtattic.com/collections/individuals" class="navbar__dropdown-item">
+              <div class="navbar__dropdown-item-icon">👤</div>
+              <div class="navbar__dropdown-item-text">
+                <span class="navbar__dropdown-item-title">Hire an Architect</span>
+                <span class="navbar__dropdown-item-desc">Connect with verified professionals</span>
+              </div>
+            </a>
+            <a href="https://www.builtattic.com/pages/valuator" class="navbar__dropdown-item">
+              <div class="navbar__dropdown-item-icon">💰</div>
+              <div class="navbar__dropdown-item-text">
+                <span class="navbar__dropdown-item-title">Valuator</span>
+                <span class="navbar__dropdown-item-desc">Building & property valuation tool</span>
+              </div>
+            </a>
+            <a href="https://www.builtattic.com/pages/material-studio" class="navbar__dropdown-item">
+              <div class="navbar__dropdown-item-icon">🧱</div>
+              <div class="navbar__dropdown-item-text">
+                <span class="navbar__dropdown-item-title">Material Studio</span>
+                <span class="navbar__dropdown-item-desc">Hardware suppliers near you</span>
+              </div>
+            </a>
+            <a href="https://www.builtattic.com/pages/summaries-construction-analysis-tool" class="navbar__dropdown-item">
+              <div class="navbar__dropdown-item-icon">📅</div>
+              <div class="navbar__dropdown-item-text">
+                <span class="navbar__dropdown-item-title">Timeline Calculator</span>
+                <span class="navbar__dropdown-item-desc">Construction schedule & analysis</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="https://www.builtattic.com/collections/access" class="navbar__link">Subscription</a>
+        <a href="https://www.builtattic.info" class="navbar__link">About</a>
+      </div>
+
+      <!-- Right Actions -->
+      <div class="navbar__actions">
+        <div class="navbar__region" title="Region / Currency">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M7 1C7 1 4.5 3.5 4.5 7S7 13 7 13" stroke="currentColor" stroke-width="1.2"/><path d="M7 1C7 1 9.5 3.5 9.5 7S7 13 7 13" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 5h11M1.5 9h11" stroke="currentColor" stroke-width="1.2"/></svg>
+          INR / ₹
+        </div>
+        <a href="https://www.builtattic.com/collections/access" class="btn btn-primary btn-sm">Get Started</a>
+        <!-- Hamburger -->
+        <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div><!-- /.navbar__inner -->
+  </div><!-- /.container -->
+
+  <!-- Mobile Menu -->
+  <div class="navbar__mobile-menu" id="mobileMenu">
+    <span class="navbar__mobile-section">Features</span>
+    <a href="https://www.builtattic.com/pages/vitruviai"     class="navbar__mobile-link">⬡ Vitruvi — Floor Plan Generator</a>
+    <a href="https://www.builtattic.com/pages/faust"          class="navbar__mobile-link">📍 Faust — Client Leads</a>
+    <a href="https://matters-prod.vercel.app/"                class="navbar__mobile-link">📋 Construction Management</a>
+    <a href="https://www.builtattic.com/collections/design-studio" class="navbar__mobile-link">🏛 Design Studio</a>
+    <a href="https://www.builtattic.com/pages/vision"         class="navbar__mobile-link">🔢 Vision — Resource Calculator</a>
+    <a href="https://www.builtattic.com/collections/individuals" class="navbar__mobile-link">👤 Hire an Architect</a>
+    <a href="https://www.builtattic.com/pages/valuator"       class="navbar__mobile-link">💰 Valuator</a>
+    <a href="https://www.builtattic.com/pages/material-studio" class="navbar__mobile-link">🧱 Material Studio</a>
+    <a href="https://www.builtattic.com/pages/summaries-construction-analysis-tool" class="navbar__mobile-link">📅 Timeline Calculator</a>
+    <hr class="navbar__mobile-divider">
+    <a href="https://www.builtattic.com/collections/access" class="navbar__mobile-link">Subscription</a>
+    <a href="https://www.builtattic.info"                    class="navbar__mobile-link">About</a>
+    <div style="padding:var(--space-4) var(--space-4) var(--space-2);">
+      <a href="https://www.builtattic.com/collections/access" class="btn btn-primary" style="width:100%; justify-content:center;">Get Started</a>
+    </div>
+  </div>
+
+</nav>
+
+<!-- NAVBAR SCRIPT -->
+<script>
+(function(){
+  const nav  = document.getElementById('navbar');
+  const ham  = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+
+  // Sticky scroll effect
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Mobile toggle
+  ham.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    ham.setAttribute('aria-expanded', open);
+    ham.querySelectorAll('span')[0].style.transform = open ? 'rotate(45deg) translate(4px,4px)' : '';
+    ham.querySelectorAll('span')[1].style.opacity   = open ? '0' : '1';
+    ham.querySelectorAll('span')[2].style.transform = open ? 'rotate(-45deg) translate(4px,-4px)' : '';
+  });
+})();
+</script>

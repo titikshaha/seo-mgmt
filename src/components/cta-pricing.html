@@ -1,0 +1,337 @@
+<!-- ============================================================
+     BUILTATTIC — PRICING CTA COMPONENT
+     Swap plan names/prices/features per product if needed
+     ============================================================ -->
+
+<style>
+.pricing-section { padding: var(--space-24) 0; }
+.pricing-section__header { text-align: center; margin-bottom: var(--space-16); }
+.pricing-section__eyebrow {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+.pricing-section__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--space-4);
+}
+.pricing-section__title span { color: var(--accent); }
+.pricing-section__sub {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Toggle */
+.pricing-toggle {
+  display: inline-flex;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  padding: 4px;
+  margin: 0 auto var(--space-12);
+  gap: 2px;
+}
+.pricing-toggle__btn {
+  padding: 8px 20px;
+  border-radius: var(--r-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--t-base);
+}
+.pricing-toggle__btn.active {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+.pricing-toggle__save {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background: var(--accent-glow);
+  color: var(--accent-light);
+  border-radius: var(--r-full);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+/* Plans Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+.pricing-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: var(--space-8);
+  position: relative;
+  transition: border-color var(--t-base), box-shadow var(--t-base), transform var(--t-base);
+}
+.pricing-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+.pricing-card--featured {
+  border-color: rgba(240,165,0,0.4);
+  background: linear-gradient(160deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+  box-shadow: var(--shadow-glow);
+}
+.pricing-card--featured:hover {
+  border-color: rgba(240,165,0,0.6);
+  transform: translateY(-4px);
+}
+.pricing-card__badge {
+  position: absolute;
+  top: -12px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--text-inverse);
+  padding: 4px 16px;
+  border-radius: var(--r-full);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.pricing-card__name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-4);
+}
+.pricing-card__price {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: var(--space-2);
+}
+.pricing-card__currency { font-size: 1.25rem; font-weight: 600; color: var(--text-primary); line-height: 1.8; }
+.pricing-card__amount   { font-family: var(--font-display); font-size: 3rem; font-weight: 800; color: var(--text-primary); line-height: 1; }
+.pricing-card__period   { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 4px; }
+.pricing-card__desc     { font-size: 0.875rem; color: var(--text-muted); margin-bottom: var(--space-8); line-height: 1.5; }
+
+.pricing-card__divider { border: none; border-top: 1px solid var(--border); margin: var(--space-6) 0; }
+
+.pricing-card__features { display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-8); }
+.pricing-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+.pricing-card__feature-icon {
+  width: 16px; height: 16px; flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--accent);
+}
+.pricing-card__feature--dim { color: var(--text-muted); }
+.pricing-card__feature--dim .pricing-card__feature-icon { color: var(--text-muted); }
+
+.pricing-card .btn { width: 100%; justify-content: center; }
+.pricing-card--featured .btn-primary { animation: pulse-glow 3s ease-in-out infinite; }
+
+/* Promo Banner */
+.pricing-promo {
+  margin-top: var(--space-8);
+  padding: var(--space-5) var(--space-8);
+  background: var(--accent-glow);
+  border: 1px solid rgba(240,165,0,0.25);
+  border-radius: var(--r-lg);
+  text-align: center;
+  font-size: 0.9375rem;
+}
+.pricing-promo strong { color: var(--accent); }
+.pricing-promo code {
+  font-family: var(--font-mono);
+  background: rgba(240,165,0,0.15);
+  padding: 2px 8px;
+  border-radius: var(--r-sm);
+  font-size: 0.875rem;
+  color: var(--accent-light);
+}
+
+@media (max-width: 900px) {
+  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .pricing-card--featured { order: -1; }
+}
+</style>
+
+<!--
+  ╔══════════════════════════════════════════════════════╗
+  ║  PRICING CTA — swap amounts/features per product    ║
+  ╚══════════════════════════════════════════════════════╝
+-->
+<section class="pricing-section" id="pricing">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="pricing-section__header">
+      <div class="pricing-section__eyebrow">
+        <span class="badge badge-accent label">Pricing</span>
+      </div>
+      <h2 class="pricing-section__title" data-pricing-title>
+        Simple, <span>transparent</span> pricing
+      </h2>
+      <p class="pricing-section__sub" data-pricing-sub>
+        One subscription. Access to all Builtattic tools including Vitruvi, Faust, Valuator, and more.
+      </p>
+    </div>
+
+    <!-- Billing Toggle -->
+    <div style="display:flex;justify-content:center;">
+      <div class="pricing-toggle" id="billingToggle">
+        <button class="pricing-toggle__btn active" data-period="monthly" onclick="switchBilling('monthly',this)">Monthly</button>
+        <button class="pricing-toggle__btn" data-period="annual" onclick="switchBilling('annual',this)">
+          Annual <span class="pricing-toggle__save">Save 20%</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Plans -->
+    <div class="pricing-grid">
+
+      <!-- Free -->
+      <div class="pricing-card">
+        <div class="pricing-card__name">Free</div>
+        <div class="pricing-card__price">
+          <span class="pricing-card__currency">₹</span>
+          <span class="pricing-card__amount" data-monthly="0" data-annual="0">0</span>
+          <span class="pricing-card__period">/month</span>
+        </div>
+        <p class="pricing-card__desc">Explore the platform. No commitment needed.</p>
+        <hr class="pricing-card__divider">
+        <div class="pricing-card__features">
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            3 floor plan generations/month
+          </div>
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Basic 2D floor plan output
+          </div>
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Community access
+          </div>
+          <div class="pricing-card__feature pricing-card__feature--dim">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            MEP layouts
+          </div>
+          <div class="pricing-card__feature pricing-card__feature--dim">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            3D views
+          </div>
+        </div>
+        <a href="https://www.builtattic.com/collections/access" class="btn btn-secondary">Get Started Free</a>
+      </div>
+
+      <!-- Pro (Featured) -->
+      <div class="pricing-card pricing-card--featured">
+        <div class="pricing-card__badge">Most Popular</div>
+        <div class="pricing-card__name">Pro</div>
+        <div class="pricing-card__price">
+          <span class="pricing-card__currency">₹</span>
+          <span class="pricing-card__amount" data-monthly="999" data-annual="799">999</span>
+          <span class="pricing-card__period">/month</span>
+        </div>
+        <p class="pricing-card__desc">Everything you need to run a modern architecture or construction practice.</p>
+        <hr class="pricing-card__divider">
+        <div class="pricing-card__features">
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Unlimited floor plan generations
+          </div>
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            MEP layouts (electrical, plumbing, HVAC)
+          </div>
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            3D views & renders
+          </div>
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            All 9 Builtattic tools included
+          </div>
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Client lead access (Faust)
+          </div>
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Priority support
+          </div>
+        </div>
+        <a href="https://www.builtattic.com/products/subscription" class="btn btn-primary btn-lg">Start Pro — ₹999/mo</a>
+      </div>
+
+      <!-- Studio -->
+      <div class="pricing-card">
+        <div class="pricing-card__name">Studio</div>
+        <div class="pricing-card__price">
+          <span class="pricing-card__currency">₹</span>
+          <span class="pricing-card__amount" data-monthly="2499" data-annual="1999">2,499</span>
+          <span class="pricing-card__period">/month</span>
+        </div>
+        <p class="pricing-card__desc">For teams, firms, and high-volume construction professionals.</p>
+        <hr class="pricing-card__divider">
+        <div class="pricing-card__features">
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Everything in Pro
+          </div>
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Up to 10 team seats
+          </div>
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            White-label plan exports
+          </div>
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            API access
+          </div>
+          <div class="pricing-card__feature">
+            <svg class="pricing-card__feature-icon" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Dedicated account manager
+          </div>
+        </div>
+        <a href="https://www.builtattic.com/collections/access" class="btn btn-secondary">Contact for Studio</a>
+      </div>
+
+    </div><!-- /.pricing-grid -->
+
+    <!-- Promo Banner -->
+    <div class="pricing-promo">
+      🎉 <strong>Launch Offer:</strong> Use code <code>WELCOME99</code> for your first month at just <strong>₹11.11</strong>
+    </div>
+
+  </div><!-- /.container -->
+</section>
+
+<script>
+function switchBilling(period, btn) {
+  document.querySelectorAll('.pricing-toggle__btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pricing-card__amount').forEach(el => {
+    el.textContent = Number(el.dataset[period]).toLocaleString('en-IN');
+  });
+}
+</script>

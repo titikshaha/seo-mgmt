@@ -1,0 +1,237 @@
+<!-- ============================================================
+     BUILTATTIC — SHARED FOOTER COMPONENT
+     ============================================================ -->
+
+<style>
+.footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  padding: var(--space-20) 0 0;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: var(--space-12);
+  padding-bottom: var(--space-16);
+}
+.footer__brand-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.footer__brand-mark {
+  width: 28px; height: 28px;
+  background: var(--accent);
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+}
+.footer__brand-mark svg { width: 15px; height: 15px; }
+.footer__tagline {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 280px;
+  margin-bottom: var(--space-6);
+}
+.footer__newsletter {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+.footer__newsletter input {
+  flex: 1;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 10px 14px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color var(--t-fast);
+}
+.footer__newsletter input::placeholder { color: var(--text-muted); }
+.footer__newsletter input:focus { border-color: var(--accent); }
+.footer__newsletter .btn { flex-shrink: 0; padding: 10px 18px; font-size: 0.8125rem; }
+.footer__social {
+  display: flex;
+  gap: var(--space-3);
+}
+.footer__social-link {
+  width: 36px; height: 36px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  transition: border-color var(--t-fast), color var(--t-fast), background var(--t-fast);
+}
+.footer__social-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.footer__col-title {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: var(--space-5);
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.footer__link {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  transition: color var(--t-fast);
+  line-height: 1.4;
+}
+.footer__link:hover { color: var(--text-primary); }
+.footer__link-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 7px;
+  background: var(--accent-glow);
+  color: var(--accent-light);
+  border-radius: var(--r-full);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--border);
+  padding: var(--space-6) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+.footer__bottom-left {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+.footer__bottom-right {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+.footer__policy-link {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  transition: color var(--t-fast);
+}
+.footer__policy-link:hover { color: var(--text-secondary); }
+
+@media (max-width: 1024px) {
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .footer__grid { grid-template-columns: 1fr; gap: var(--space-10); }
+  .footer__bottom { flex-direction: column; text-align: center; }
+  .footer__newsletter { flex-direction: column; }
+}
+</style>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <!-- Brand Col -->
+      <div>
+        <div class="footer__brand-name">
+          <div class="footer__brand-mark">
+            <svg viewBox="0 0 18 18" fill="none"><path d="M2 14L9 3L16 14H2Z" fill="#0C0C0D"/></svg>
+          </div>
+          Builtattic
+        </div>
+        <p class="footer__tagline">
+          Built for every step in construction — supporting architects, engineers, and contractors across the entire industry, anywhere in the world.
+        </p>
+        <!-- Newsletter -->
+        <div class="footer__newsletter">
+          <input type="email" placeholder="Stay inspired — your email" aria-label="Email for newsletter">
+          <button class="btn btn-primary btn-sm">Subscribe</button>
+        </div>
+        <!-- Social -->
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/company/builltattic" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.instagram.com/builtattic/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@Builtattic" class="footer__social-link" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tools Col -->
+      <div>
+        <div class="footer__col-title">Tools</div>
+        <div class="footer__links">
+          <a href="https://www.builtattic.com/pages/vitruviai"     class="footer__link">Vitruvi — Floor Plan Generator <span class="footer__link-badge">AI</span></a>
+          <a href="https://www.builtattic.com/pages/faust"          class="footer__link">Faust — Client Leads</a>
+          <a href="https://matters-prod.vercel.app/"                class="footer__link">Construction Management</a>
+          <a href="https://www.builtattic.com/pages/vision"         class="footer__link">Vision — Resource Calculator</a>
+          <a href="https://www.builtattic.com/pages/valuator"       class="footer__link">Valuator</a>
+          <a href="https://www.builtattic.com/pages/material-studio" class="footer__link">Material Studio</a>
+          <a href="https://www.builtattic.com/pages/summaries-construction-analysis-tool" class="footer__link">Timeline Calculator</a>
+        </div>
+      </div>
+
+      <!-- Shop Col -->
+      <div>
+        <div class="footer__col-title">Shop</div>
+        <div class="footer__links">
+          <a href="https://www.builtattic.com/collections/design-studio?filter.p.m.custom.categories=Residential" class="footer__link">Residential Plans</a>
+          <a href="https://www.builtattic.com/collections/design-studio?filter.p.m.custom.categories=Commercial"  class="footer__link">Commercial Plans</a>
+          <a href="https://www.builtattic.com/collections/individuals" class="footer__link">Hire an Architect</a>
+          <a href="https://www.builtattic.com/collections/access"      class="footer__link">Subscription Plans</a>
+          <a href="https://www.builtattic.com/pages/register"          class="footer__link">Become a Vendor <span class="footer__link-badge">Free</span></a>
+        </div>
+      </div>
+
+      <!-- Company Col -->
+      <div>
+        <div class="footer__col-title">Company</div>
+        <div class="footer__links">
+          <a href="https://www.builtattic.info"                          class="footer__link">About Builtattic</a>
+          <a href="https://www.builtattic.com/policies/privacy-policy"  class="footer__link">Privacy Policy</a>
+          <a href="https://www.builtattic.com/policies/refund-policy"   class="footer__link">Refund Policy</a>
+          <a href="https://www.builtattic.com/policies/terms-of-service" class="footer__link">Terms of Service</a>
+          <a href="https://www.builtattic.com/policies/shipping-policy" class="footer__link">Shipping Policy</a>
+          <a href="https://www.builtattic.com/policies/contact-information" class="footer__link">Contact</a>
+        </div>
+      </div>
+
+    </div><!-- /.footer__grid -->
+
+    <!-- Bottom Bar -->
+    <div class="footer__bottom">
+      <div class="footer__bottom-left">
+        © 2026 Builtattic. All rights reserved. Built with care for the construction industry.
+      </div>
+      <div class="footer__bottom-right">
+        <a href="https://www.builtattic.com/policies/privacy-policy"   class="footer__policy-link">Privacy</a>
+        <a href="https://www.builtattic.com/policies/terms-of-service"  class="footer__policy-link">Terms</a>
+        <a href="https://www.builtattic.com/policies/refund-policy"     class="footer__policy-link">Refunds</a>
+        <a href="https://www.builtattic.com/policies/contact-information" class="footer__policy-link">Contact</a>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+</footer>
