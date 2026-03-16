@@ -480,6 +480,13 @@
       border-top: 1px solid var(--border);
       padding-top: var(--space-4);
     }
+    .quick-links { margin: var(--space-8) auto; max-width: 900px; border: 1px solid var(--border); background: var(--bg-surface); border-radius: var(--r-lg); padding: var(--space-5); }
+    .quick-links__title { font-family: var(--font-display); font-size: 1.125rem; font-weight: 800; margin-bottom: var(--space-4); }
+    .quick-links__grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--space-3); }
+    .quick-links__item { border-radius: var(--r-md); border: 1px solid var(--border); background: var(--bg-card); padding: var(--space-3); text-decoration: none; color: var(--text-primary); transition: border-color var(--t-fast), transform var(--t-fast); }
+    .quick-links__item:hover { border-color: rgba(240,165,0,0.3); transform: translateY(-2px); }
+    .quick-links__item-title { font-weight: 700; margin-bottom: 0.2rem; }
+    .quick-links__item-sub { font-size: 0.8rem; color: var(--text-muted); line-height: 1.3; }
   </style>
 </head>
 <body>
@@ -837,6 +844,27 @@
       <div class="container">
         <div class="faq__header">
           <h2 class="faq__title">Frequently asked <span>questions</span></h2>
+        </div>
+        <div class="quick-links">
+          <div class="quick-links__title">Need quick detail pages?</div>
+          <div class="quick-links__grid">
+            <a class="quick-links__item" href="/pages/floor-plan-generator/blog/AI-floor-plan-generator-in-2026.html">
+              <div class="quick-links__item-title">Floor Plan Blog</div>
+              <div class="quick-links__item-sub">AI floor plan insights, comparisons, and how-tos.</div>
+            </a>
+            <a class="quick-links__item" href="/pages/floor-plan-generator/comparisons/free-vs-paid-floor-plan-generators.html">
+              <div class="quick-links__item-title">Free vs Paid Comparison</div>
+              <div class="quick-links__item-sub">Feature, price, and regional compliance breakdown.</div>
+            </a>
+            <a class="quick-links__item" href="/pages/floor-plan-generator/pages/7-AI-tools-architects-are-using-instead-of-AutoCAD.html">
+              <div class="quick-links__item-title">Top 7 AI Tools</div>
+              <div class="quick-links__item-sub">Best AI architecture tools architects use instead of AutoCAD.</div>
+            </a>
+            <a class="quick-links__item" href="/pages/floor-plan-generator/use-cases/who-uses-an-AI-floor-plan-generator.html">
+              <div class="quick-links__item-title">Who Uses AI Floor Plans?</div>
+              <div class="quick-links__item-sub">Use cases for homeowners, architects, builders, and developers.</div>
+            </a>
+          </div>
         </div>
         <div class="faq__list">
 
