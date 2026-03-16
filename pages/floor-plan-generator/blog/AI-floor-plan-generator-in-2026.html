@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Floor Plan Generator Blog — Tips, Guides & AI Architecture Insights | Builtattic</title>
+  <meta name="description" content="Expert articles on AI floor plan generators, architectural planning, MEP layouts, and construction workflows. Guides for architects, engineers, and homeowners across India, UK, US, Australia and more.">
+  <meta name="keywords" content="floor plan generator blog, AI floor plan tips, house floor plan generator guide, best floor plan generator, online floor plan generator tutorial, floor plan design ideas, 2BHK floor plan generator, villa floor plan generator, apartment floor plan generator, commercial floor plan generator, AI architecture tools, MEP layout guide, vastu floor plan tips, self-build floor plan UK, DA floor plans Australia">
+  <link rel="canonical" href="https://www.builtattic.in/pages/floor-plan-generator/blog">
+
+  <meta property="og:title" content="Floor Plan Generator Blog — Builtattic">
+  <meta property="og:description" content="Expert guides on AI floor plan generation, architectural planning, and construction workflows for professionals and homeowners worldwide.">
+  <meta property="og:url" content="https://www.builtattic.in/pages/floor-plan-generator/blog">
+  <meta property="og:type" content="website">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Builtattic Floor Plan Generator Blog",
+    "url": "https://www.builtattic.in/pages/floor-plan-generator/blog",
+    "description": "Expert articles on AI floor plan generation, architectural planning and construction.",
+    "publisher": { "@type": "Organization", "name": "Builtattic", "url": "https://www.builtattic.com" }
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/globals.css">
+  <style>
+
+    /* ── PAGE HEADER ─────────────────────────────────── */
+    .page-header {
+      padding: 100px 0 var(--space-16);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-header__bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% -10%, rgba(240,165,0,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .page-header__inner { position: relative; z-index: 1; }
+    .page-header__breadcrumb {
+      display: flex; align-items: center; gap: var(--space-2);
+      font-size: 0.8125rem; color: var(--text-muted);
+      margin-bottom: var(--space-5);
+    }
+    .page-header__breadcrumb a { color: var(--text-muted); transition: color var(--t-fast); }
+    .page-header__breadcrumb a:hover { color: var(--accent); }
+    .page-header__breadcrumb span { color: var(--border-hover); }
+    .page-header__title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800; letter-spacing: -0.03em; line-height: 1.08;
+      margin-bottom: var(--space-5);
+    }
+    .page-header__title span { color: var(--accent); }
+    .page-header__sub {
+      font-size: 1.0625rem; color: var(--text-secondary);
+      max-width: 560px; line-height: 1.65; margin-bottom: var(--space-8);
+    }
+    .page-header__meta {
+      display: flex; align-items: center; gap: var(--space-6);
+      flex-wrap: wrap;
+    }
+    .page-header__meta-item {
+      display: flex; align-items: center; gap: var(--space-2);
+      font-size: 0.8125rem; color: var(--text-muted);
+    }
+    .page-header__meta-item svg { width:14px;height:14px; }
+
+    /* ── CATEGORY FILTER ─────────────────────────────── */
+    .blog-filter {
+      padding: var(--space-8) 0;
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 64px; z-index: 50;
+      background: rgba(12,12,13,0.9);
+      backdrop-filter: blur(12px);
+    }
+    .blog-filter__inner {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: var(--space-4); flex-wrap: wrap;
+    }
+    .blog-filter__tabs { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+    .blog-filter__tab {
+      padding: 7px 16px; border-radius: var(--r-full);
+      font-size: 0.8125rem; font-weight: 500;
+      color: var(--text-muted); border: 1px solid var(--border);
+      cursor: pointer; transition: all var(--t-base);
+    }
+    .blog-filter__tab:hover { color: var(--text-primary); border-color: var(--border-hover); }
+    .blog-filter__tab.active {
+      background: var(--accent-glow); color: var(--accent-light);
+      border-color: rgba(240,165,0,0.3);
+    }
+    .blog-filter__count { font-size: 0.8125rem; color: var(--text-muted); white-space: nowrap; }
+
+    /* ── BLOG GRID ───────────────────────────────────── */
+    .blog-section { padding: var(--space-16) 0 var(--space-24); }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+    .blog-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--r-lg); overflow: hidden;
+      transition: border-color var(--t-base), transform var(--t-base), box-shadow var(--t-base);
+      display: flex; flex-direction: column;
+    }
+    .blog-card:hover {
+      border-color: rgba(240,165,0,0.3);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow);
+    }
+    .blog-card--featured {
+      grid-column: span 2;
+      flex-direction: row;
+    }
+    .blog-card__thumb {
+      background: var(--bg-elevated);
+      border-bottom: 1px solid var(--border);
+      aspect-ratio: 16/9;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; flex-shrink: 0;
+      position: relative; overflow: hidden;
+    }
+    .blog-card--featured .blog-card__thumb {
+      width: 42%; aspect-ratio: auto;
+      border-bottom: none; border-right: 1px solid var(--border);
+    }
+    .blog-card__thumb-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(240,165,0,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(240,165,0,0.06) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .blog-card__thumb-icon { position: relative; z-index: 1; }
+    .blog-card__body { padding: var(--space-6); display: flex; flex-direction: column; flex: 1; }
+    .blog-card__tags { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-4); }
+    .blog-card__tag {
+      padding: 3px 10px; border-radius: var(--r-full);
+      font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+      background: var(--accent-glow); color: var(--accent-light);
+      border: 1px solid rgba(240,165,0,0.2);
+    }
+    .blog-card__tag--neutral {
+      background: rgba(255,255,255,0.04); color: var(--text-muted);
+      border-color: var(--border);
+    }
+    .blog-card__title {
+      font-family: var(--font-display);
+      font-size: 1.0625rem; font-weight: 700;
+      color: var(--text-primary); line-height: 1.3;
+      margin-bottom: var(--space-3);
+      transition: color var(--t-fast);
+    }
+    .blog-card:hover .blog-card__title { color: var(--accent); }
+    .blog-card--featured .blog-card__title { font-size: 1.375rem; }
+    .blog-card__excerpt {
+      font-size: 0.875rem; color: var(--text-secondary);
+      line-height: 1.65; margin-bottom: var(--space-5); flex: 1;
+    }
+    .blog-card__footer {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--space-3); flex-wrap: wrap;
+      padding-top: var(--space-4); border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+    .blog-card__meta { display: flex; align-items: center; gap: var(--space-3); }
+    .blog-card__meta-item { font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
+    .blog-card__read-more {
+      font-size: 0.8125rem; font-weight: 500; color: var(--accent);
+      display: flex; align-items: center; gap: 4px;
+      transition: gap var(--t-fast);
+    }
+    .blog-card__read-more:hover { gap: 8px; }
+    .blog-card__read-more svg { width:12px;height:12px; }
+
+    /* ── SIDEBAR LINKS ───────────────────────────────── */
+    .blog-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: var(--space-12);
+      align-items: start;
+    }
+    .blog-sidebar { position: sticky; top: 120px; display: flex; flex-direction: column; gap: var(--space-6); }
+    .sidebar-widget {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: var(--space-6);
+    }
+    .sidebar-widget__title {
+      font-family: var(--font-display); font-size: 0.875rem;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em;
+      color: var(--text-primary); margin-bottom: var(--space-5);
+    }
+    .sidebar-links { display: flex; flex-direction: column; gap: var(--space-3); }
+    .sidebar-link {
+      display: flex; align-items: flex-start; gap: var(--space-3);
+      font-size: 0.875rem; color: var(--text-secondary);
+      transition: color var(--t-fast); line-height: 1.4;
+    }
+    .sidebar-link:hover { color: var(--accent); }
+    .sidebar-link__icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));
+      border: 1px solid rgba(240,165,0,0.2);
+      border-radius: var(--r-lg); padding: var(--space-6);
+      text-align: center;
+    }
+    .sidebar-cta__icon { font-size: 2rem; margin-bottom: var(--space-3); }
+    .sidebar-cta__title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: var(--space-2); }
+    .sidebar-cta__sub { font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: var(--space-5); line-height: 1.5; }
+    .sidebar-cta .btn { width: 100%; justify-content: center; }
+
+    /* ── INTERNAL LINK BANNER ────────────────────────── */
+    .internal-banner {
+      background: var(--bg-surface); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: var(--space-6) var(--space-8);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--space-6); flex-wrap: wrap;
+      margin: var(--space-12) 0;
+    }
+    .internal-banner__text { font-size: 0.9375rem; color: var(--text-secondary); }
+    .internal-banner__text strong { color: var(--text-primary); }
+    .internal-banner__links { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+    .internal-banner__link {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 8px 16px; border-radius: var(--r-md);
+      font-size: 0.8125rem; font-weight: 500;
+      border: 1px solid var(--border); color: var(--text-secondary);
+      transition: all var(--t-fast);
+    }
+    .internal-banner__link:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); }
+
+    @media (max-width: 1100px) { .blog-layout { grid-template-columns: 1fr; } .blog-sidebar { position: static; } }
+    @media (max-width: 900px)  { .blog-grid { grid-template-columns: 1fr 1fr; } .blog-card--featured { grid-column: span 2; flex-direction: column; } .blog-card--featured .blog-card__thumb { width: 100%; aspect-ratio: 16/9; border-right: none; border-bottom: 1px solid var(--border); } }
+    @media (max-width: 600px)  { .blog-grid { grid-template-columns: 1fr; } .blog-card--featured { grid-column: span 1; } }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="page-header__bg"></div>
+      <div class="container">
+        <div class="page-header__inner">
+          <nav class="page-header__breadcrumb" aria-label="Breadcrumb">
+            <a href="https://www.builtattic.com/">Builtattic</a>
+            <span>›</span>
+            <a href="/pages/floor-plan-generator/homepage.html">Floor Plan Generator</a>
+            <span>›</span>
+            <span style="color:var(--text-secondary)">Blog</span>
+          </nav>
+          <h1 class="page-header__title">Floor Plan <span>Insights</span></h1>
+          <p class="page-header__sub">Expert guides, comparisons, and how-tos on AI floor plan generation — for architects, engineers, developers, and homeowners worldwide.</p>
+          <div class="page-header__meta">
+            <div class="page-header__meta-item">
+              <svg viewBox="0 0 14 14" fill="none"><rect x="1" y="2" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h12M5 2v3M9 2v3" stroke="currentColor" stroke-width="1.2"/></svg>
+              Updated weekly
+            </div>
+            <div class="page-header__meta-item">
+              <svg viewBox="0 0 14 14" fill="none"><path d="M7 1a6 6 0 100 12A6 6 0 007 1zM7 4v3l2 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              5–8 min reads
+            </div>
+            <div class="page-header__meta-item">
+              <svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7l2 2 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              9 countries covered
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="blog-filter">
+      <div class="container">
+        <div class="blog-filter__inner">
+          <div class="blog-filter__tabs">
+            <button class="blog-filter__tab active" data-filter="all">All</button>
+            <button class="blog-filter__tab" data-filter="guide">Guides</button>
+            <button class="blog-filter__tab" data-filter="comparison">Comparisons</button>
+            <button class="blog-filter__tab" data-filter="regional">Regional</button>
+            <button class="blog-filter__tab" data-filter="ai-tools">AI Tools</button>
+            <button class="blog-filter__tab" data-filter="use-cases">Use Cases</button>
+          </div>
+          <span class="blog-filter__count">8 articles</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOG CONTENT -->
+    <section class="blog-section">
+      <div class="container">
+        <div class="blog-layout">
+
+          <!-- MAIN GRID -->
+          <div>
+            <div class="blog-grid">
+
+              <!-- Featured -->
+              <article class="blog-card blog-card--featured animate-fade-up">
+                <div class="blog-card__thumb">
+                  <div class="blog-card__thumb-grid"></div>
+                  <span class="blog-card__thumb-icon">🗺️</span>
+                </div>
+                <div class="blog-card__body">
+                  <div class="blog-card__tags">
+                    <span class="blog-card__tag">Featured</span>
+                    <span class="blog-card__tag--neutral blog-card__tag">Guide</span>
+                  </div>
+                    <a href="/pages/floor-plan-generator/pages/7-AI-tools-architects-are-using-instead-of-AutoCAD.html">
+                    <h2 class="blog-card__title">The 7 Best AI Tools for Architecture in 2025 — Ranked & Reviewed</h2>
+                  </a>
+                  <p class="blog-card__excerpt">From AI floor plan generators to automated MEP design — we tested 7 tools that are changing how architects, engineers and developers work. Vitruvi leads the pack for speed and regional compliance.</p>
+                  <div class="blog-card__footer">
+                    <div class="blog-card__meta">
+                    
+                      <span class="blog-card__meta-item">⏱ 8 min read</span>
+                    </div>
+                    <a href="/pages/floor-plan-generator/pages/7-AI-tools-architects-are-using-instead-of-AutoCAD.html" class="blog-card__read-more">
+                      Read article <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article class="blog-card animate-fade-up delay-1">
+                <div class="blog-card__thumb">
+                  <div class="blog-card__thumb-grid"></div>
+                  <span class="blog-card__thumb-icon">⚖️</span>
+                </div>
+                <div class="blog-card__body">
+                  <div class="blog-card__tags">
+                    <span class="blog-card__tag">Comparison</span>
+                  </div>
+                    <a href="/pages/floor-plan-generator/comparisons/free-vs-paid-floor-plan-generators.html">
+                    <h2 class="blog-card__title">Free vs Paid Floor Plan Generators — What Do You Actually Get?</h2>
+                  </a>
+                  <p class="blog-card__excerpt">We break down exactly what free floor plan generator tools offer vs paid plans — MEP support, 3D views, export quality, and regional compliance.</p>
+                  <div class="blog-card__footer">
+                    <div class="blog-card__meta">
+                      <span class="blog-card__meta-item">📅 Feb 2025</span>
+                      <span class="blog-card__meta-item">⏱ 6 min read</span>
+                    </div>
+                    <a href="/pages/floor-plan-generator/comparisons/free-vs-paid-floor-plan-generators.html" class="blog-card__read-more">
+                      Read article <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="blog-card animate-fade-up delay-1">
+                <div class="blog-card__thumb">
+                  <div class="blog-card__thumb-grid"></div>
+                  <span class="blog-card__thumb-icon">🏠</span>
+                </div>
+                <div class="blog-card__body">
+                  <div class="blog-card__tags">
+                    <span class="blog-card__tag--neutral blog-card__tag">Regional</span>
+                    <span class="blog-card__tag--neutral blog-card__tag">Use Cases</span>
+                    <span class="blog-card__tag--neutral blog-card__tag">🇮🇳 India</span>
+                  </div>
+                    <a href="/pages/floor-plan-generator/use-cases/who-uses-an-AI-floor-plan-generator.html">
+                    <h2 class="blog-card__title">2BHK Floor Plan Generator — What Architects in India Are Using in 2025</h2>
+                  </a>
+                  <p class="blog-card__excerpt">A deep-dive into how Indian architects are using AI floor plan generators for 2BHK, 3BHK and duplex layouts — with Vastu compliance built in.</p>
+                  <div class="blog-card__footer">
+                    <div class="blog-card__meta">
+                      <span class="blog-card__meta-item">📅 Mar 2025</span>
+                      <span class="blog-card__meta-item">⏱ 5 min read</span>
+                    </div>
+                    <a href="/pages/floor-plan-generator/use-cases/" class="blog-card__read-more">
+                      Read article <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 4 -->
+              <article class="blog-card animate-fade-up delay-2">
+                <div class="blog-card__thumb">
+                  <div class="blog-card__thumb-grid"></div>
+                  <span class="blog-card__thumb-icon">🏢</span>
+                </div>
+                <div class="blog-card__body">
+                  <div class="blog-card__tags">
+                    <span class="blog-card__tag--neutral blog-card__tag">Guide</span>
+                  </div>
+                  <a href="/pages/floor-plan-generator/use-cases/">
+                    <h2 class="blog-card__title">Commercial Floor Plan Generator: Office, Retail & Mixed-Use Layouts</h2>
+                  </a>
+                  <p class="blog-card__excerpt">How to generate commercial floor plans for offices, retail spaces, warehouses, and mixed-use buildings — including fire exit compliance and accessibility layouts.</p>
+                  <div class="blog-card__footer">
+                    <div class="blog-card__meta">
+                      <span class="blog-card__meta-item">📅 Feb 2025</span>
+                      <span class="blog-card__meta-item">⏱ 7 min read</span>
+                    </div>
+                    <a href="/pages/floor-plan-generator/use-cases/" class="blog-card__read-more">
+                      Read article <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 5 -->
+              <article class="blog-card animate-fade-up delay-2">
+                <div class="blog-card__thumb">
+                  <div class="blog-card__thumb-grid"></div>
+                  <span class="blog-card__thumb-icon">🏡</span>
+                </div>
+                <div class="blog-card__body">
+                  <div class="blog-card__tags">
+                    <span class="blog-card__tag--neutral blog-card__tag">Regional</span>
+                    <span class="blog-card__tag--neutral blog-card__tag">🇬🇧 UK</span>
+                  </div>
+                  <a href="/pages/floor-plan-generator/use-cases/">
+                    <h2 class="blog-card__title">Best AI Floor Plan Generator for UK Planning Applications in 2025</h2>
+                  </a>
+                  <p class="blog-card__excerpt">A practical walkthrough for UK self-builders, architects, and developers — generating planning-ready floor plans that comply with Part M and local council requirements.</p>
+                  <div class="blog-card__footer">
+                    <div class="blog-card__meta">
+                      <span class="blog-card__meta-item">📅 Jan 2025</span>
+                      <span class="blog-card__meta-item">⏱ 6 min read</span>
+                    </div>
+                    <a href="/pages/floor-plan-generator/use-cases/" class="blog-card__read-more">
+                      Read article <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 6 -->
+              <article class="blog-card animate-fade-up delay-3">
+                <div class="blog-card__thumb">
+                  <div class="blog-card__thumb-grid"></div>
+                  <span class="blog-card__thumb-icon">🏰</span>
+                </div>
+                <div class="blog-card__body">
+                  <div class="blog-card__tags">
+                    <span class="blog-card__tag--neutral blog-card__tag">Guide</span>
+                  </div>
+                  <a href="/pages/floor-plan-generator/use-cases/">
+                    <h2 class="blog-card__title">Villa Floor Plan Generator — Designing Luxury Layouts with AI</h2>
+                  </a>
+                  <p class="blog-card__excerpt">How to generate villa and luxury residential floor plans — covering multi-storey layouts, swimming pool placement, servant quarters, and landscaping integration.</p>
+                  <div class="blog-card__footer">
+                    <div class="blog-card__meta">
+                      <span class="blog-card__meta-item">📅 Mar 2025</span>
+                      <span class="blog-card__meta-item">⏱ 5 min read</span>
+                    </div>
+                    <a href="/pages/floor-plan-generator/use-cases/" class="blog-card__read-more">
+                      Read article <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 7 -->
+              <article class="blog-card animate-fade-up delay-1">
+                <div class="blog-card__thumb">
+                  <div class="blog-card__thumb-grid"></div>
+                  <span class="blog-card__thumb-icon">🏗️</span>
+                </div>
+                <div class="blog-card__body">
+                  <div class="blog-card__tags">
+                    <span class="blog-card__tag--neutral blog-card__tag">AI Tools</span>
+                  </div>
+                  <a href="/pages/floor-plan-generator/pages/7-AI-tools-architects-are-using-instead-of-AutoCAD.html">
+                    <h2 class="blog-card__title">How AI is Replacing Manual Drafting — And What It Means for Architects</h2>
+                  </a>
+                  <p class="blog-card__excerpt">AI floor plan generators aren't replacing architects — but they are replacing hours of repetitive drafting work. Here's what the shift looks like in practice.</p>
+                  <div class="blog-card__footer">
+                    <div class="blog-card__meta">
+                      <span class="blog-card__meta-item">📅 Feb 2025</span>
+                      <span class="blog-card__meta-item">⏱ 7 min read</span>
+                    </div>
+                    <a href="/pages/floor-plan-generator/pages/7-AI-tools-architects-are-using-instead-of-AutoCAD.html" class="blog-card__read-more">
+                      Read article <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 8 -->
+              <article class="blog-card animate-fade-up delay-2">
+                <div class="blog-card__thumb">
+                  <div class="blog-card__thumb-grid"></div>
+                  <span class="blog-card__thumb-icon">🏙️</span>
+                </div>
+                <div class="blog-card__body">
+                  <div class="blog-card__tags">
+                    <span class="blog-card__tag--neutral blog-card__tag">Regional</span>
+                    <span class="blog-card__tag--neutral blog-card__tag">🇦🇺 Australia</span>
+                  </div>
+                  <a href="/pages/floor-plan-generator/use-cases/">
+                    <h2 class="blog-card__title">Apartment Floor Plan Generator for Australian DA Submissions</h2>
+                  </a>
+                  <p class="blog-card__excerpt">Generating NCC-compliant apartment layouts for development approval in NSW, VIC, and QLD — including accessibility requirements and BASIX considerations.</p>
+                  <div class="blog-card__footer">
+                    <div class="blog-card__meta">
+                      <span class="blog-card__meta-item">📅 Mar 2025</span>
+                      <span class="blog-card__meta-item">⏱ 6 min read</span>
+                    </div>
+                    <a href="/pages/floor-plan-generator/use-cases/" class="blog-card__read-more">
+                      Read article <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+            </div><!-- /.blog-grid -->
+
+            <!-- Internal Link Banner -->
+            <div class="internal-banner">
+              <p class="internal-banner__text">Explore more from Builtattic: <strong>Compare tools, read use cases, or see the top AI architecture tools.</strong></p>
+              <div class="internal-banner__links">
+                <a href="/pages/floor-plan-generator/comparisons/free-vs-paid-floor-plan-generators.html" class="internal-banner__link">⚖️ Comparison</a>
+                <a href="/pages/floor-plan-generator/use-cases/who-uses-an-AI-floor-plan-generator.html" class="internal-banner__link">👤 Use Cases</a>
+                <a href="/pages/floor-plan-generator/pages/7-AI-tools-architects-are-using-instead-of-AutoCAD.html" class="internal-banner__link">🏆 Top 7 Tools</a>
+                <a href="/pages/floor-plan-generator/homepage.html" class="internal-banner__link">🗺️ Vitruvi Tool</a>
+              </div>
+            </div>
+
+          </div><!-- /main -->
+
+          <!-- SIDEBAR -->
+          <aside class="blog-sidebar">
+
+            <div class="sidebar-cta">
+              <div class="sidebar-cta__icon">⬡</div>
+              <div class="sidebar-cta__title">Try Vitruvi Free</div>
+              <p class="sidebar-cta__sub">Generate your first AI floor plan — 2D, MEP, and 3D views included.</p>
+              <a href="https://www.builtattic.com/collections/access" class="btn btn-primary btn-sm">Start for Free</a>
+            </div>
+
+            <div class="sidebar-widget">
+              <div class="sidebar-widget__title">Explore These Pages</div>
+              <div class="sidebar-links">
+                <a href="/pages/floor-plan-generator/homepage.html" class="sidebar-link"><span class="sidebar-link__icon">🗺️</span>Floor Plan Generator — Vitruvi</a>
+                <a href="/pages/floor-plan-generator/comparisons/free-vs-paid-floor-plan-generators.html" class="sidebar-link"><span class="sidebar-link__icon">⚖️</span>Free vs Paid Comparison</a>
+                <a href="/pages/floor-plan-generator/pages/7-AI-tools-architects-are-using-instead-of-AutoCAD.html" class="sidebar-link"><span class="sidebar-link__icon">🏆</span>Top 7 AI Architecture Tools</a>
+                <a href="/pages/floor-plan-generator/use-cases/who-uses-an-AI-floor-plan-generator.html" class="sidebar-link"><span class="sidebar-link__icon">👤</span>Who Uses Vitruvi?</a>
+              </div>
+            </div>
+
+            <div class="sidebar-widget">
+              <div class="sidebar-widget__title">Other Builtattic Tools</div>
+              <div class="sidebar-links">
+                <a href="https://www.builtattic.com/pages/faust" class="sidebar-link"><span class="sidebar-link__icon">📍</span>Faust — Client Leads</a>
+                <a href="https://www.builtattic.com/pages/vision" class="sidebar-link"><span class="sidebar-link__icon">🔢</span>Vision — Resource Calculator</a>
+                <a href="https://www.builtattic.com/pages/valuator" class="sidebar-link"><span class="sidebar-link__icon">💰</span>Valuator — Property Valuation</a>
+                <a href="https://www.builtattic.com/collections/design-studio" class="sidebar-link"><span class="sidebar-link__icon">🏛</span>Design Studio — Ready Plans</a>
+              </div>
+            </div>
+
+            <div class="sidebar-widget">
+              <div class="sidebar-widget__title">Popular Keywords</div>
+              <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-2)">
+                <span class="badge badge-neutral">AI floor plan generator</span>
+                <span class="badge badge-neutral">2BHK planner</span>
+                <span class="badge badge-neutral">villa floor plan</span>
+                <span class="badge badge-neutral">online floor plan</span>
+                <span class="badge badge-neutral">free floor plan</span>
+                <span class="badge badge-neutral">MEP layouts</span>
+                <span class="badge badge-neutral">3D floor plan</span>
+                <span class="badge badge-neutral">vastu floor plan</span>
+              </div>
+            </div>
+
+          </aside>
+
+        </div><!-- /.blog-layout -->
+      </div><!-- /.container -->
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    const components = [
+      { id: 'navbar-placeholder', file: '/src/components/navbar.html' },
+      { id: 'footer-placeholder', file: '/src/components/footer.html' },
+    ];
+    Promise.all(components.map(({ id, file }) =>
+      fetch(file).then(r => r.text()).then(html => {
+        const el = document.getElementById(id);
+        if (el) el.outerHTML = html;
+      }).catch(console.warn)
+    )).then(() => {
+      document.querySelectorAll('.animate-fade-up').forEach(el => {
+        el.style.animationPlayState = 'paused';
+        new IntersectionObserver(([e]) => { if (e.isIntersecting) { el.style.animationPlayState = 'running'; } }, { threshold: 0.1 }).observe(el);
+      });
+    });
+    const blogTabs = document.querySelectorAll('.blog-filter__tab');
+    const blogCards = document.querySelectorAll('.blog-card');
+    const countEl = document.querySelector('.blog-filter__count');
+
+    const categoryMap = {
+      'guide': ['Guide', 'Guides'],
+      'comparison': ['Comparison', 'Comparisons'],
+      'regional': ['Regional'],
+      'ai-tools': ['AI Tools', 'AI Tool'],
+      'use-cases': ['Use Cases', 'Use Case']
+    };
+
+    function getCardCategories(card) {
+      return Array.from(card.querySelectorAll('.blog-card__tag, .blog-card__tag--neutral')).map(el => el.textContent.trim().toLowerCase());
+    }
+
+    function matchesFilter(card, filter) {
+      if (filter === 'all') return true;
+      const tags = getCardCategories(card);
+      const lookups = categoryMap[filter] || [filter];
+      return lookups.some(value => tags.some(tag => tag.includes(value.toLowerCase())));
+    }
+
+    function updateCount(visible) {
+      if (countEl) {
+        countEl.textContent = `${visible} article${visible === 1 ? '' : 's'}`;
+      }
+    }
+
+    function applyFilter(filter) {
+      let visible = 0;
+      blogCards.forEach(card => {
+        if (matchesFilter(card, filter)) {
+          card.style.display = '';
+          visible += 1;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      updateCount(visible);
+    }
+
+    blogTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        blogTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter || 'all';
+        applyFilter(filter);
+      });
+    });
+
+    applyFilter('all');  </script>
+
+</body>
+</html>

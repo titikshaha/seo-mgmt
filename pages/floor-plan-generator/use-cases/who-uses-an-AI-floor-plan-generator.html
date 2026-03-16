@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Floor Plan Generator Use Cases — 2BHK, Villa, Apartment, Commercial & More | VirtruviAI Builtattic</title>
+  <meta name="description" content="See how architects, engineers, homeowners, and developers use VirtruviAI — Builtattic's AI floor plan generator — for 2BHK homes, villas, apartment blocks, commercial spaces, and more across India, UK, US, Canada, Australia, Netherlands and Japan.">
+  <meta name="keywords" content="floor plan generator use cases, 2BHK floor plan generator, villa floor plan generator, apartment floor plan generator, commercial floor plan generator, house floor plan generator, AI floor plan for architects, floor plan generator for homeowners, online floor plan generator India, vastu floor plan generator, floor plan generator UK planning, floor plan generator free, best floor plan generator, floor plan generator for developers, MEP floor plan tool">
+  <link rel="canonical" href="https://www.builtattic.in/pages/floor-plan-generator/use-cases">
+
+  <meta property="og:title" content="VirtruviAI Floor Plan Generator — Use Cases for Every Project Type">
+  <meta property="og:description" content="From 2BHK homes to commercial complexes — see how VirtruviAI's AI floor plan generator fits every project type, profession, and region.">
+  <meta property="og:url" content="https://www.builtattic.in/pages/floor-plan-generator/use-cases">
+  <meta property="og:type" content="website">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "VirtruviAI Floor Plan Generator — Use Cases",
+    "url": "https://www.builtattic.in/pages/floor-plan-generator/use-cases",
+    "description": "Use cases for VirtruviAI AI floor plan generator — 2BHK, villa, apartment, commercial, and regional use across 9+ countries.",
+    "publisher": { "@type": "Organization", "name": "Builtattic", "url": "https://www.builtattic.com" }
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/globals.css">
+  <style>
+
+    .page-header {
+      padding: 100px 0 var(--space-16); border-bottom: 1px solid var(--border);
+      position: relative; overflow: hidden;
+    }
+    .page-header__bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% -10%, rgba(240,165,0,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .breadcrumb { display:flex; align-items:center; gap:var(--space-2); font-size:0.8125rem; color:var(--text-muted); margin-bottom:var(--space-5); }
+    .breadcrumb a { color:var(--text-muted); transition:color var(--t-fast); }
+    .breadcrumb a:hover { color:var(--accent); }
+    .breadcrumb span { color:var(--border-hover); }
+    .page-header__title { font-family:var(--font-display); font-size:clamp(2rem,4vw,3.5rem); font-weight:800; letter-spacing:-0.03em; line-height:1.08; margin-bottom:var(--space-5); position:relative; z-index:1; }
+    .page-header__title span { color:var(--accent); }
+    .page-header__sub { font-size:1.0625rem; color:var(--text-secondary); max-width:600px; line-height:1.65; position:relative; z-index:1; }
+
+    /* ── TYPE NAVIGATOR ───────────────────────────────── */
+    .type-nav { padding:var(--space-8) 0; border-bottom:1px solid var(--border); background:var(--bg-surface); position:sticky; top:64px; z-index:50; backdrop-filter:blur(12px); }
+    .type-nav__inner { display:flex; gap:var(--space-2); overflow-x:auto; padding-bottom:2px; scrollbar-width:none; }
+    .type-nav__inner::-webkit-scrollbar { display:none; }
+    .type-nav__tab {
+      display:flex; align-items:center; gap:var(--space-2); padding:8px 16px;
+      border-radius:var(--r-full); font-size:0.8125rem; font-weight:500;
+      color:var(--text-muted); border:1px solid var(--border);
+      cursor:pointer; white-space:nowrap; transition:all var(--t-base); flex-shrink:0;
+      text-decoration:none;
+    }
+    .type-nav__tab:hover { color:var(--text-primary); border-color:var(--border-hover); }
+    .type-nav__tab.active { background:var(--accent-glow); color:var(--accent-light); border-color:rgba(240,165,0,0.3); }
+
+    /* ── USE CASE SECTIONS ───────────────────────────── */
+    .usecase-section { padding:var(--space-20) 0; border-bottom:1px solid var(--border); }
+    .usecase-section:last-of-type { border-bottom:none; }
+    .usecase-section__layout { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-12); align-items:center; }
+    .usecase-section__layout--reverse { direction:rtl; }
+    .usecase-section__layout--reverse > * { direction:ltr; }
+    .usecase-section__eyebrow { margin-bottom:var(--space-3); display:flex; align-items:center; gap:var(--space-3); }
+    .usecase-section__num { font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted); }
+    .usecase-section__title { font-family:var(--font-display); font-size:clamp(1.5rem,2.5vw,2.25rem); font-weight:800; letter-spacing:-0.025em; line-height:1.15; margin-bottom:var(--space-4); }
+    .usecase-section__title span { color:var(--accent); }
+    .usecase-section__desc { font-size:0.9375rem; color:var(--text-secondary); line-height:1.7; margin-bottom:var(--space-6); }
+    .usecase-section__bullets { display:flex; flex-direction:column; gap:var(--space-3); margin-bottom:var(--space-8); }
+    .usecase-bullet { display:flex; align-items:flex-start; gap:var(--space-3); font-size:0.875rem; color:var(--text-secondary); line-height:1.5; }
+    .usecase-bullet__icon { width:20px;height:20px; flex-shrink:0; background:var(--accent-glow); border-radius:var(--r-sm); display:flex; align-items:center; justify-content:center; font-size:0.6875rem; color:var(--accent); margin-top:1px; }
+    .usecase-section__regions { display:flex; flex-wrap:wrap; gap:var(--space-2); margin-bottom:var(--space-6); }
+    .region-tag { display:inline-flex; align-items:center; gap:5px; padding:4px 10px; border-radius:var(--r-full); font-size:0.75rem; background:rgba(255,255,255,0.04); border:1px solid var(--border); color:var(--text-muted); }
+    .usecase-section__actions { display:flex; gap:var(--space-3); flex-wrap:wrap; }
+
+    /* Mockup Panel */
+    .mockup-panel {
+      background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-xl);
+      overflow:hidden; box-shadow:var(--shadow-lift);
+    }
+    .mockup-panel__bar { background:var(--bg-elevated); border-bottom:1px solid var(--border); padding:12px 16px; display:flex; align-items:center; gap:var(--space-2); }
+    .mockup-panel__dot { width:10px;height:10px;border-radius:50%; }
+    .mockup-panel__label { font-family:var(--font-mono); font-size:0.6875rem; color:var(--text-muted); margin:0 auto; }
+    .mockup-panel__body { padding:var(--space-5); }
+    .mockup-panel__fp {
+      width:100%; aspect-ratio:4/3;
+      background:var(--bg-elevated); border:1px solid var(--border); border-radius:var(--r-md);
+      position:relative; overflow:hidden; margin-bottom:var(--space-4);
+    }
+    .mockup-panel__fp::before {
+      content:''; position:absolute; inset:0;
+      background-image: linear-gradient(rgba(240,165,0,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(240,165,0,0.06) 1px, transparent 1px);
+      background-size:20px 20px;
+    }
+    .fp-room { position:absolute; border:2px solid rgba(240,165,0,0.45); border-radius:2px; display:flex; align-items:center; justify-content:center; }
+    .fp-label { font-size:7px; font-family:var(--font-mono); color:rgba(240,165,0,0.8); text-align:center; line-height:1.2; }
+    .mockup-panel__chips { display:flex; gap:var(--space-2); flex-wrap:wrap; }
+    .mockup-panel__chip { padding:4px 10px; background:var(--accent-glow); border:1px solid rgba(240,165,0,0.2); border-radius:var(--r-full); font-size:0.6875rem; color:var(--accent-light); font-family:var(--font-mono); }
+
+    /* ── STATS STRIP ─────────────────────────────────── */
+    .stats-strip { background:var(--bg-surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:var(--space-10) 0; }
+    .stats-strip__grid { display:grid; grid-template-columns:repeat(5,1fr); gap:var(--space-4); text-align:center; }
+    .stat__num { font-family:var(--font-display); font-size:clamp(1.5rem,2.5vw,2rem); font-weight:800; color:var(--text-primary); }
+    .stat__num span { color:var(--accent); }
+    .stat__label { font-size:0.8125rem; color:var(--text-muted); margin-top:2px; }
+
+    /* ── REGION GRID ─────────────────────────────────── */
+    .region-use { padding:var(--space-24) 0; background:var(--bg-surface); }
+    .region-use__header { text-align:center; margin-bottom:var(--space-16); }
+    .region-use__title { font-family:var(--font-display); font-size:clamp(1.75rem,3vw,2.5rem); font-weight:800; letter-spacing:-0.025em; margin-bottom:var(--space-4); }
+    .region-use__title span { color:var(--accent); }
+    .region-use__sub { font-size:0.9375rem; color:var(--text-secondary); max-width:500px; margin:0 auto; }
+    .region-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-5); }
+    .region-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-lg); padding:var(--space-7); transition:border-color var(--t-base), transform var(--t-base); }
+    .region-card:hover { border-color:var(--border-hover); transform:translateY(-2px); }
+    .region-card__flag { font-size:2rem; margin-bottom:var(--space-4); display:block; }
+    .region-card__name { font-family:var(--font-display); font-size:1rem; font-weight:700; margin-bottom:var(--space-2); }
+    .region-card__type { font-size:0.75rem; color:var(--accent); font-weight:600; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:var(--space-4); }
+    .region-card__desc { font-size:0.875rem; color:var(--text-secondary); line-height:1.65; margin-bottom:var(--space-4); }
+    .region-card__kws { display:flex; flex-wrap:wrap; gap:var(--space-2); }
+    .region-card__kw { font-size:0.6875rem; font-family:var(--font-mono); padding:3px 8px; background:rgba(255,255,255,0.04); border:1px solid var(--border); border-radius:var(--r-full); color:var(--text-muted); }
+
+    /* ── FAQ ─────────────────────────────────────────── */
+    .faq { padding:var(--space-24) 0; }
+    .faq__header { text-align:center; margin-bottom:var(--space-12); }
+    .faq__title { font-family:var(--font-display); font-size:clamp(1.5rem,2.5vw,2rem); font-weight:800; letter-spacing:-0.025em; margin-bottom:var(--space-3); }
+    .faq__title span { color:var(--accent); }
+    .faq__list { max-width:720px; margin:0 auto; display:flex; flex-direction:column; gap:var(--space-2); }
+    .faq__item { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-md); overflow:hidden; }
+    .faq__question { width:100%; text-align:left; padding:var(--space-5) var(--space-6); display:flex; align-items:center; justify-content:space-between; gap:var(--space-4); font-size:0.9375rem; font-weight:500; color:var(--text-primary); cursor:pointer; transition:background var(--t-fast); background:transparent; }
+    .faq__question:hover { background:rgba(255,255,255,0.03); }
+    .faq__chevron { width:16px;height:16px;flex-shrink:0;color:var(--text-muted);transition:transform var(--t-base); }
+    .faq__item.open .faq__chevron { transform:rotate(180deg); }
+    .faq__item.open .faq__question { color:var(--accent); }
+    .faq__answer { max-height:0; overflow:hidden; transition:max-height 0.4s var(--ease); }
+    .faq__item.open .faq__answer { max-height:300px; }
+    .faq__answer-inner { padding:0 var(--space-6) var(--space-5); font-size:0.875rem; color:var(--text-secondary); line-height:1.7; border-top:1px solid var(--border); padding-top:var(--space-4); }
+    .faq__answer-inner a { color:var(--accent); }
+
+    @media (max-width:1024px) { .usecase-section__layout { grid-template-columns:1fr; } .usecase-section__layout--reverse { direction:ltr; } .region-cards { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:640px)  { .stats-strip__grid { grid-template-columns:repeat(2,1fr); } .region-cards { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="page-header__bg"></div>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="https://www.builtattic.com/">Builtattic</a><span>›</span>
+          <a href="/pages/floor-plan-generator/homepage.html">Floor Plan Generator</a><span>›</span>
+          <span style="color:var(--text-secondary)">Use Cases</span>
+        </nav>
+        <div style="margin-bottom:var(--space-4)" class="animate-fade-up">
+          <span class="badge badge-accent label">Use Cases</span>
+        </div>
+        <h1 class="page-header__title animate-fade-up delay-1">Every project type.<br><span>One floor plan generator.</span></h1>
+        <p class="page-header__sub animate-fade-up delay-2">From a 2BHK flat in Pune to a commercial complex in Amsterdam — VirtruviAI's AI floor plan generator adapts to your project, profession, and region.</p>
+      </div>
+    </div>
+
+    <!-- TYPE NAVIGATOR -->
+    <nav class="type-nav" aria-label="Project type navigation">
+      <div class="container">
+        <div class="type-nav__inner">
+          <a href="#residential"  class="type-nav__tab active">🏠 Residential</a>
+          <a href="#villa"        class="type-nav__tab">🏰 Villa & Luxury</a>
+          <a href="#apartment"    class="type-nav__tab">🏢 Apartment</a>
+          <a href="#commercial"   class="type-nav__tab">🏗️ Commercial</a>
+          <a href="#professionals" class="type-nav__tab">📐 Professionals</a>
+          <a href="#regions"      class="type-nav__tab">🌍 By Region</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- STATS STRIP -->
+    <div class="stats-strip">
+      <div class="container">
+        <div class="stats-strip__grid">
+          <div><div class="stat__num">2BHK<span>+</span></div><div class="stat__label">to 10-bed villas</div></div>
+          <div><div class="stat__num">9<span>+</span></div><div class="stat__label">Countries supported</div></div>
+          <div><div class="stat__num">30<span>sec</span></div><div class="stat__label">Average generation time</div></div>
+          <div><div class="stat__num">12<span>K+</span></div><div class="stat__label">Plans generated</div></div>
+          <div><div class="stat__num">4.8<span>★</span></div><div class="stat__label">User rating</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ SECTION 1: RESIDENTIAL ══ -->
+    <section class="usecase-section" id="residential">
+      <div class="container">
+        <div class="usecase-section__layout">
+          <div>
+            <div class="usecase-section__eyebrow">
+              <span class="badge badge-accent label">Use Case 01</span>
+              <span class="usecase-section__num">Residential</span>
+            </div>
+            <h2 class="usecase-section__title">2BHK, 3BHK &<br><span>House Floor Plans</span></h2>
+            <p class="usecase-section__desc">The most common use case worldwide. Whether you're planning a 2BHK flat, a 3BHK independent house, or a family duplex — describe the rooms, plot size, and preferences, and VirtruviAI generates a complete dimensioned floor plan instantly. Vastu compliance included for Indian users.</p>
+            <div class="usecase-section__bullets">
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>2BHK and 3BHK layouts with room labels and dimensions</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Vastu-compliant plans for Indian residential projects</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Single-storey, double-storey, and duplex support</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>MEP overlays for plumbing, electrical, and HVAC</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>PDF export ready for builder handover</div>
+            </div>
+            <div class="usecase-section__regions">
+              <span class="region-tag">🇮🇳 ghar ka naksha</span>
+              <span class="region-tag">🇬🇧 self-build plans</span>
+              <span class="region-tag">🇺🇸 house blueprints</span>
+              <span class="region-tag">🇦🇺 owner-builder</span>
+              <span class="region-tag">🇨🇦 residential permit</span>
+            </div>
+            <div class="usecase-section__actions">
+              <a href="https://www.builtattic.com/collections/access" class="btn btn-primary">Generate a Residential Plan →</a>
+              <a href="/pages/floor-plan-generator/homepage.html" class="btn btn-secondary">Learn More</a>
+            </div>
+          </div>
+          <div class="mockup-panel">
+            <div class="mockup-panel__bar">
+              <div class="mockup-panel__dot" style="background:#EF4444"></div>
+              <div class="mockup-panel__dot" style="background:#F5A623;margin-left:6px"></div>
+              <div class="mockup-panel__dot" style="background:#22C55E;margin-left:6px"></div>
+              <span class="mockup-panel__label">3BHK · Vastu · 1800 sqft</span>
+            </div>
+            <div class="mockup-panel__body">
+              <div class="mockup-panel__fp">
+                <div class="fp-room" style="left:5%;top:5%;width:38%;height:45%"><span class="fp-label">Living Room</span></div>
+                <div class="fp-room" style="left:5%;top:54%;width:38%;height:38%"><span class="fp-label">Master Bedroom</span></div>
+                <div class="fp-room" style="left:47%;top:5%;width:30%;height:30%"><span class="fp-label">Kitchen</span></div>
+                <div class="fp-room" style="left:47%;top:39%;width:30%;height:28%"><span class="fp-label">Bedroom 2</span></div>
+                <div class="fp-room" style="left:47%;top:71%;width:30%;height:22%"><span class="fp-label">Bedroom 3</span></div>
+                <div class="fp-room" style="left:81%;top:5%;width:14%;height:88%"><span class="fp-label">Bath / Util</span></div>
+              </div>
+              <div class="mockup-panel__chips">
+                <span class="mockup-panel__chip">✓ Vastu</span>
+                <span class="mockup-panel__chip">✓ 2D Plan</span>
+                <span class="mockup-panel__chip">✓ MEP</span>
+                <span class="mockup-panel__chip">✓ 3D View</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SECTION 2: VILLA ══ -->
+    <section class="usecase-section" id="villa" style="background:var(--bg-surface)">
+      <div class="container">
+        <div class="usecase-section__layout usecase-section__layout--reverse">
+          <div class="mockup-panel">
+            <div class="mockup-panel__bar">
+              <div class="mockup-panel__dot" style="background:#EF4444"></div>
+              <div class="mockup-panel__dot" style="background:#F5A623;margin-left:6px"></div>
+              <div class="mockup-panel__dot" style="background:#22C55E;margin-left:6px"></div>
+              <span class="mockup-panel__label">Villa · G+1 · 4500 sqft</span>
+            </div>
+            <div class="mockup-panel__body">
+              <div class="mockup-panel__fp">
+                <div class="fp-room" style="left:4%;top:4%;width:44%;height:35%"><span class="fp-label">Grand Living</span></div>
+                <div class="fp-room" style="left:4%;top:43%;width:22%;height:30%"><span class="fp-label">Dining</span></div>
+                <div class="fp-room" style="left:4%;top:77%;width:22%;height:19%"><span class="fp-label">Puja Room</span></div>
+                <div class="fp-room" style="left:30%;top:43%;width:18%;height:30%"><span class="fp-label">Kitchen</span></div>
+                <div class="fp-room" style="left:52%;top:4%;width:26%;height:35%"><span class="fp-label">Master Suite</span></div>
+                <div class="fp-room" style="left:52%;top:43%;width:26%;height:53%"><span class="fp-label">Bedroom / Study</span></div>
+                <div class="fp-room" style="left:82%;top:4%;width:14%;height:92%"><span class="fp-label">Baths / Util</span></div>
+              </div>
+              <div class="mockup-panel__chips">
+                <span class="mockup-panel__chip">✓ G+1</span>
+                <span class="mockup-panel__chip">✓ MEP</span>
+                <span class="mockup-panel__chip">✓ 3D</span>
+                <span class="mockup-panel__chip">✓ DWG Export</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="usecase-section__eyebrow">
+              <span class="badge badge-accent label">Use Case 02</span>
+              <span class="usecase-section__num">Villa &amp; Luxury</span>
+            </div>
+            <h2 class="usecase-section__title">Villa &amp; Luxury<br><span>Residential Plans</span></h2>
+            <p class="usecase-section__desc">Design multi-storey villas, luxury residences, and high-end bungalows with AI. VirtruviAI handles complex layouts — G+1 and G+2 structures, swimming pool placement, servant quarters, double-height lobbies, and majlis-style guest wings for Middle Eastern projects.</p>
+            <div class="usecase-section__bullets">
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Multi-storey villa layouts (G+1, G+2, basement)</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Servant quarters, guest suite, study room configurations</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Pool area and landscaping zone integration</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Majlis and segregated entry layouts for UAE/GCC</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>DWG-compatible export for handover to architects</div>
+            </div>
+            <div class="usecase-section__regions">
+              <span class="region-tag">🇮🇳 India villa naksha</span>
+              <span class="region-tag">🇦🇪 UAE villa plan</span>
+              <span class="region-tag">🇺🇸 luxury home plan</span>
+              <span class="region-tag">🇬🇧 detached house plan</span>
+            </div>
+            <div class="usecase-section__actions">
+              <a href="https://www.builtattic.com/collections/access" class="btn btn-primary">Generate a Villa Plan →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SECTION 3: APARTMENT ══ -->
+    <section class="usecase-section" id="apartment">
+      <div class="container">
+        <div class="usecase-section__layout">
+          <div>
+            <div class="usecase-section__eyebrow">
+              <span class="badge badge-accent label">Use Case 03</span>
+              <span class="usecase-section__num">Apartment &amp; Multi-Unit</span>
+            </div>
+            <h2 class="usecase-section__title">Apartment &amp;<br><span>Multi-Unit Layouts</span></h2>
+            <p class="usecase-section__desc">Generate floor plans for apartment blocks, housing society units, granny flats, and multi-unit residential buildings. VirtruviAI understands shared core elements — lifts, stairwells, corridors — and can produce individual unit layouts or whole-floor plans.</p>
+            <div class="usecase-section__bullets">
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Studio, 1BHK, 2BHK apartment unit layouts</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Whole-floor plans with multiple units per floor</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Granny flat and secondary dwelling designs</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Accessibility-compliant layouts (UK Part M, ADA)</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>DA and CDC ready for Australian submissions</div>
+            </div>
+            <div class="usecase-section__regions">
+              <span class="region-tag">🇮🇳 society apartment plan</span>
+              <span class="region-tag">🇦🇺 DA apartment</span>
+              <span class="region-tag">🇳🇱 appartement plattegrond</span>
+              <span class="region-tag">🇨🇦 secondary suite</span>
+              <span class="region-tag">🇬🇧 flat conversion plan</span>
+            </div>
+            <div class="usecase-section__actions">
+              <a href="https://www.builtattic.com/collections/access" class="btn btn-primary">Generate an Apartment Plan →</a>
+            </div>
+          </div>
+          <div class="mockup-panel">
+            <div class="mockup-panel__bar">
+              <div class="mockup-panel__dot" style="background:#EF4444"></div>
+              <div class="mockup-panel__dot" style="background:#F5A623;margin-left:6px"></div>
+              <div class="mockup-panel__dot" style="background:#22C55E;margin-left:6px"></div>
+              <span class="mockup-panel__label">Apartment Floor · 6 Units</span>
+            </div>
+            <div class="mockup-panel__body">
+              <div class="mockup-panel__fp">
+                <div class="fp-room" style="left:3%;top:5%;width:28%;height:42%"><span class="fp-label">Unit A<br>2BHK</span></div>
+                <div class="fp-room" style="left:3%;top:53%;width:28%;height:42%"><span class="fp-label">Unit B<br>1BHK</span></div>
+                <div class="fp-room" style="left:36%;top:5%;width:10%;height:90%"><span class="fp-label">Core / Lift</span></div>
+                <div class="fp-room" style="left:51%;top:5%;width:22%;height:42%"><span class="fp-label">Unit C<br>2BHK</span></div>
+                <div class="fp-room" style="left:51%;top:53%;width:22%;height:42%"><span class="fp-label">Unit D<br>Studio</span></div>
+                <div class="fp-room" style="left:77%;top:5%;width:20%;height:90%"><span class="fp-label">Units E+F<br>1BHK</span></div>
+              </div>
+              <div class="mockup-panel__chips">
+                <span class="mockup-panel__chip">✓ Multi-unit</span>
+                <span class="mockup-panel__chip">✓ Accessible</span>
+                <span class="mockup-panel__chip">✓ DA ready</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SECTION 4: COMMERCIAL ══ -->
+    <section class="usecase-section" id="commercial" style="background:var(--bg-surface)">
+      <div class="container">
+        <div class="usecase-section__layout usecase-section__layout--reverse">
+          <div class="mockup-panel">
+            <div class="mockup-panel__bar">
+              <div class="mockup-panel__dot" style="background:#EF4444"></div>
+              <div class="mockup-panel__dot" style="background:#F5A623;margin-left:6px"></div>
+              <div class="mockup-panel__dot" style="background:#22C55E;margin-left:6px"></div>
+              <span class="mockup-panel__label">Office Floor · Open Plan</span>
+            </div>
+            <div class="mockup-panel__body">
+              <div class="mockup-panel__fp">
+                <div class="fp-room" style="left:3%;top:4%;width:58%;height:56%"><span class="fp-label">Open Plan Office</span></div>
+                <div class="fp-room" style="left:3%;top:65%;width:28%;height:30%"><span class="fp-label">Meeting Room</span></div>
+                <div class="fp-room" style="left:35%;top:65%;width:26%;height:30%"><span class="fp-label">Breakout</span></div>
+                <div class="fp-room" style="left:65%;top:4%;width:15%;height:90%"><span class="fp-label">Toilets / Utilities</span></div>
+                <div class="fp-room" style="left:65%;top:65%;width:16%;height:30%"><span class="fp-label">Reception</span></div>
+                <div class="fp-room" style="left:84%;top:4%;width:13%;height:56%"><span class="fp-label">Director Suite</span></div>
+              </div>
+              <div class="mockup-panel__chips">
+                <span class="mockup-panel__chip">✓ Fire exits</span>
+                <span class="mockup-panel__chip">✓ ADA / Part M</span>
+                <span class="mockup-panel__chip">✓ MEP</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="usecase-section__eyebrow">
+              <span class="badge badge-accent label">Use Case 04</span>
+              <span class="usecase-section__num">Commercial</span>
+            </div>
+            <h2 class="usecase-section__title">Office, Retail &amp;<br><span>Commercial Plans</span></h2>
+            <p class="usecase-section__desc">Generate commercial floor plans for offices, retail units, restaurants, warehouses, and mixed-use buildings. VirtruviAI accounts for fire exit routes, accessibility corridors, service areas, and loading docks — producing layouts that work for building control submissions.</p>
+            <div class="usecase-section__bullets">
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Open-plan and cellular office layouts</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Retail unit and shop floor plans</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Restaurant, café, and hospitality layouts</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Warehouse and industrial floor plans</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Fire exit compliance and accessibility routing</div>
+            </div>
+            <div class="usecase-section__regions">
+              <span class="region-tag">🇬🇧 Building Regs commercial</span>
+              <span class="region-tag">🇺🇸 IBC commercial</span>
+              <span class="region-tag">🇮🇳 commercial naksha</span>
+              <span class="region-tag">🇳🇱 bedrijfsruimte plattegrond</span>
+            </div>
+            <div class="usecase-section__actions">
+              <a href="https://www.builtattic.com/collections/access" class="btn btn-primary">Generate a Commercial Plan →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SECTION 5: PROFESSIONALS ══ -->
+    <section class="usecase-section" id="professionals">
+      <div class="container">
+        <div class="usecase-section__layout">
+          <div>
+            <div class="usecase-section__eyebrow">
+              <span class="badge badge-accent label">Use Case 05</span>
+              <span class="usecase-section__num">Architecture &amp; Engineering Professionals</span>
+            </div>
+            <h2 class="usecase-section__title">For <span>Architects &amp; Engineers</span></h2>
+            <p class="usecase-section__desc">VirtruviAI isn't just for homeowners — it's used daily by architects, structural engineers, MEP consultants, and construction firms to accelerate concept-stage work, generate client presentation drawings, and produce MEP overlays that would otherwise take hours to coordinate manually.</p>
+            <div class="usecase-section__bullets">
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Rapid concept plans for client pitch meetings</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>MEP overlay generation — electrical, plumbing, HVAC</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Multiple layout iterations in minutes, not hours</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>DWG export for handover to AutoCAD workflow</div>
+              <div class="usecase-bullet"><div class="usecase-bullet__icon">✓</div>Connected to resource calculator, valuator, and timeline tools</div>
+            </div>
+            <div class="usecase-section__actions">
+              <a href="https://www.builtattic.com/collections/access" class="btn btn-primary">Start Pro Plan →</a>
+              <a href="/pages/floor-plan-generator/comparisons/free-vs-paid-floor-plan-generators.html" class="btn btn-secondary">Compare Plans</a>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+            <div class="card card--glow" style="padding:var(--space-6)">
+              <div style="font-size:1.5rem;margin-bottom:var(--space-3)">📐</div>
+              <div style="font-family:var(--font-display);font-weight:700;margin-bottom:var(--space-2)">Architects</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6">Cut concept-stage drafting time by 3× with instant AI floor plan generation. Spend more time on design, less on repetitive drawing.</p>
+            </div>
+            <div class="card">
+              <div style="font-size:1.5rem;margin-bottom:var(--space-3)">⚙️</div>
+              <div style="font-family:var(--font-display);font-weight:700;margin-bottom:var(--space-2)">MEP Engineers</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6">Auto-generate electrical, plumbing, and HVAC layouts on any floor plan. Save a full working day per project on MEP coordination.</p>
+            </div>
+            <div class="card">
+              <div style="font-size:1.5rem;margin-bottom:var(--space-3)">🏗️</div>
+              <div style="font-family:var(--font-display);font-weight:700;margin-bottom:var(--space-2)">Contractors</div>
+              <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6">Access and share floor plans on-site. Connect directly to the resource calculator and construction timeline for a fully integrated workflow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ REGIONAL USE CASES ══ -->
+    <section class="region-use" id="regions">
+      <div class="container">
+        <div class="region-use__header">
+          <span class="badge badge-neutral label" style="margin-bottom:var(--space-4);display:inline-flex">By Region</span>
+          <h2 class="region-use__title">How VirtruviAI is used <span>around the world</span></h2>
+          <p class="region-use__sub">Every region has different building norms, permit requirements, and design conventions. VirtruviAI handles them all.</p>
+        </div>
+        <div class="region-cards">
+          <div class="region-card">
+            <span class="region-card__flag">🇮🇳</span>
+            <div class="region-card__name">India</div>
+            <div class="region-card__type">Most Popular Use: 2BHK & 3BHK Residential</div>
+            <p class="region-card__desc">Indian architects and homeowners use VirtruviAI for ghar ka naksha generation — Vastu-compliant layouts for 2BHK, 3BHK, duplex, and villa projects. RERA-format exports included.</p>
+            <div class="region-card__kws"><span class="region-card__kw">ghar ka naksha</span><span class="region-card__kw">vastu floor plan</span><span class="region-card__kw">2BHK planner</span><span class="region-card__kw">makan design</span></div>
+          </div>
+          <div class="region-card">
+            <span class="region-card__flag">🇬🇧</span>
+            <div class="region-card__name">United Kingdom</div>
+            <div class="region-card__type">Most Popular Use: Planning Applications & Extensions</div>
+            <p class="region-card__desc">UK self-builders, architects, and developers use VirtruviAI to generate planning-permission-ready floor plans — loft conversions, rear extensions, and new builds under permitted development rules.</p>
+            <div class="region-card__kws"><span class="region-card__kw">planning permission plan</span><span class="region-card__kw">self-build floor plan</span><span class="region-card__kw">loft conversion</span><span class="region-card__kw">Part M</span></div>
+          </div>
+          <div class="region-card">
+            <span class="region-card__flag">🇺🇸</span>
+            <div class="region-card__name">United States</div>
+            <div class="region-card__type">Most Popular Use: ADU & Custom Home Blueprints</div>
+            <p class="region-card__desc">US homeowners and architects use VirtruviAI for ADU (accessory dwelling unit) floor plans, open-plan residential layouts, and permit drawings formatted for local building departments.</p>
+            <div class="region-card__kws"><span class="region-card__kw">ADU floor plan</span><span class="region-card__kw">house blueprint maker</span><span class="region-card__kw">open floor plan</span><span class="region-card__kw">permit drawings</span></div>
+          </div>
+          <div class="region-card">
+            <span class="region-card__flag">🇦🇺</span>
+            <div class="region-card__name">Australia</div>
+            <div class="region-card__type">Most Popular Use: DA Submissions & Granny Flats</div>
+            <p class="region-card__desc">Australian owner-builders and architects use VirtruviAI for DA and CDC submissions, granny flat designs, and NCC-compliant residential layouts across NSW, VIC, and QLD.</p>
+            <div class="region-card__kws"><span class="region-card__kw">DA floor plan</span><span class="region-card__kw">granny flat design</span><span class="region-card__kw">NCC compliant</span><span class="region-card__kw">owner-builder</span></div>
+          </div>
+          <div class="region-card">
+            <span class="region-card__flag">🇳🇱</span>
+            <div class="region-card__name">Netherlands</div>
+            <div class="region-card__type">Most Popular Use: Residential & Omgevingsvergunning</div>
+            <p class="region-card__desc">Dutch architects and homeowners use VirtruviAI to generate plattegronden for omgevingsvergunning applications — Bouwbesluit-compliant layouts for rijtjeshuizen, appartementen, and tiny houses.</p>
+            <div class="region-card__kws"><span class="region-card__kw">plattegrond generator</span><span class="region-card__kw">bouwtekening</span><span class="region-card__kw">omgevingsvergunning</span></div>
+          </div>
+          <div class="region-card">
+            <span class="region-card__flag">🇯🇵</span>
+            <div class="region-card__name">Japan / 日本</div>
+            <div class="region-card__type">Most Popular Use: LDK Residential Layouts</div>
+            <p class="region-card__desc">日本の建築士や施主がVitruvi AIを使ってLDK型の間取りを自動生成。建築基準法に準拠した平面図を即座に作成できます。</p>
+            <div class="region-card__kws"><span class="region-card__kw">間取りAI</span><span class="region-card__kw">LDK 平面図</span><span class="region-card__kw">建築確認</span><span class="region-card__kw">住宅設計</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container">
+        <div class="faq__header">
+          <h2 class="faq__title">Common <span>Questions</span></h2>
+        </div>
+        <div class="faq__list">
+          <div class="faq__item">
+            <button class="faq__question">Can VirtruviAI generate a 2BHK floor plan with Vastu?
+              <svg class="faq__chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer"><div class="faq__answer-inner">Yes. VirtruviAI supports Vastu Shastra as an optional setting for Indian projects. When enabled, room placement follows Vastu directional guidelines — kitchen in the south-east, master bedroom in the south-west, puja room in the north-east, and main entrance facing east or north. You can specify your plot orientation and BHK configuration. <a href="https://www.builtattic.com/collections/access">Try it free →</a></div></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">Does the AI floor plan generator work for commercial buildings?
+              <svg class="faq__chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer"><div class="faq__answer-inner">Yes — VirtruviAI supports commercial floor plan generation for offices, retail units, restaurants, warehouses, and mixed-use buildings. It accounts for fire exit routing, accessibility corridors, and service zones. Commercial output is designed for use in building control submissions and planning applications.</div></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">Can I generate a villa floor plan with multiple storeys?
+              <svg class="faq__chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer"><div class="faq__answer-inner">Yes. VirtruviAI supports G, G+1, and G+2 villa layouts, including staircase positioning, first-floor bedroom wings, and basement-level plans. For very complex multi-wing villas, we recommend starting with a ground-floor plan and iterating per floor — each generation takes under 30 seconds.</div></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">Is VirtruviAI useful for architects or just homeowners?
+              <svg class="faq__chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer"><div class="faq__answer-inner">Both. Homeowners use VirtruviAI to visualise their project before hiring a builder. Architects use it to generate rapid concept plans for client meetings — saving 3–4 hours of manual drafting per project. MEP engineers use the automatic MEP overlay feature to save a full day of coordination work. See our <a href="/pages/floor-plan-generator/comparisons/free-vs-paid-floor-plan-generators.html">comparison page</a> for a full breakdown.</div></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">How is this different from hiring an architect?
+              <svg class="faq__chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__answer"><div class="faq__answer-inner">VirtruviAI generates concept and planning-stage floor plans instantly — something that would take an architect 2–4 hours to produce manually. It is not a replacement for a licensed architect on complex or high-value projects. Instead, it accelerates the early stages — and if you need a licensed professional, Builtattic's <a href="https://www.builtattic.com/collections/individuals">Hire an Architect</a> tool connects you with verified professionals.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNAL LINKS STRIP -->
+    <div style="background:var(--bg-surface);border-top:1px solid var(--border);padding:var(--space-12) 0;">
+      <div class="container">
+        <p style="font-size:0.875rem;color:var(--text-muted);text-align:center;margin-bottom:var(--space-6)">Continue exploring VirtruviAI and Builtattic</p>
+        <div style="display:flex;justify-content:center;gap:var(--space-4);flex-wrap:wrap;">
+          <a href="/pages/floor-plan-generator/homepage.html" class="btn btn-secondary btn-sm">🗺️ VirtruviAI Feature Page</a>
+          <a href="/pages/floor-plan-generator/comparisons/free-vs-paid-floor-plan-generators.html" class="btn btn-secondary btn-sm">⚖️ Free vs Paid Comparison</a>
+          <a href="/pages/floor-plan-generator/pages/7-AI-tools-architects-are-using-instead-of-AutoCAD.html" class="btn btn-secondary btn-sm">🏆 Top 7 AI Tools</a>
+          <a href="/pages/floor-plan-generator/blog/AI-floor-plan-generator-in-2026.html" class="btn btn-secondary btn-sm">📝 Blog</a>
+          <a href="https://www.builtattic.com/collections/access" class="btn btn-primary btn-sm">Get Started →</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="cta-hero-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    const components = [
+      { id: 'navbar-placeholder',   file: '/src/components/navbar.html'   },
+      { id: 'cta-hero-placeholder', file: '/src/components/cta-hero.html' },
+      { id: 'footer-placeholder',   file: '/src/components/footer.html'   },
+    ];
+    Promise.all(components.map(({ id, file }) =>
+      fetch(file).then(r => r.text()).then(html => {
+        const el = document.getElementById(id); if (el) el.outerHTML = html;
+      }).catch(console.warn)
+    )).then(() => {
+      document.querySelectorAll('.faq__question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq__item');
+          const isOpen = item.classList.contains('open');
+          document.querySelectorAll('.faq__item.open').forEach(i => i.classList.remove('open'));
+          if (!isOpen) item.classList.add('open');
+        });
+      });
+      document.querySelectorAll('.animate-fade-up').forEach(el => {
+        el.style.animationPlayState = 'paused';
+        new IntersectionObserver(([e]) => { if (e.isIntersecting) el.style.animationPlayState = 'running'; }, { threshold: 0.1 }).observe(el);
+      });
+      // Type nav active state on scroll
+      const sections = document.querySelectorAll('.usecase-section, .region-use');
+      const tabs = document.querySelectorAll('.type-nav__tab');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            tabs.forEach(t => t.classList.remove('active'));
+            const matchTab = document.querySelector(`.type-nav__tab[href="#${e.target.id}"]`);
+            if (matchTab) matchTab.classList.add('active');
+          }
+        });
+      }, { threshold: 0.4 });
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+</body>
+</html>

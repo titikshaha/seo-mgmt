@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Top 7 AI Tools for Architecture in 2025 — Floor Plans, MEP & Design | Builtattic</title>
+  <meta name="description" content="The 7 best AI tools for architects and construction professionals in 2025 — covering AI floor plan generators, MEP automation, 3D rendering, structural analysis, and project management. Includes Vitruvi, Midjourney, and more.">
+  <meta name="keywords" content="AI tools for architecture, best AI floor plan generator, AI architecture software 2025, AI for architects, AI building design, floor plan generator online, house floor plan generator AI, best floor plan generator 2025, AI MEP design tool, AI structural analysis, architecture AI software, Vitruvi AI, Builtattic tools, AI for construction, generative design architecture">
+  <link rel="canonical" href="https://www.builtattic.in/pages/floor-plan-generator/top-7-ai-tools">
+
+  <meta property="og:title" content="Top 7 AI Tools for Architecture in 2025 — Ranked by Builtattic">
+  <meta property="og:description" content="From AI floor plan generators to automated MEP design — the 7 tools transforming how architects and engineers work in 2025.">
+  <meta property="og:url" content="https://www.builtattic.in/pages/floor-plan-generator/top-7-ai-tools">
+  <meta property="og:type" content="article">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Top 7 AI Tools for Architecture in 2025",
+    "url": "https://www.builtattic.in/pages/floor-plan-generator/top-7-ai-tools",
+    "description": "Ranked review of the best AI tools for architects, engineers and construction professionals in 2025.",
+    "publisher": { "@type": "Organization", "name": "Builtattic", "url": "https://www.builtattic.com" }
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/globals.css">
+  <style>
+
+    .page-header {
+      padding: 100px 0 var(--space-16); border-bottom: 1px solid var(--border);
+      position: relative; overflow: hidden;
+    }
+    .page-header__bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% -10%, rgba(240,165,0,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .breadcrumb { display:flex; align-items:center; gap:var(--space-2); font-size:0.8125rem; color:var(--text-muted); margin-bottom:var(--space-5); }
+    .breadcrumb a { color:var(--text-muted); transition:color var(--t-fast); }
+    .breadcrumb a:hover { color:var(--accent); }
+    .breadcrumb span { color:var(--border-hover); }
+
+    .page-header__eyebrow { margin-bottom: var(--space-4); }
+    .page-header__title { font-family:var(--font-display); font-size:clamp(2rem,4vw,3.5rem); font-weight:800; letter-spacing:-0.03em; line-height:1.08; margin-bottom:var(--space-5); position:relative; z-index:1; }
+    .page-header__title span { color:var(--accent); }
+    .page-header__sub { font-size:1.0625rem; color:var(--text-secondary); max-width:600px; line-height:1.65; position:relative; z-index:1; margin-bottom:var(--space-8); }
+    .page-header__tags { display:flex; gap:var(--space-2); flex-wrap:wrap; position:relative; z-index:1; }
+    .page-header__tag { padding:4px 12px; border-radius:var(--r-full); font-size:0.75rem; font-weight:500; background:rgba(255,255,255,0.05); border:1px solid var(--border); color:var(--text-muted); }
+
+    /* ── RANKING OVERVIEW ─────────────────────────────── */
+    .ranking-overview { padding: var(--space-16) 0; border-bottom: 1px solid var(--border); background: var(--bg-surface); }
+    .ranking-overview__title { font-family:var(--font-display); font-size:1.25rem; font-weight:700; margin-bottom:var(--space-8); }
+    .ranking-list { display:grid; grid-template-columns:repeat(2,1fr); gap:var(--space-3); }
+    .ranking-item {
+      display:flex; align-items:center; gap:var(--space-4);
+      background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-md);
+      padding:var(--space-4) var(--space-5);
+      transition:border-color var(--t-fast);
+      text-decoration:none;
+    }
+    .ranking-item:hover { border-color:var(--border-hover); }
+    .ranking-item--top { border-color:rgba(240,165,0,0.3); }
+    .ranking-item__num { font-family:var(--font-display); font-size:1.375rem; font-weight:800; color:var(--text-muted); min-width:32px; }
+    .ranking-item--top .ranking-item__num { color:var(--accent); }
+    .ranking-item__name { font-family:var(--font-display); font-size:0.9375rem; font-weight:700; color:var(--text-primary); margin-bottom:2px; }
+    .ranking-item__desc { font-size:0.75rem; color:var(--text-muted); }
+    .ranking-item__score { margin-left:auto; font-size:0.8125rem; font-weight:600; color:var(--accent); white-space:nowrap; }
+
+    /* ── TOOL ARTICLES ────────────────────────────────── */
+    .tools-section { padding: var(--space-20) 0; }
+    .tools-layout { display:grid; grid-template-columns:1fr 280px; gap:var(--space-12); align-items:start; }
+
+    .tool-article {
+      background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-xl);
+      overflow:hidden; margin-bottom:var(--space-8);
+      transition:border-color var(--t-base);
+    }
+    .tool-article:hover { border-color:var(--border-hover); }
+    .tool-article--top { border-color:rgba(240,165,0,0.3); }
+    .tool-article__header {
+      display:flex; align-items:flex-start; gap:var(--space-6);
+      padding:var(--space-8); border-bottom:1px solid var(--border);
+      flex-wrap:wrap;
+    }
+    .tool-article__rank {
+      width:56px; height:56px; flex-shrink:0;
+      border-radius:var(--r-md); border:2px solid var(--border);
+      display:flex; align-items:center; justify-content:center;
+      font-family:var(--font-display); font-size:1.5rem; font-weight:800; color:var(--text-muted);
+      background:var(--bg-elevated);
+    }
+    .tool-article--top .tool-article__rank { border-color:var(--accent); color:var(--accent); background:var(--accent-glow); }
+    .tool-article__header-info { flex:1; min-width:200px; }
+    .tool-article__name { font-family:var(--font-display); font-size:1.375rem; font-weight:800; letter-spacing:-0.02em; margin-bottom:var(--space-1); }
+    .tool-article__type { font-size:0.875rem; color:var(--text-muted); margin-bottom:var(--space-4); }
+    .tool-article__scores { display:flex; gap:var(--space-4); flex-wrap:wrap; }
+    .score-pill {
+      display:flex; flex-direction:column; align-items:center;
+      padding:var(--space-3) var(--space-4); border-radius:var(--r-md);
+      background:var(--bg-elevated); border:1px solid var(--border);
+      min-width:72px;
+    }
+    .score-pill__value { font-family:var(--font-display); font-size:1.125rem; font-weight:800; color:var(--text-primary); }
+    .tool-article--top .score-pill__value { color:var(--accent); }
+    .score-pill__label { font-size:0.6875rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; white-space:nowrap; }
+    .tool-article__verdict {
+      background:var(--accent-glow); border:1px solid rgba(240,165,0,0.2); border-radius:var(--r-md);
+      padding:var(--space-3) var(--space-4); font-size:0.875rem; color:var(--accent-light);
+      line-height:1.5; align-self:flex-start; flex-shrink:0; max-width:220px;
+    }
+    .tool-article__verdict strong { display:block; font-weight:700; margin-bottom:2px; color:var(--accent); }
+    .tool-article__body { padding:var(--space-8); }
+    .tool-article__desc { font-size:0.9375rem; color:var(--text-secondary); line-height:1.7; margin-bottom:var(--space-6); }
+    .tool-article__subtitle { font-family:var(--font-display); font-size:0.875rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-muted); margin-bottom:var(--space-3); }
+    .feature-tags { display:flex; flex-wrap:wrap; gap:var(--space-2); margin-bottom:var(--space-6); }
+    .feature-tag {
+      display:inline-flex; align-items:center; gap:5px;
+      padding:5px 12px; border-radius:var(--r-full);
+      font-size:0.75rem; font-weight:500;
+      background:rgba(255,255,255,0.04); border:1px solid var(--border); color:var(--text-secondary);
+    }
+    .feature-tag::before { content:'✓'; color:var(--success); font-size:0.6875rem; }
+    .tool-article__use-for { font-size:0.875rem; color:var(--text-muted); padding:var(--space-4) var(--space-5); background:var(--bg-elevated); border-radius:var(--r-md); }
+    .tool-article__use-for strong { color:var(--text-primary); }
+    .tool-article__cta { padding:0 var(--space-8) var(--space-8); }
+
+    /* ── SIDEBAR ─────────────────────────────────────── */
+    .sticky-sidebar { position:sticky; top:80px; display:flex; flex-direction:column; gap:var(--space-5); }
+    .toc-widget { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-lg); padding:var(--space-6); }
+    .toc-widget__title { font-family:var(--font-display); font-size:0.875rem; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; margin-bottom:var(--space-4); }
+    .toc-links { display:flex; flex-direction:column; gap:var(--space-1); }
+    .toc-link { display:flex; align-items:center; gap:var(--space-2); font-size:0.8125rem; color:var(--text-muted); padding:6px 10px; border-radius:var(--r-sm); transition:all var(--t-fast); border-left:2px solid transparent; }
+    .toc-link:hover { color:var(--accent); border-left-color:var(--accent); background:var(--accent-glow); }
+    .toc-link__num { font-family:var(--font-mono); font-size:0.6875rem; color:var(--text-muted); width:18px; flex-shrink:0; }
+    .related-widget { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-lg); padding:var(--space-6); }
+    .related-widget__title { font-family:var(--font-display); font-size:0.875rem; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; margin-bottom:var(--space-4); }
+    .related-links { display:flex; flex-direction:column; gap:var(--space-3); }
+    .related-link { font-size:0.875rem; color:var(--text-secondary); display:flex; align-items:flex-start; gap:var(--space-2); transition:color var(--t-fast); line-height:1.4; }
+    .related-link:hover { color:var(--accent); }
+
+    /* ── SUMMARY TABLE ───────────────────────────────── */
+    .summary-table { padding:var(--space-16) 0; background:var(--bg-surface); border-top:1px solid var(--border); }
+    .summary-table__title { font-family:var(--font-display); font-size:clamp(1.5rem,2.5vw,2rem); font-weight:800; letter-spacing:-0.025em; margin-bottom:var(--space-3); }
+    .summary-table__title span { color:var(--accent); }
+    .summary-table__sub { font-size:0.9375rem; color:var(--text-secondary); margin-bottom:var(--space-10); }
+    .table-wrap { overflow-x:auto; border-radius:var(--r-lg); border:1px solid var(--border); }
+    table { width:100%; border-collapse:collapse; font-size:0.875rem; }
+    thead { background:var(--bg-elevated); }
+    th { padding:14px 16px; text-align:left; font-family:var(--font-display); font-size:0.8125rem; font-weight:700; color:var(--text-secondary); letter-spacing:0.04em; text-transform:uppercase; border-bottom:1px solid var(--border); white-space:nowrap; }
+    th.col-h { color:var(--accent); }
+    td { padding:12px 16px; color:var(--text-secondary); border-bottom:1px solid var(--border); vertical-align:middle; }
+    tr:last-child td { border-bottom:none; }
+    tr:hover td { background:rgba(255,255,255,0.02); }
+    td.col-h { background:rgba(240,165,0,0.04); }
+    td:first-child { font-weight:600; color:var(--text-primary); }
+    .check { color:var(--success); } .cross { color:var(--error); } .partial { color:var(--accent); }
+
+    @media (max-width:1100px) { .tools-layout { grid-template-columns:1fr; } .sticky-sidebar { position:static; } }
+    @media (max-width:800px)  { .ranking-list { grid-template-columns:1fr; } .tool-article__header { flex-direction:column; } .tool-article__verdict { max-width:100%; } }
+    @media (max-width:600px)  { .tool-article__scores { gap:var(--space-2); } .score-pill { min-width:60px; padding:var(--space-2) var(--space-3); } }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="page-header__bg"></div>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="https://www.builtattic.com/">Builtattic</a><span>›</span>
+          <a href="/pages/floor-plan-generator/homepage.html">Floor Plan Generator</a><span>›</span>
+          <a href="/pages/floor-plan-generator/blog/AI-floor-plan-generator-in-2026.html">Blog</a><span>›</span>
+          <span style="color:var(--text-secondary)">Top 7 AI Tools</span>
+        </nav>
+        <div class="page-header__eyebrow animate-fade-up">
+          <span class="badge badge-accent label">Ranked · 2025</span>
+        </div>
+        <h1 class="page-header__title animate-fade-up delay-1">Top <span>7 AI Tools</span> for<br>Architecture in 2025</h1>
+        <p class="page-header__sub animate-fade-up delay-2">We tested every major AI architecture tool — from floor plan generators to automated MEP design and generative rendering. Here's what's actually worth using.</p>
+        <div class="page-header__tags animate-fade-up delay-3">
+          <span class="page-header__tag">AI Floor Plan Generator</span>
+          <span class="page-header__tag">MEP Automation</span>
+          <span class="page-header__tag">3D Rendering</span>
+          <span class="page-header__tag">Generative Design</span>
+          <span class="page-header__tag">Construction AI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RANKING OVERVIEW -->
+    <section class="ranking-overview">
+      <div class="container">
+        <h2 class="ranking-overview__title">All 7 Tools at a Glance</h2>
+        <div class="ranking-list">
+          <a href="#tool-1" class="ranking-item ranking-item--top">
+            <span class="ranking-item__num">01</span>
+            <div><div class="ranking-item__name">⬡ Vitruvi by Builtattic</div><div class="ranking-item__desc">AI floor plan generator + MEP + 3D views</div></div>
+            <span class="ranking-item__score">★ 4.8</span>
+          </a>
+          <a href="#tool-2" class="ranking-item">
+            <span class="ranking-item__num">02</span>
+            <div><div class="ranking-item__name">🎨 Midjourney + Architecture</div><div class="ranking-item__desc">AI concept rendering & moodboards</div></div>
+            <span class="ranking-item__score">★ 4.2</span>
+          </a>
+          <a href="#tool-3" class="ranking-item">
+            <span class="ranking-item__num">03</span>
+            <div><div class="ranking-item__name">🤖 Autodesk Forma</div><div class="ranking-item__desc">AI-powered early-stage design analysis</div></div>
+            <span class="ranking-item__score">★ 4.1</span>
+          </a>
+          <a href="#tool-4" class="ranking-item">
+            <span class="ranking-item__num">04</span>
+            <div><div class="ranking-item__name">🌿 Spacemaker (Autodesk)</div><div class="ranking-item__desc">Generative site planning & feasibility</div></div>
+            <span class="ranking-item__score">★ 3.9</span>
+          </a>
+          <a href="#tool-5" class="ranking-item">
+            <span class="ranking-item__num">05</span>
+            <div><div class="ranking-item__name">📐 TestFit</div><div class="ranking-item__desc">Rapid building feasibility & massing</div></div>
+            <span class="ranking-item__score">★ 3.8</span>
+          </a>
+          <a href="#tool-6" class="ranking-item">
+            <span class="ranking-item__num">06</span>
+            <div><div class="ranking-item__name">🔮 Stable Diffusion (Arch)</div><div class="ranking-item__desc">AI image generation for concept design</div></div>
+            <span class="ranking-item__score">★ 3.5</span>
+          </a>
+          <a href="#tool-7" class="ranking-item">
+            <span class="ranking-item__num">07</span>
+            <div><div class="ranking-item__name">📊 Hypar</div><div class="ranking-item__desc">Generative BIM and building functions</div></div>
+            <span class="ranking-item__score">★ 3.4</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT + SIDEBAR -->
+    <section class="tools-section">
+      <div class="container">
+        <div class="tools-layout">
+
+          <!-- TOOL ARTICLES -->
+          <div>
+
+            <!-- Tool 1 — Vitruvi -->
+            <article class="tool-article tool-article--top" id="tool-1">
+              <div class="tool-article__header">
+                <div class="tool-article__rank">01</div>
+                <div class="tool-article__header-info">
+                  <div class="tool-article__name">⬡ Vitruvi by Builtattic</div>
+                  <div class="tool-article__type">AI Floor Plan Generator · MEP Automation · 3D Views · Construction Suite</div>
+                  <div class="tool-article__scores">
+                    <div class="score-pill"><span class="score-pill__value">4.8</span><span class="score-pill__label">Overall</span></div>
+                    <div class="score-pill"><span class="score-pill__value">5.0</span><span class="score-pill__label">Speed</span></div>
+                    <div class="score-pill"><span class="score-pill__value">4.9</span><span class="score-pill__label">Value</span></div>
+                    <div class="score-pill"><span class="score-pill__value">4.7</span><span class="score-pill__label">Output</span></div>
+                  </div>
+                </div>
+                <div class="tool-article__verdict">
+                  <strong>Our Pick</strong>
+                  Best all-in-one AI floor plan tool for architects, engineers, and homeowners in 2025.
+                </div>
+              </div>
+              <div class="tool-article__body">
+                <p class="tool-article__desc">Vitruvi is the standout AI floor plan generator in this list — and the only tool that covers the full workflow from initial concept to construction-ready documentation. You describe your project in plain language (plot size, number of rooms, building type, regional preferences), and Vitruvi generates a complete 2D floor plan with dimensions and room labels, automatically adds MEP overlays (electrical, plumbing, HVAC), and produces a 3D view — all without any CAD skills.</p>
+                <p class="tool-article__desc">What sets it apart is regional intelligence. Vitruvi is the only tool tested that adapts output to local building norms — Vastu compliance for India, Part M for UK, NCC for Australia, NBC for Canada, and more. It's also the most affordable — at ₹999/month (~$12 USD), it bundles 9 construction tools including client leads (Faust), resource calculator (Vision), property valuator, and construction timeline.</p>
+                <div class="tool-article__subtitle">Key Features</div>
+                <div class="feature-tags">
+                  <span class="feature-tag">Plain-language AI input</span>
+                  <span class="feature-tag">Automatic MEP overlays</span>
+                  <span class="feature-tag">3D view generation</span>
+                  <span class="feature-tag">PDF + DWG export</span>
+                  <span class="feature-tag">9+ region compliance</span>
+                  <span class="feature-tag">Vastu support</span>
+                  <span class="feature-tag">Free tier available</span>
+                  <span class="feature-tag">9 bundled tools</span>
+                </div>
+                <div class="tool-article__use-for"><strong>Best for:</strong> Architects wanting rapid concept plans, MEP engineers, property developers, homeowners designing their self-build, and construction firms across India, UK, US, Canada, Australia, Netherlands, and Japan.</div>
+              </div>
+              <div class="tool-article__cta">
+                <a href="https://www.builtattic.com/collections/access" class="btn btn-primary">Try Vitruvi Free →</a>
+                <a href="/pages/floor-plan-generator/homepage.html" class="btn btn-secondary" style="margin-left:var(--space-3)">See Full Feature Page</a>
+              </div>
+            </article>
+
+            <!-- Tool 2 — Midjourney -->
+            <article class="tool-article" id="tool-2">
+              <div class="tool-article__header">
+                <div class="tool-article__rank">02</div>
+                <div class="tool-article__header-info">
+                  <div class="tool-article__name">🎨 Midjourney (Architecture)</div>
+                  <div class="tool-article__type">AI Image Generation · Concept Rendering · Moodboards</div>
+                  <div class="tool-article__scores">
+                    <div class="score-pill"><span class="score-pill__value">4.2</span><span class="score-pill__label">Overall</span></div>
+                    <div class="score-pill"><span class="score-pill__value">4.5</span><span class="score-pill__label">Visuals</span></div>
+                    <div class="score-pill"><span class="score-pill__value">3.8</span><span class="score-pill__label">Utility</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tool-article__body">
+                <p class="tool-article__desc">Midjourney has become an indispensable tool for architects creating concept visuals, client moodboards, and early-stage exterior renders. It cannot generate actual floor plans or technical drawings, but for visual communication and design exploration, nothing matches its output quality. Architects use it to rapidly explore facade styles, material palettes, and building aesthetics before committing to technical design work.</p>
+                <div class="tool-article__subtitle">Key Features</div>
+                <div class="feature-tags">
+                  <span class="feature-tag">Photorealistic renders</span>
+                  <span class="feature-tag">Facade & exterior design</span>
+                  <span class="feature-tag">Material exploration</span>
+                  <span class="feature-tag">Client presentation visuals</span>
+                  <span class="feature-tag">Rapid concept iteration</span>
+                </div>
+                <div class="tool-article__use-for"><strong>Best for:</strong> Creating concept visuals and client presentation boards. <strong>Not suitable</strong> for technical floor plans or construction documentation — use alongside <a href="/pages/floor-plan-generator/homepage.html" style="color:var(--accent)">Vitruvi</a> for the full workflow.</div>
+              </div>
+            </article>
+
+            <!-- Tool 3 — Autodesk Forma -->
+            <article class="tool-article" id="tool-3">
+              <div class="tool-article__header">
+                <div class="tool-article__rank">03</div>
+                <div class="tool-article__header-info">
+                  <div class="tool-article__name">🤖 Autodesk Forma</div>
+                  <div class="tool-article__type">AI Early-Stage Design Analysis · Wind, Sun, Noise Simulation</div>
+                  <div class="tool-article__scores">
+                    <div class="score-pill"><span class="score-pill__value">4.1</span><span class="score-pill__label">Overall</span></div>
+                    <div class="score-pill"><span class="score-pill__value">4.6</span><span class="score-pill__label">Analysis</span></div>
+                    <div class="score-pill"><span class="score-pill__value">3.2</span><span class="score-pill__label">Value</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tool-article__body">
+                <p class="tool-article__desc">Autodesk Forma (formerly Spacemaker) brings AI-driven environmental analysis to early-stage design — simulating wind flow, sunlight exposure, daylight quality, and noise levels across a site before a single wall is placed. It's a powerful tool for large-scale residential and commercial projects where site performance matters. The downside: it's priced for enterprise and requires a meaningful learning investment.</p>
+                <div class="tool-article__subtitle">Key Features</div>
+                <div class="feature-tags">
+                  <span class="feature-tag">Wind simulation</span>
+                  <span class="feature-tag">Solar analysis</span>
+                  <span class="feature-tag">Noise mapping</span>
+                  <span class="feature-tag">Daylight compliance</span>
+                  <span class="feature-tag">Revit integration</span>
+                </div>
+                <div class="tool-article__use-for"><strong>Best for:</strong> Large-scale residential developers and urban planning firms doing site performance analysis. Not suitable for individual house floor plans or small projects.</div>
+              </div>
+            </article>
+
+            <!-- Tool 4 — Spacemaker -->
+            <article class="tool-article" id="tool-4">
+              <div class="tool-article__header">
+                <div class="tool-article__rank">04</div>
+                <div class="tool-article__header-info">
+                  <div class="tool-article__name">🌿 Spacemaker (Autodesk)</div>
+                  <div class="tool-article__type">Generative Site Planning · Feasibility Studies</div>
+                  <div class="tool-article__scores">
+                    <div class="score-pill"><span class="score-pill__value">3.9</span><span class="score-pill__label">Overall</span></div>
+                    <div class="score-pill"><span class="score-pill__value">4.4</span><span class="score-pill__label">Planning</span></div>
+                    <div class="score-pill"><span class="score-pill__value">2.8</span><span class="score-pill__label">Value</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tool-article__body">
+                <p class="tool-article__desc">Now integrated into Autodesk Forma, Spacemaker's generative design capabilities allow developers to explore hundreds of site layout options against planning constraints, GFA targets, and unit mix requirements — automatically. Excellent for property developers and urban designers, but overkill for anything below large residential or commercial schemes.</p>
+                <div class="tool-article__subtitle">Key Features</div>
+                <div class="feature-tags">
+                  <span class="feature-tag">Generative massing</span>
+                  <span class="feature-tag">GFA optimisation</span>
+                  <span class="feature-tag">Planning constraint analysis</span>
+                  <span class="feature-tag">Unit mix modelling</span>
+                </div>
+                <div class="tool-article__use-for"><strong>Best for:</strong> Large property developers and urban planners optimising residential site layouts. For individual floor plan generation, <a href="/pages/floor-plan-generator/" style="color:var(--accent)">Vitruvi</a> is the better fit.</div>
+              </div>
+            </article>
+
+            <!-- Tool 5 — TestFit -->
+            <article class="tool-article" id="tool-5">
+              <div class="tool-article__header">
+                <div class="tool-article__rank">05</div>
+                <div class="tool-article__header-info">
+                  <div class="tool-article__name">📐 TestFit</div>
+                  <div class="tool-article__type">Rapid Building Feasibility · Massing & Unit Layout</div>
+                  <div class="tool-article__scores">
+                    <div class="score-pill"><span class="score-pill__value">3.8</span><span class="score-pill__label">Overall</span></div>
+                    <div class="score-pill"><span class="score-pill__value">4.3</span><span class="score-pill__label">Speed</span></div>
+                    <div class="score-pill"><span class="score-pill__value">3.0</span><span class="score-pill__label">Value</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tool-article__body">
+                <p class="tool-article__desc">TestFit automates building feasibility studies — generating parking layouts, unit configurations, and building massing that fits a given site in minutes. Used primarily by developers and their architects at the very earliest stage of a project to check viability before investing in full design. Strong for multifamily residential and mixed-use schemes in North America.</p>
+                <div class="tool-article__subtitle">Key Features</div>
+                <div class="feature-tags">
+                  <span class="feature-tag">Automated parking layouts</span>
+                  <span class="feature-tag">Unit configuration</span>
+                  <span class="feature-tag">Building massing</span>
+                  <span class="feature-tag">Feasibility reporting</span>
+                </div>
+                <div class="tool-article__use-for"><strong>Best for:</strong> Real estate developers and architects in North America running feasibility studies on multifamily sites.</div>
+              </div>
+            </article>
+
+            <!-- Tool 6 — Stable Diffusion -->
+            <article class="tool-article" id="tool-6">
+              <div class="tool-article__header">
+                <div class="tool-article__rank">06</div>
+                <div class="tool-article__header-info">
+                  <div class="tool-article__name">🔮 Stable Diffusion (Architecture)</div>
+                  <div class="tool-article__type">Open-source AI Image Generation · Sketch-to-Render</div>
+                  <div class="tool-article__scores">
+                    <div class="score-pill"><span class="score-pill__value">3.5</span><span class="score-pill__label">Overall</span></div>
+                    <div class="score-pill"><span class="score-pill__value">4.0</span><span class="score-pill__label">Flexibility</span></div>
+                    <div class="score-pill"><span class="score-pill__value">4.5</span><span class="score-pill__label">Cost</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tool-article__body">
+                <p class="tool-article__desc">Stable Diffusion with architecture-specific ControlNet models allows architects to transform rough sketches or floor plan outlines into photorealistic render concepts. Free and highly customisable, but requires technical setup and prompt engineering skill. Less polished than Midjourney but more controllable — particularly useful for sketch-to-render workflows.</p>
+                <div class="tool-article__subtitle">Key Features</div>
+                <div class="feature-tags">
+                  <span class="feature-tag">Sketch-to-render</span>
+                  <span class="feature-tag">ControlNet support</span>
+                  <span class="feature-tag">Open source / free</span>
+                  <span class="feature-tag">Highly customisable</span>
+                </div>
+                <div class="tool-article__use-for"><strong>Best for:</strong> Tech-savvy architects and students who want free AI rendering and are comfortable with local installation and prompting.</div>
+              </div>
+            </article>
+
+            <!-- Tool 7 — Hypar -->
+            <article class="tool-article" id="tool-7">
+              <div class="tool-article__header">
+                <div class="tool-article__rank">07</div>
+                <div class="tool-article__header-info">
+                  <div class="tool-article__name">📊 Hypar</div>
+                  <div class="tool-article__type">Generative BIM · Building Function Automation</div>
+                  <div class="tool-article__scores">
+                    <div class="score-pill"><span class="score-pill__value">3.4</span><span class="score-pill__label">Overall</span></div>
+                    <div class="score-pill"><span class="score-pill__value">4.1</span><span class="score-pill__label">BIM</span></div>
+                    <div class="score-pill"><span class="score-pill__value">2.8</span><span class="score-pill__label">Ease</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tool-article__body">
+                <p class="tool-article__desc">Hypar is a generative BIM platform that automates building element generation — from structural grids to MEP routing — through programmable functions. Powerful for BIM-heavy firms wanting to automate repetitive modelling tasks. Steep learning curve and primarily suited for larger architecture and engineering practices with existing BIM workflows.</p>
+                <div class="tool-article__subtitle">Key Features</div>
+                <div class="feature-tags">
+                  <span class="feature-tag">Generative BIM elements</span>
+                  <span class="feature-tag">Programmable functions</span>
+                  <span class="feature-tag">IFC export</span>
+                  <span class="feature-tag">Structural automation</span>
+                </div>
+                <div class="tool-article__use-for"><strong>Best for:</strong> Large AEC firms with existing BIM infrastructure wanting to automate repetitive modelling tasks.</div>
+              </div>
+            </article>
+
+            <!-- Internal nav -->
+            <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:var(--space-6) var(--space-8);display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;margin-top:var(--space-4)">
+              <p style="font-size:0.9375rem;color:var(--text-secondary)">Want to <strong style="color:var(--text-primary)">compare tools head to head</strong> or see <strong style="color:var(--text-primary)">who uses Vitruvi</strong>?</p>
+              <div style="display:flex;gap:var(--space-3);flex-wrap:wrap">
+                <a href="/pages/floor-plan-generator/comparisons/free-vs-paid-floor-plan-generators.html" class="btn btn-secondary btn-sm">⚖️ Compare All Tools</a>
+                <a href="/pages/floor-plan-generator/use-cases/who-uses-an-AI-floor-plan-generator.html" class="btn btn-secondary btn-sm">👤 See Use Cases</a>
+                <a href="/pages/floor-plan-generator/blog/AI-floor-plan-generator-in-2026.html" class="btn btn-secondary btn-sm">📝 Read More Articles</a>
+              </div>
+            </div>
+
+          </div><!-- /tool articles -->
+
+          <!-- SIDEBAR -->
+          <aside class="sticky-sidebar">
+            <div class="toc-widget">
+              <div class="toc-widget__title">Jump to Tool</div>
+              <div class="toc-links">
+                <a href="#tool-1" class="toc-link"><span class="toc-link__num">01</span>Vitruvi by Builtattic</a>
+                <a href="#tool-2" class="toc-link"><span class="toc-link__num">02</span>Midjourney</a>
+                <a href="#tool-3" class="toc-link"><span class="toc-link__num">03</span>Autodesk Forma</a>
+                <a href="#tool-4" class="toc-link"><span class="toc-link__num">04</span>Spacemaker</a>
+                <a href="#tool-5" class="toc-link"><span class="toc-link__num">05</span>TestFit</a>
+                <a href="#tool-6" class="toc-link"><span class="toc-link__num">06</span>Stable Diffusion</a>
+                <a href="#tool-7" class="toc-link"><span class="toc-link__num">07</span>Hypar</a>
+              </div>
+            </div>
+
+            <div style="background:linear-gradient(135deg,var(--bg-elevated),var(--bg-card));border:1px solid rgba(240,165,0,0.2);border-radius:var(--r-lg);padding:var(--space-6);text-align:center;">
+              <div style="font-size:2rem;margin-bottom:var(--space-3)">⬡</div>
+              <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:var(--space-2)">#1 Pick: Vitruvi</div>
+              <p style="font-size:0.8125rem;color:var(--text-secondary);margin-bottom:var(--space-5);line-height:1.5">The only tool with AI floor plan generation, MEP overlays, 3D views, and regional compliance in one place.</p>
+              <a href="https://www.builtattic.com/collections/access" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">Try Free →</a>
+            </div>
+
+            <div class="related-widget">
+              <div class="related-widget__title">Related Reading</div>
+              <div class="related-links">
+                <a href="/pages/floor-plan-generator/comparisons/free-vs-paid-floor-plan-generators.html" class="related-link">⚖️ Free vs Paid Floor Plan Tools</a>
+                <a href="/pages/floor-plan-generator/use-cases/who-uses-an-AI-floor-plan-generator.html" class="related-link">👤 Who Uses Vitruvi?</a>
+                <a href="/pages/floor-plan-generator/blog/AI-floor-plan-generator-in-2026.html" class="related-link">📝 Floor Plan Generator Blog</a>
+                <a href="/pages/floor-plan-generator/homepage.html" class="related-link">🗺️ Vitruvi — Full Feature Page</a>
+                <a href="https://www.builtattic.com/pages/vision" class="related-link">🔢 Vision — Resource Calculator</a>
+              </div>
+            </div>
+          </aside>
+
+        </div><!-- /.tools-layout -->
+      </div>
+    </section>
+
+    <!-- SUMMARY TABLE -->
+    <section class="summary-table">
+      <div class="container">
+        <h2 class="summary-table__title">All 7 Tools — <span>Quick Summary</span></h2>
+        <p class="summary-table__sub">Which tool is right for your workflow?</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Tool</th>
+                <th class="col-h">Floor Plans</th>
+                <th>MEP</th>
+                <th>3D</th>
+                <th>Regional</th>
+                <th>Free Tier</th>
+                <th>Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td><strong>⬡ Vitruvi</strong></td><td class="col-h"><span class="check">✓</span> AI</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span> 9+</td><td><span class="check">✓</span></td><td>Everyone</td></tr>
+              <tr><td>2</td><td>🎨 Midjourney</td><td><span class="cross">✕</span></td><td><span class="cross">✕</span></td><td><span class="check">✓</span></td><td><span class="cross">✕</span></td><td><span class="partial">~</span></td><td>Visuals only</td></tr>
+              <tr><td>3</td><td>🤖 Autodesk Forma</td><td><span class="partial">~</span></td><td><span class="partial">~</span></td><td><span class="check">✓</span></td><td><span class="cross">✕</span></td><td><span class="cross">✕</span></td><td>Large firms</td></tr>
+              <tr><td>4</td><td>🌿 Spacemaker</td><td><span class="partial">~</span></td><td><span class="cross">✕</span></td><td><span class="check">✓</span></td><td><span class="cross">✕</span></td><td><span class="cross">✕</span></td><td>Developers</td></tr>
+              <tr><td>5</td><td>📐 TestFit</td><td><span class="partial">~</span></td><td><span class="cross">✕</span></td><td><span class="check">✓</span></td><td><span class="cross">✕</span></td><td><span class="cross">✕</span></td><td>Feasibility</td></tr>
+              <tr><td>6</td><td>🔮 Stable Diffusion</td><td><span class="cross">✕</span></td><td><span class="cross">✕</span></td><td><span class="check">✓</span></td><td><span class="cross">✕</span></td><td><span class="check">✓</span></td><td>Tech users</td></tr>
+              <tr><td>7</td><td>📊 Hypar</td><td><span class="partial">~</span></td><td><span class="partial">~</span></td><td><span class="check">✓</span></td><td><span class="cross">✕</span></td><td><span class="partial">~</span></td><td>BIM firms</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="cta-hero-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    const components = [
+      { id: 'navbar-placeholder',   file: '/src/components/navbar.html'   },
+      { id: 'cta-hero-placeholder', file: '/src/components/cta-hero.html' },
+      { id: 'footer-placeholder',   file: '/src/components/footer.html'   },
+    ];
+    Promise.all(components.map(({ id, file }) =>
+      fetch(file).then(r => r.text()).then(html => {
+        const el = document.getElementById(id); if (el) el.outerHTML = html;
+      }).catch(console.warn)
+    )).then(() => {
+      document.querySelectorAll('.animate-fade-up').forEach(el => {
+        el.style.animationPlayState = 'paused';
+        new IntersectionObserver(([e]) => { if (e.isIntersecting) el.style.animationPlayState = 'running'; }, { threshold: 0.1 }).observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
