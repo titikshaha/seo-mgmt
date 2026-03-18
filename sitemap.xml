@@ -7,39 +7,76 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.builtattic.in/home</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://www.builtattic.in/pages/how-ai-floor-plans-work</loc>
     <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://www.builtattic.in/pages/floor-plan-generator/homepage</loc>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.builtattic.in/pages/floor-plan-generator/blog/AI-floor-plan-generator-in-2026</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.builtattic.in/pages/floor-plan-generator/comparisons/free-vs-paid-floor-plan-generators</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.builtattic.in/pages/floor-plan-generator/pages/7-AI-tools-architects-are-using-instead-of-AutoCAD</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.builtattic.in/pages/floor-plan-generator/use-cases/who-uses-an-AI-floor-plan-generator</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://www.builtattic.in/pages/is-an-ai-floor-plan-accurate</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.builtattic.in/pages/best-architecture-ai-solution-online</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://www.builtattic.in/pages/how-to-generate-floor-plan-online</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://www.builtattic.in/pages/can-ai-replace-architects-floor-plans</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://www.builtattic.in/pages/what-drawings-are-needed-for-construction</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
   </url>
 </urlset>
