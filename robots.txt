@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://builtattic.in/sitemap.xml
+Sitemap: https://www.builtattic.in/sitemap.xml

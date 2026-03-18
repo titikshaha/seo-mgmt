@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-94Z58CXG3E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-94Z58CXG3E');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Builtattic — AI Construction & Architecture Tools | Floor Plans, Cost Estimators, Project Management</title>
+  <meta name="description" content="Builtattic is the all-in-one AI platform for the construction and architecture industry. Generate floor plans, estimate construction costs, find client leads, manage projects, value properties, and hire architects — all in one place. Trusted by professionals across India, UK, US, Canada, Australia, Netherlands and Japan.">
+  <meta name="keywords" content="AI floor plan generator, construction cost estimator, property valuation tool, construction project management app, hire architect online, construction material supplier, construction timeline generator, ready to build house plans, property hotspot finder, AI architecture tools India, construction software for architects, building cost calculator, online floor plan maker, ghar ka naksha AI, construction management app India, best AI tools for architects 2025, vastu floor plan generator">
+  <link rel="canonical" href="https://www.builtattic.in/">
+  <meta property="og:title" content="Builtattic — AI Platform for Construction & Architecture">
+  <meta property="og:description" content="9 AI-powered tools for architects, engineers, contractors and homeowners. Floor plans, cost estimation, project management, property valuation and more.">
+  <meta property="og:url" content="https://www.builtattic.in/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Builtattic","url":"https://www.builtattic.in","description":"AI-powered construction and architecture platform with 9 tools for professionals and homeowners worldwide.","publisher":{"@type":"Organization","name":"Builtattic","url":"https://www.builtattic.com"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Builtattic AI Construction Tools","itemListElement":[{"@type":"ListItem","position":1,"name":"AI Floor Plan Generator","url":"https://www.builtattic.in/floor-plan-generator/"},{"@type":"ListItem","position":2,"name":"Property Hotspot Finder","url":"https://www.builtattic.in/property-hotspot-finder/"},{"@type":"ListItem","position":3,"name":"Construction Management App","url":"https://www.builtattic.in/construction-management-app/"},{"@type":"ListItem","position":4,"name":"Ready-to-Build Designs","url":"https://www.builtattic.in/ready-to-build-designs/"},{"@type":"ListItem","position":5,"name":"Construction Material Estimator","url":"https://www.builtattic.in/construction-material-estimator/"},{"@type":"ListItem","position":6,"name":"Hire an Architect","url":"https://www.builtattic.in/hire-an-architect/"},{"@type":"ListItem","position":7,"name":"Property Valuation Tool","url":"https://www.builtattic.in/property-valuation-tool/"},{"@type":"ListItem","position":8,"name":"Construction Material Suppliers","url":"https://www.builtattic.in/construction-material-suppliers/"},{"@type":"ListItem","position":9,"name":"Construction Timeline Generator","url":"https://www.builtattic.in/construction-timeline-generator/"}]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+
+  <style>
+  /* ═══════════════════════════════════════════════════════════
+     BUILTATTIC.IN — DESIGN TOKENS
+     Light (day) default. Dark (night) via [data-theme="dark"]
+  ═══════════════════════════════════════════════════════════ */
+  :root {
+    --paper:      #F4F1EC;
+    --paper-warm: #EDE9E1;
+    --paper-deep: #E5E0D6;
+    --ink:        #111010;
+    --ink-2:      #2A2825;
+    --ink-3:      #4A4743;
+    --ink-4:      #7A7772;
+    --ink-5:      #A8A5A0;
+    --ink-6:      #C8C5C0;
+    --rule:       rgba(17,16,16,0.1);
+    --rule-d:     rgba(17,16,16,0.18);
+    --red:        #C8321A;
+    --red-dark:   #A02210;
+    --red-tint:   rgba(200,50,26,0.07);
+    --sh-sm:      0 1px 3px rgba(17,16,16,0.07);
+    --sh-md:      0 4px 20px rgba(17,16,16,0.1);
+    --sh-red:     0 4px 20px rgba(200,50,26,0.3);
+    --font:       'Montserrat', sans-serif;
+    --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:20px;
+    --s6:24px;--s8:32px;--s10:40px;--s12:48px;
+    --s16:64px;--s20:80px;--s24:96px;
+    --r-xs:3px;--r-sm:6px;--r-md:10px;--r-lg:16px;--r-xl:24px;--r-full:9999px;
+    --ease:cubic-bezier(0.4,0,0.2,1);
+    --tf:120ms var(--ease);--tb:240ms var(--ease);--ts:400ms var(--ease);
+    --w:1200px;
+    /* semantic */
+    --bg:var(--paper);--bg2:var(--paper-warm);--bg3:var(--paper-deep);
+    --t1:var(--ink);--t2:var(--ink-3);--t3:var(--ink-4);--tm:var(--ink-5);
+    --ti:var(--paper);--b1:var(--rule);--b2:var(--rule-d);
+    --inv:#111010;
+  }
+  :root[data-theme="dark"] {
+    --paper:      #1A1916;
+    --paper-warm: #201E1B;
+    --paper-deep: #272420;
+    --ink:        #F0EDE6;
+    --ink-2:      #D8D4CC;
+    --ink-3:      #B0ACA4;
+    --ink-4:      #78746E;
+    --ink-5:      #524F4A;
+    --ink-6:      #3A3733;
+    --rule:       rgba(240,237,230,0.07);
+    --rule-d:     rgba(240,237,230,0.13);
+    --red:        #E04428;
+    --red-dark:   #C83218;
+    --red-tint:   rgba(224,68,40,0.1);
+    --sh-sm:      0 1px 3px rgba(0,0,0,0.4);
+    --sh-md:      0 4px 20px rgba(0,0,0,0.5);
+    --sh-red:     0 4px 24px rgba(224,68,40,0.35);
+    --bg:var(--paper);--bg2:var(--paper-warm);--bg3:var(--paper-deep);
+    --t1:var(--ink);--t2:var(--ink-3);--t3:var(--ink-4);--tm:var(--ink-5);
+    --ti:#F0EDE6;--b1:var(--rule);--b2:var(--rule-d);
+    --inv:#0E0D0B;
+  }
+
+  /* ── RESET ── */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+  body{background:var(--bg);color:var(--t1);font-family:var(--font);font-size:16px;line-height:1.6;overflow-x:hidden;transition:background var(--ts),color var(--ts);}
+  img,video{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  button{cursor:pointer;font-family:inherit;border:none;background:none;}
+  ul,ol{list-style:none;}
+  .wrap{width:100%;max-width:var(--w);margin:0 auto;padding:0 var(--s6);}
+
+  /* ── BUTTONS ── */
+  .btn{display:inline-flex;align-items:center;gap:var(--s2);padding:13px 26px;border-radius:var(--r-sm);font-family:var(--font);font-size:0.875rem;font-weight:700;letter-spacing:0.02em;white-space:nowrap;transition:all var(--tb);}
+  .btn svg{width:14px;height:14px;flex-shrink:0;}
+  .btn-ink{background:var(--t1);color:var(--bg);}
+  .btn-ink:hover{background:var(--red);transform:translateY(-1px);box-shadow:var(--sh-red);}
+  .btn-out{background:transparent;color:var(--t1);border:1.5px solid var(--b2);}
+  .btn-out:hover{border-color:var(--red);color:var(--red);background:var(--red-tint);}
+  .btn-red{background:var(--red);color:#fff;}
+  .btn-red:hover{background:var(--red-dark);transform:translateY(-1px);box-shadow:var(--sh-red);}
+  .btn-sm{padding:9px 18px;font-size:0.8125rem;}
+  .btn-lg{padding:16px 36px;font-size:0.9375rem;}
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+  .rv{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease);}
+  .rv.in{opacity:1;transform:translateY(0);}
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+  /* ═══════════════════════════════════════════════════
+     TOPBAR
+  ═══════════════════════════════════════════════════ */
+  .topbar{background:var(--inv);color:var(--ti);padding:8px var(--s6);font-size:0.6875rem;font-weight:600;letter-spacing:0.05em;display:flex;align-items:center;justify-content:space-between;gap:var(--s4);flex-wrap:wrap;transition:background var(--ts);}
+  .topbar__dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:blink 2s ease-in-out infinite;flex-shrink:0;}
+  .topbar__l{display:flex;align-items:center;gap:var(--s3);}
+  .topbar__r{display:flex;align-items:center;gap:var(--s5);}
+  .topbar__a{color:var(--ink-5);transition:color var(--tf);text-transform:uppercase;letter-spacing:0.08em;}
+  .topbar__a:hover{color:var(--ti);}
+
+  /* ═══════════════════════════════════════════════════
+     NAVBAR
+  ═══════════════════════════════════════════════════ */
+  .nav{background:var(--bg);border-bottom:1.5px solid var(--b2);position:sticky;top:0;z-index:200;transition:background var(--ts),border-color var(--ts),box-shadow var(--tb);}
+  .nav.scrolled{box-shadow:0 4px 24px rgba(17,16,16,0.1);}
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:var(--s4);}
+  .nav__logo{display:flex;align-items:center;gap:var(--s3);font-size:1.125rem;font-weight:900;letter-spacing:-0.03em;text-transform:uppercase;color:var(--t1);flex-shrink:0;transition:color var(--tf);}
+  .nav__logo:hover{color:var(--red);}
+  .nav__logo-box{width:30px;height:30px;background:var(--t1);border-radius:var(--r-xs);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background var(--tb);}
+  .nav__logo:hover .nav__logo-box{background:var(--red);}
+  .nav__logo-box svg{width:16px;height:16px;}
+  .nav__logo-dot{color:var(--red);}
+  .nav__links{display:flex;align-items:center;gap:var(--s1);}
+  .nav__link{padding:7px 12px;border-radius:var(--r-sm);font-size:0.8125rem;font-weight:600;color:var(--t2);transition:color var(--tf),background var(--tf);}
+  .nav__link:hover{color:var(--t1);background:var(--bg2);}
+
+  /* Dropdown */
+  .nav__drop{position:relative;}
+  .nav__drop-toggle{display:flex;align-items:center;gap:4px;cursor:pointer;}
+  .nav__drop-toggle svg{width:12px;height:12px;transition:transform var(--tf);}
+  .nav__drop:hover .nav__drop-toggle svg{transform:rotate(180deg);}
+  .nav__drop-menu{
+    position:absolute;top:calc(100% + 10px);left:50%;
+    transform:translateX(-50%) translateY(-8px);
+    background:var(--bg);border:1.5px solid var(--b2);border-radius:var(--r-lg);
+    padding:var(--s2);min-width:260px;
+    box-shadow:0 12px 40px rgba(17,16,16,0.14);
+    opacity:0;pointer-events:none;
+    transition:opacity var(--tb),transform var(--tb);z-index:300;
+  }
+  .nav__drop:hover .nav__drop-menu{opacity:1;pointer-events:all;transform:translateX(-50%) translateY(0);}
+  .nav__drop-item{display:flex;align-items:flex-start;gap:var(--s3);padding:9px var(--s3);border-radius:var(--r-md);transition:background var(--tf);}
+  .nav__drop-item:hover{background:var(--bg2);}
+  .nav__drop-icon{width:30px;height:30px;flex-shrink:0;background:var(--bg2);border:1px solid var(--b1);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:0.875rem;}
+  .nav__drop-title{font-size:0.8125rem;font-weight:700;color:var(--t1);}
+  .nav__drop-desc{font-size:0.6875rem;color:var(--t3);line-height:1.4;margin-top:1px;}
+
+  /* Theme toggle */
+  .toggle{width:44px;height:24px;background:var(--b2);border-radius:var(--r-full);position:relative;cursor:pointer;border:1.5px solid var(--b2);transition:background var(--tb),border-color var(--tb);flex-shrink:0;display:flex;align-items:center;}
+  .toggle:hover{border-color:var(--red);}
+  .toggle__knob{width:18px;height:18px;border-radius:50%;background:var(--t1);position:absolute;left:2px;display:flex;align-items:center;justify-content:center;transition:transform var(--tb),background var(--tb);font-size:0.6875rem;line-height:1;}
+  .toggle__day{position:absolute;opacity:1;transition:opacity var(--tf);}
+  .toggle__ngt{position:absolute;opacity:0;transition:opacity var(--tf);}
+  :root[data-theme="dark"] .toggle{background:var(--ink-3);}
+  :root[data-theme="dark"] .toggle__knob{transform:translateX(20px);background:var(--paper);}
+  :root[data-theme="dark"] .toggle__day{opacity:0;}
+  :root[data-theme="dark"] .toggle__ngt{opacity:1;}
+
+  .nav__actions{display:flex;align-items:center;gap:var(--s3);flex-shrink:0;}
+  .nav__sep{width:1px;height:20px;background:var(--b2);}
+  .nav__ham{display:none;flex-direction:column;gap:5px;padding:6px;border-radius:var(--r-sm);}
+  .nav__ham span{display:block;width:20px;height:1.5px;background:var(--t1);transition:all var(--tb);}
+  .nav__mob{display:none;flex-direction:column;background:var(--bg);border-top:1px solid var(--b1);}
+  .nav__mob.open{display:flex;}
+  .nav__mob-link{padding:13px var(--s6);font-size:0.9375rem;font-weight:600;color:var(--t2);border-bottom:1px solid var(--b1);transition:color var(--tf),background var(--tf);}
+  .nav__mob-link:hover{color:var(--red);background:var(--red-tint);}
+  .nav__mob-theme{display:flex;align-items:center;justify-content:space-between;padding:13px var(--s6);border-bottom:1px solid var(--b1);font-size:0.875rem;font-weight:600;color:var(--t2);}
+
+  @media(max-width:900px){
+    .nav__links{display:none;}
+    .nav__actions .btn,.nav__actions .nav__sep{display:none;}
+    .nav__actions .toggle{display:flex;}
+    .nav__ham{display:flex;}
+  }
+
+  /* ═══════════════════════════════════════════════════
+     HERO
+  ═══════════════════════════════════════════════════ */
+  .hero{min-height:92vh;display:grid;grid-template-columns:1fr 1fr;border-bottom:1.5px solid var(--b2);overflow:hidden;}
+  .hero__l{
+    padding:var(--s24) var(--s12) var(--s20) calc((100vw - var(--w))/2 + var(--s6));
+    display:flex;flex-direction:column;justify-content:center;
+    border-right:1.5px solid var(--b2);
+  }
+  .hero__issue{display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s8);}
+  .hero__issue-line{flex:1;height:1px;background:var(--b2);}
+  .hero__issue-txt{font-size:0.6875rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--tm);}
+  .hero__eye{font-size:0.6875rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--red);margin-bottom:var(--s6);}
+  .hero__h1{font-size:clamp(3.5rem,6vw,5.75rem);font-weight:900;line-height:.93;letter-spacing:-.045em;text-transform:uppercase;margin-bottom:var(--s8);color:var(--t1);}
+  .hero__h1 span{display:block;}
+  .hero__h1-red{color:var(--red);}
+  .hero__h1-out{-webkit-text-stroke:2px var(--t1);color:transparent;}
+  .hero__sub{font-size:1.0625rem;font-weight:400;color:var(--t2);max-width:480px;line-height:1.7;margin-bottom:var(--s10);}
+  .hero__sub strong{color:var(--t1);font-weight:700;}
+  .hero__btns{display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap;margin-bottom:var(--s10);}
+  .hero__trust{display:flex;align-items:center;gap:var(--s5);flex-wrap:wrap;padding-top:var(--s8);border-top:1px solid var(--b2);}
+  .hero__stat-num{font-size:1.375rem;font-weight:900;color:var(--t1);letter-spacing:-.03em;line-height:1;}
+  .hero__stat-num span{color:var(--red);}
+  .hero__stat-lbl{font-size:0.6875rem;font-weight:700;color:var(--tm);text-transform:uppercase;letter-spacing:.08em;margin-top:2px;}
+  .hero__sep{width:1px;height:32px;background:var(--b2);}
+
+  .hero__r{background:var(--bg2);padding:var(--s12);display:flex;flex-direction:column;justify-content:center;transition:background var(--ts);}
+  .hero__r-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--s5);padding-bottom:var(--s5);border-bottom:1px solid var(--b2);}
+  .hero__r-title{font-size:0.6875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);}
+  .hero__r-count{font-size:0.6875rem;font-weight:800;color:var(--red);letter-spacing:.06em;}
+  .hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);}
+  .hero__tool{background:var(--bg);border:1px solid var(--b1);border-radius:var(--r-md);padding:var(--s5);display:flex;flex-direction:column;gap:var(--s2);position:relative;overflow:hidden;transition:border-color var(--tb),transform var(--tb),box-shadow var(--tb);text-decoration:none;color:inherit;}
+  .hero__tool::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--red);transform:scaleY(0);transform-origin:bottom;transition:transform var(--tb);}
+  .hero__tool:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:var(--sh-md);}
+  .hero__tool:hover::before{transform:scaleY(1);}
+  .hero__tool-ico{font-size:1.25rem;line-height:1;}
+  .hero__tool-name{font-size:0.8125rem;font-weight:700;color:var(--t1);line-height:1.3;}
+  .hero__tool-desc{font-size:0.6875rem;color:var(--t3);line-height:1.4;}
+
+  @media(max-width:960px){.hero{grid-template-columns:1fr;min-height:auto;}.hero__l{padding:80px var(--s6) var(--s12);border-right:none;border-bottom:1.5px solid var(--b2);}.hero__r{padding:var(--s10) var(--s6);}}
+  @media(max-width:600px){.hero__grid{grid-template-columns:1fr;}.hero__btns{flex-direction:column;align-items:flex-start;}}
+
+  /* ═══════════════════════════════════════════════════
+     TICKER
+  ═══════════════════════════════════════════════════ */
+  .ticker{background:var(--inv);overflow:hidden;padding:14px 0;border-bottom:1.5px solid var(--b2);transition:background var(--ts);}
+  .ticker__track{display:flex;gap:var(--s16);animation:ticker 30s linear infinite;width:max-content;}
+  .ticker__track:hover{animation-play-state:paused;}
+  .ticker__item{display:flex;align-items:center;gap:var(--s3);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#A8A5A0;white-space:nowrap;}
+  .ticker__dot{width:4px;height:4px;border-radius:50%;background:var(--red);flex-shrink:0;}
+
+  /* ═══════════════════════════════════════════════════
+     INTRO
+  ═══════════════════════════════════════════════════ */
+  .intro{padding:var(--s24) 0;border-bottom:1.5px solid var(--b2);}
+  .intro__grid{display:grid;grid-template-columns:1fr 2fr;gap:var(--s16);align-items:start;}
+  .intro__lbl{font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:var(--s4);}
+  .intro__num{font-size:clamp(5rem,10vw,9rem);font-weight:900;line-height:1;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1.5px var(--b2);}
+  .intro__title{font-size:clamp(1.75rem,3vw,2.75rem);font-weight:900;letter-spacing:-.03em;text-transform:uppercase;line-height:1.1;margin-bottom:var(--s6);color:var(--t1);}
+  .intro__title span{color:var(--red);}
+  .intro__p{font-size:1rem;color:var(--t2);line-height:1.75;max-width:680px;margin-bottom:var(--s6);}
+  .intro__p strong{color:var(--t1);font-weight:700;}
+  .intro__p a{color:var(--red);font-weight:700;}
+  .intro__pills{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4);}
+  .intro__pill{padding:var(--s5) var(--s6);border:1px solid var(--b2);border-radius:var(--r-md);border-top:3px solid var(--t1);background:var(--bg);transition:background var(--ts);}
+  .intro__pill-ico{font-size:1.25rem;margin-bottom:var(--s3);}
+  .intro__pill-title{font-size:.875rem;font-weight:800;margin-bottom:var(--s2);color:var(--t1);}
+  .intro__pill-body{font-size:.75rem;color:var(--t3);line-height:1.55;}
+  @media(max-width:900px){.intro__grid{grid-template-columns:1fr;gap:var(--s8);}.intro__pills{grid-template-columns:1fr 1fr;}}
+  @media(max-width:500px){.intro__pills{grid-template-columns:1fr;}}
+
+  /* ═══════════════════════════════════════════════════
+     9 TOOLS
+  ═══════════════════════════════════════════════════ */
+  .tools{padding:var(--s24) 0;border-bottom:1.5px solid var(--b2);}
+  .tools__head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:var(--s8);padding-bottom:var(--s10);border-bottom:1.5px solid var(--b2);margin-bottom:var(--s12);}
+  .tools__lbl{font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:var(--s3);}
+  .tools__title{font-size:clamp(1.75rem,3vw,2.75rem);font-weight:900;letter-spacing:-.03em;text-transform:uppercase;line-height:1.05;color:var(--t1);}
+  .tools__title span{color:var(--red);}
+  .tools__sub{font-size:.9375rem;color:var(--t2);max-width:360px;line-height:1.6;text-align:right;}
+  .tools__grid{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--b2);border-radius:var(--r-lg);overflow:hidden;}
+  .tc{padding:var(--s8);border-right:1px solid var(--b2);border-bottom:1px solid var(--b2);position:relative;overflow:hidden;display:flex;flex-direction:column;gap:var(--s4);transition:background var(--tb);text-decoration:none;color:inherit;background:var(--bg);}
+  .tc:nth-child(3n){border-right:none;}
+  .tc:nth-last-child(-n+3){border-bottom:none;}
+  .tc:hover{background:var(--bg2);}
+  .tc__corner{position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 26px 26px 0;border-color:transparent var(--red) transparent transparent;}
+  .tc__num{font-size:.6875rem;font-weight:800;color:var(--tm);letter-spacing:.1em;}
+  .tc__ico{font-size:2rem;line-height:1;}
+  .tc__name{font-size:1rem;font-weight:800;color:var(--t1);letter-spacing:-.01em;line-height:1.25;}
+  .tc__desc{font-size:.8125rem;color:var(--t3);line-height:1.6;flex:1;}
+  .tc__kws{display:flex;flex-wrap:wrap;gap:var(--s2);}
+  .tc__kw{font-size:.625rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border:1px solid var(--b2);border-radius:var(--r-full);color:var(--t3);}
+  .tc__foot{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding-top:var(--s4);border-top:1px solid var(--b1);margin-top:auto;}
+  .tc__link{font-size:.75rem;font-weight:700;color:var(--red);display:flex;align-items:center;gap:4px;letter-spacing:.03em;}
+  .tc__link svg{width:11px;height:11px;}
+  @media(max-width:900px){.tools__grid{grid-template-columns:repeat(2,1fr);}.tc:nth-child(3n){border-right:1px solid var(--b2);}.tc:nth-child(2n){border-right:none;}.tc:nth-last-child(-n+3){border-bottom:1px solid var(--b2);}.tc:nth-last-child(-n+2){border-bottom:none;}.tools__head{grid-template-columns:1fr;}.tools__sub{text-align:left;max-width:100%;}}
+  @media(max-width:580px){.tools__grid{grid-template-columns:1fr;}.tc{border-right:none!important;}.tc:not(:last-child){border-bottom:1px solid var(--b2)!important;}.tc:last-child{border-bottom:none!important;}}
+
+  /* ═══════════════════════════════════════════════════
+     HOW IT WORKS
+  ═══════════════════════════════════════════════════ */
+  .how{padding:var(--s24) 0;background:var(--inv);color:var(--ti);border-bottom:1.5px solid rgba(255,255,255,0.06);transition:background var(--ts);}
+  :root[data-theme="dark"] .how{background:#0E0D0B;}
+  .how__head{margin-bottom:var(--s16);padding-bottom:var(--s10);border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s8);flex-wrap:wrap;}
+  .how__lbl{font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:var(--s3);}
+  .how__title{font-size:clamp(1.75rem,3vw,2.75rem);font-weight:900;letter-spacing:-.03em;text-transform:uppercase;line-height:1.05;}
+  .how__title span{color:var(--red);}
+  .how__sub{font-size:.9375rem;color:rgba(255,255,255,0.4);max-width:360px;line-height:1.65;}
+  .how__steps{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r-lg);overflow:hidden;}
+  .how__step{padding:var(--s8);border-right:1px solid rgba(255,255,255,0.07);}
+  .how__step:last-child{border-right:none;}
+  .how__step-n{font-size:clamp(3rem,5vw,4.5rem);font-weight:900;line-height:1;letter-spacing:-.05em;color:rgba(255,255,255,0.05);margin-bottom:var(--s5);}
+  .how__step-ico{font-size:1.375rem;margin-bottom:var(--s4);}
+  .how__step-title{font-size:.9375rem;font-weight:800;color:#fff;margin-bottom:var(--s3);line-height:1.3;}
+  .how__step-body{font-size:.8125rem;color:rgba(255,255,255,0.4);line-height:1.65;}
+  @media(max-width:900px){.how__steps{grid-template-columns:repeat(2,1fr);}.how__step:nth-child(2){border-right:none;}.how__step{border-bottom:1px solid rgba(255,255,255,0.07);}.how__step:last-child{border-bottom:none;}}
+  @media(max-width:540px){.how__steps{grid-template-columns:1fr;}.how__step{border-right:none!important;}}
+
+  /* ═══════════════════════════════════════════════════
+     AUDIENCE
+  ═══════════════════════════════════════════════════ */
+  .aud{padding:var(--s24) 0;border-bottom:1.5px solid var(--b2);}
+  .aud__head{margin-bottom:var(--s12);}
+  .aud__lbl{font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:var(--s3);}
+  .aud__title{font-size:clamp(1.75rem,3vw,2.75rem);font-weight:900;letter-spacing:-.03em;text-transform:uppercase;margin-bottom:var(--s5);color:var(--t1);}
+  .aud__title span{color:var(--red);}
+  .aud__sub{font-size:1rem;color:var(--t2);max-width:560px;line-height:1.7;}
+  .aud__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s5);}
+  .ac{border:1.5px solid var(--b2);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:border-color var(--tb),transform var(--tb),box-shadow var(--tb);background:var(--bg);}
+  .ac:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:var(--sh-md);}
+  .ac__top{padding:var(--s7);border-bottom:1px solid var(--b1);background:var(--bg2);transition:background var(--ts);}
+  .ac__ico{font-size:2rem;margin-bottom:var(--s4);}
+  .ac__title{font-size:1.0625rem;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:var(--s2);color:var(--t1);}
+  .ac__sub{font-size:.75rem;color:var(--t3);letter-spacing:.04em;font-weight:600;text-transform:uppercase;}
+  .ac__body{padding:var(--s7);flex:1;display:flex;flex-direction:column;gap:var(--s5);}
+  .ac__desc{font-size:.875rem;color:var(--t2);line-height:1.65;}
+  .ac__links{display:flex;flex-direction:column;gap:var(--s2);}
+  .ac__link{font-size:.8125rem;font-weight:600;color:var(--t1);display:flex;align-items:center;gap:var(--s2);transition:color var(--tf);padding:6px 0;border-bottom:1px solid var(--b1);}
+  .ac__link:last-child{border-bottom:none;}
+  .ac__link:hover{color:var(--red);}
+  .ac__link::before{content:'→';font-size:.75rem;color:var(--red);}
+  @media(max-width:900px){.aud__grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:580px){.aud__grid{grid-template-columns:1fr;}}
+
+  /* ═══════════════════════════════════════════════════
+     REGIONS
+  ═══════════════════════════════════════════════════ */
+  .reg{padding:var(--s20) 0;background:var(--bg2);border-bottom:1.5px solid var(--b2);transition:background var(--ts);}
+  .reg__head{margin-bottom:var(--s10);display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s8);flex-wrap:wrap;}
+  .reg__lbl{font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:var(--s3);}
+  .reg__title{font-size:clamp(1.25rem,2.5vw,1.875rem);font-weight:900;letter-spacing:-.025em;text-transform:uppercase;color:var(--t1);}
+  .reg__title span{color:var(--red);}
+  .reg__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s4);}
+  .rc{background:var(--bg);border:1px solid var(--b2);border-radius:var(--r-md);padding:var(--s6);transition:border-color var(--tb),transform var(--tb),background var(--ts);}
+  .rc:hover{border-color:var(--red);transform:translateY(-2px);}
+  .rc__flag{font-size:1.75rem;margin-bottom:var(--s3);display:block;}
+  .rc__name{font-size:.9375rem;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:var(--s3);color:var(--t1);}
+  .rc__kws{display:flex;flex-wrap:wrap;gap:var(--s2);}
+  .rc__kw{font-size:.5625rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border:1px solid var(--b2);border-radius:var(--r-full);color:var(--t3);}
+  @media(max-width:900px){.reg__grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* ═══════════════════════════════════════════════════
+     SEO CONTENT
+  ═══════════════════════════════════════════════════ */
+  .seo{padding:var(--s24) 0;border-bottom:1.5px solid var(--b2);}
+  .seo__layout{display:grid;grid-template-columns:260px 1fr;gap:var(--s16);align-items:start;}
+  .seo__sidebar{position:sticky;top:80px;}
+  .seo__toc{border:1px solid var(--b2);border-radius:var(--r-md);overflow:hidden;background:var(--bg);}
+  .seo__toc-head{background:var(--t1);color:var(--bg);padding:var(--s4) var(--s5);font-size:.6875rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;transition:background var(--ts),color var(--ts);}
+  .seo__toc-links{display:flex;flex-direction:column;}
+  .seo__toc-a{padding:10px var(--s5);font-size:.8125rem;font-weight:600;color:var(--t2);border-bottom:1px solid var(--b1);display:flex;align-items:center;gap:var(--s2);transition:all var(--tf);}
+  .seo__toc-a:last-child{border-bottom:none;}
+  .seo__toc-a:hover{color:var(--red);background:var(--red-tint);padding-left:calc(var(--s5) + 4px);}
+  .seo__toc-a::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--red);flex-shrink:0;}
+  .seo__body{max-width:760px;}
+  .seo__sec{margin-bottom:var(--s16);padding-bottom:var(--s16);border-bottom:1px solid var(--b1);}
+  .seo__sec:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+  .seo__sec-lbl{font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:var(--s3);}
+  .seo__sec-title{font-size:1.375rem;font-weight:900;letter-spacing:-.02em;text-transform:uppercase;margin-bottom:var(--s5);line-height:1.15;color:var(--t1);}
+  .seo__sec-title span{color:var(--red);}
+  .seo__p{font-size:.9375rem;color:var(--t2);line-height:1.8;margin-bottom:var(--s5);}
+  .seo__p:last-child{margin-bottom:0;}
+  .seo__p strong{color:var(--t1);font-weight:700;}
+  .seo__p a{color:var(--red);font-weight:600;border-bottom:1px solid transparent;transition:border-color var(--tf);}
+  .seo__p a:hover{border-bottom-color:var(--red);}
+  .seo__list{display:flex;flex-direction:column;gap:var(--s3);margin-bottom:var(--s5);}
+  .seo__li{display:flex;align-items:flex-start;gap:var(--s3);font-size:.9375rem;color:var(--t2);line-height:1.65;}
+  .seo__li::before{content:'—';color:var(--red);font-weight:700;flex-shrink:0;margin-top:1px;}
+  @media(max-width:960px){.seo__layout{grid-template-columns:1fr;}.seo__sidebar{position:static;}}
+
+  /* ═══════════════════════════════════════════════════
+     FAQ
+  ═══════════════════════════════════════════════════ */
+  .faq{padding:var(--s24) 0;background:var(--bg2);border-bottom:1.5px solid var(--b2);transition:background var(--ts);}
+  .faq__head{margin-bottom:var(--s12);display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s8);flex-wrap:wrap;}
+  .faq__lbl{font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:var(--s3);}
+  .faq__title{font-size:clamp(1.5rem,2.5vw,2.25rem);font-weight:900;letter-spacing:-.03em;text-transform:uppercase;color:var(--t1);}
+  .faq__title span{color:var(--red);}
+  .faq__note{font-size:.75rem;color:var(--t3);max-width:280px;text-align:right;line-height:1.5;}
+  .faq__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4);}
+  .fi{border:1.5px solid var(--b2);border-radius:var(--r-md);overflow:hidden;background:var(--bg);transition:background var(--ts);}
+  .fi__q{width:100%;text-align:left;padding:var(--s5) var(--s6);display:flex;align-items:center;justify-content:space-between;gap:var(--s4);font-size:.9375rem;font-weight:700;color:var(--t1);cursor:pointer;background:transparent;letter-spacing:-.01em;transition:background var(--tf);}
+  .fi__q:hover{background:var(--red-tint);}
+  .fi.open .fi__q{color:var(--red);background:var(--red-tint);}
+  .fi__chev{width:16px;height:16px;flex-shrink:0;color:var(--t3);transition:transform var(--tb);}
+  .fi.open .fi__chev{transform:rotate(180deg);color:var(--red);}
+  .fi__a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);}
+  .fi.open .fi__a{max-height:400px;}
+  .fi__a-in{padding:0 var(--s6) var(--s5);font-size:.875rem;color:var(--t2);line-height:1.75;border-top:1px solid var(--b1);padding-top:var(--s4);}
+  .fi__a-in a{color:var(--red);font-weight:600;}
+  @media(max-width:720px){.faq__grid{grid-template-columns:1fr;}}
+
+  /* ═══════════════════════════════════════════════════
+     FINAL CTA
+  ═══════════════════════════════════════════════════ */
+  .cta-final{padding:var(--s24) 0;background:var(--inv);color:var(--ti);position:relative;overflow:hidden;transition:background var(--ts);}
+  :root[data-theme="dark"] .cta-final{background:#0E0D0B;}
+  .cta-final::before{content:'';position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:48px 48px;}
+  .cta-final__inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto;gap:var(--s12);align-items:center;}
+  .cta-final__lbl{font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:var(--s4);}
+  .cta-final__title{font-size:clamp(2rem,4vw,3.5rem);font-weight:900;letter-spacing:-.04em;text-transform:uppercase;line-height:.95;margin-bottom:var(--s6);}
+  .cta-final__title span{color:var(--red);}
+  .cta-final__sub{font-size:1rem;color:rgba(255,255,255,0.45);line-height:1.7;max-width:480px;margin-bottom:var(--s8);}
+  .cta-final__sub strong{color:#fff;}
+  .cta-final__btns{display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap;}
+  .cta-final__promo{background:rgba(200,50,26,0.15);border:1px solid rgba(200,50,26,0.3);border-radius:var(--r-lg);padding:var(--s8) var(--s10);text-align:center;flex-shrink:0;}
+  .cta-final__promo-lbl{font-size:.6875rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:var(--s3);}
+  .cta-final__promo-code{font-size:1.5rem;font-weight:900;color:#fff;margin-bottom:var(--s2);}
+  .cta-final__promo-detail{font-size:.8125rem;color:rgba(255,255,255,0.45);}
+  .cta-final__promo-detail strong{color:var(--red);}
+  @media(max-width:800px){.cta-final__inner{grid-template-columns:1fr;}.cta-final__promo{text-align:left;}}
+  @media(max-width:500px){.cta-final__btns{flex-direction:column;align-items:flex-start;}}
+
+  /* ═══════════════════════════════════════════════════
+     FOOTER
+  ═══════════════════════════════════════════════════ */
+  .foot{background:var(--ink-2);color:var(--paper);border-top:1.5px solid rgba(255,255,255,0.06);padding:var(--s20) 0 0;transition:background var(--ts);}
+  :root[data-theme="dark"] .foot{background:#161412;}
+  .foot__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:var(--s12);padding-bottom:var(--s16);border-bottom:1px solid rgba(255,255,255,0.07);}
+  .foot__brand{display:flex;flex-direction:column;gap:var(--s4);}
+  .foot__brand-name{display:flex;align-items:center;gap:var(--s3);font-size:1.125rem;font-weight:900;letter-spacing:-.02em;text-transform:uppercase;color:#F0EDE6;}
+  .foot__brand-box{width:28px;height:28px;background:var(--red);border-radius:var(--r-xs);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .foot__brand-box svg{width:14px;height:14px;}
+  .foot__brand-desc{font-size:.8125rem;color:#524F4A;line-height:1.7;max-width:280px;}
+  .foot__domains{display:flex;flex-direction:column;gap:var(--s3);}
+  .foot__domain{display:flex;align-items:center;gap:var(--s3);font-size:.8125rem;}
+  .foot__badge{font-size:.5625rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:var(--r-full);flex-shrink:0;}
+  .foot__badge--in{background:var(--red);color:#fff;}
+  .foot__badge--com{background:rgba(255,255,255,0.1);color:#524F4A;}
+  .foot__domain-url{color:#524F4A;font-weight:500;transition:color var(--tf);}
+  .foot__domain-url:hover{color:#F0EDE6;}
+  .foot__social{display:flex;gap:var(--s3);}
+  .foot__social-a{width:34px;height:34px;border:1px solid rgba(255,255,255,0.1);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;color:#524F4A;font-size:.875rem;transition:all var(--tf);}
+  .foot__social-a:hover{border-color:var(--red);color:var(--red);}
+  .foot__nl{display:flex;gap:var(--s2);max-width:280px;}
+  .foot__nl input{flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:var(--r-sm);padding:9px 12px;font-family:var(--font);font-size:.8125rem;color:#F0EDE6;outline:none;transition:border-color var(--tf);}
+  .foot__nl input::placeholder{color:#524F4A;}
+  .foot__nl input:focus{border-color:var(--red);}
+  .foot__nl-btn{flex-shrink:0;padding:9px 14px;font-size:.75rem;background:var(--red);color:#fff;border-radius:var(--r-sm);font-weight:700;transition:background var(--tf);cursor:pointer;font-family:var(--font);border:none;}
+  .foot__nl-btn:hover{background:var(--red-dark);}
+  .foot__col-title{font-size:.6875rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#F0EDE6;margin-bottom:var(--s5);}
+  .foot__links{display:flex;flex-direction:column;gap:var(--s3);}
+  .foot__link{font-size:.8125rem;color:#524F4A;transition:color var(--tf);line-height:1.4;}
+  .foot__link:hover{color:#F0EDE6;}
+  .foot__tag{display:inline-block;margin-left:5px;font-size:.5625rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--red);color:#fff;padding:1px 5px;border-radius:var(--r-full);vertical-align:middle;}
+  .foot__bottom{padding:var(--s6) 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--s4);}
+  .foot__copy{font-size:.75rem;color:#524F4A;}
+  .foot__policies{display:flex;gap:var(--s5);flex-wrap:wrap;}
+  .foot__policy{font-size:.75rem;color:#524F4A;transition:color var(--tf);}
+  .foot__policy:hover{color:#F0EDE6;}
+  @media(max-width:1000px){.foot__grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:580px){.foot__grid{grid-template-columns:1fr;gap:var(--s10);}.foot__bottom{flex-direction:column;text-align:center;}.foot__policies{justify-content:center;}}
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar__l"><div class="topbar__dot"></div><span>Launch Offer — Use <strong>WELCOME99</strong> for first month at ₹11.11</span></div>
+    <div class="topbar__r">
+      <a href="https://www.builtattic.com/pages/register" class="topbar__a">Become a Vendor</a>
+      <a href="https://www.builtattic.com/collections/access" class="topbar__a">Subscribe ↗</a>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="nav" id="nav">
+    <div class="wrap">
+      <div class="nav__inner">
+        <a href="https://www.builtattic.in/" class="nav__logo">
+          <div class="nav__logo-box"><Image src="/assets/images/logo/logo.png" alt="Builtattic logo" width={120} height={32} /></div>
+          Builtattic<span class="nav__logo-dot">.in</span>
+        </a>
+        <div class="nav__links">
+          <div class="nav__drop">
+            <a href="#tools" class="nav__link nav__drop-toggle">Tools <svg viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="nav__drop-menu">
+              <a href="pages/floor-plan-generator/homepage.html"            class="nav__drop-item"><div class="nav__drop-icon">🗺️</div><div><div class="nav__drop-title">AI Floor Plan Generator</div><div class="nav__drop-desc">2D, MEP &amp; 3D — VirtuviAI</div></div></a>
+              <a href="pages/property-hotspot-finder/homepage.html"         class="nav__drop-item"><div class="nav__drop-icon">📍</div><div><div class="nav__drop-title">Property Hotspot Finder</div><div class="nav__drop-desc">High-growth area analysis</div></div></a>
+              <a href="pages/construction-management-app/homepage.html"     class="nav__drop-item"><div class="nav__drop-icon">📋</div><div><div class="nav__drop-title">Construction Management</div><div class="nav__drop-desc">Bills, attendance &amp; progress</div></div></a>
+              <a href="pages/ready-to-build-designs/homepage.html"          class="nav__drop-item"><div class="nav__drop-icon">🏛</div><div><div class="nav__drop-title">Ready-to-Build Designs</div><div class="nav__drop-desc">Architect-approved plans</div></div></a>
+              <a href="pages/construction-material-estimator/homepage.html" class="nav__drop-item"><div class="nav__drop-icon">🔢</div><div><div class="nav__drop-title">Material Estimator</div><div class="nav__drop-desc">Hardware &amp; cost calculator</div></div></a>
+              <a href="pages/hire-an-architect/homepage.html"               class="nav__drop-item"><div class="nav__drop-icon">👤</div><div><div class="nav__drop-title">Hire an Architect</div><div class="nav__drop-desc">Verified professionals</div></div></a>
+              <a href="pages/property-valuation-tool/homepage.html"         class="nav__drop-item"><div class="nav__drop-icon">💰</div><div><div class="nav__drop-title">Property Valuation Tool</div><div class="nav__drop-desc">Instant value estimates</div></div></a>
+              <a href="pages/construction-material-suppliers/homepage.html" class="nav__drop-item"><div class="nav__drop-icon">🧱</div><div><div class="nav__drop-title">Material Suppliers</div><div class="nav__drop-desc">Local hardware directory</div></div></a>
+              <a href="pages/construction-timeline-generator/homepage.html" class="nav__drop-item"><div class="nav__drop-icon">📅</div><div><div class="nav__drop-title">Timeline Generator</div><div class="nav__drop-desc">Build schedules &amp; analysis</div></div></a>
+            </div>
+          </div>
+          <a href="#guide"    class="nav__link">How It Works</a>
+          <a href="#audience" class="nav__link">Who It's For</a>
+          <a href="#faq"      class="nav__link">FAQ</a>
+          <a href="/floor-plan-generator/blog/" class="nav__link">Blog</a>
+        </div>
+        <div class="nav__actions">
+          <button class="toggle" id="themeBtn" aria-label="Toggle day/night mode">
+            <div class="toggle__knob"><span class="toggle__day">☀</span><span class="toggle__ngt">☾</span></div>
+          </button>
+          <div class="nav__sep"></div>
+          <a href="https://www.builtattic.com" class="btn btn-out btn-sm" target="_blank" rel="noopener">builtattic.com ↗</a>
+          <a href="https://www.builtattic.com/collections/access" class="btn btn-ink btn-sm">Get Started</a>
+          <button class="nav__ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="nav__mob" id="mob">
+      <div class="nav__mob-theme"><span>Switch theme</span>
+        <button class="toggle" id="themeBtnMob" aria-label="Toggle theme"><div class="toggle__knob"><span class="toggle__day">☀</span><span class="toggle__ngt">☾</span></div></button>
+      </div>
+      <a href="pages/floor-plan-generator/homepage.html"            class="nav__mob-link">🗺️ AI Floor Plan Generator</a>
+      <a href="pages/property-hotspot-finder/homepage.html"         class="nav__mob-link">📍 Property Hotspot Finder</a>
+      <a href="pages/construction-management-app/homepage.html"     class="nav__mob-link">📋 Construction Management</a>
+      <a href="pages/ready-to-build-designs/homepage.html"          class="nav__mob-link">🏛 Ready-to-Build Designs</a>
+      <a href="pages/construction-material-estimator/homepage.html" class="nav__mob-link">🔢 Material Estimator</a>
+      <a href="pages/hire-an-architect/homepage.html"               class="nav__mob-link">👤 Hire an Architect</a>
+      <a href="pages/property-valuation-tool/homepage.html"         class="nav__mob-link">💰 Property Valuation Tool</a>
+      <a href="pages/construction-material-suppliers/homepage.html" class="nav__mob-link">🧱 Material Suppliers</a>
+      <a href="pages/construction-timeline-generator/homepage.html" class="nav__mob-link">📅 Timeline Generator</a>
+      <a href="#guide"    class="nav__mob-link">How It Works</a>
+      <a href="#audience" class="nav__mob-link">Who It's For</a>
+      <a href="/floor-plan-generator/blog/" class="nav__mob-link">Blog</a>
+      <a href="#faq"      class="nav__mob-link">FAQ</a>
+      <div style="padding:var(--s4) var(--s6) var(--s5)">
+        <a href="https://www.builtattic.com/collections/access" class="btn btn-red" style="width:100%;justify-content:center;">Get Started on Builtattic.com →</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__l">
+        <div class="hero__issue"><span class="hero__issue-txt">builtattic.in</span><div class="hero__issue-line"></div><span class="hero__issue-txt">Vol. I · 2025</span></div>
+        <div class="hero__eye">AI Platform for Construction &amp; Architecture</div>
+        <h1 class="hero__h1">
+          <span>Build</span>
+          <span class="hero__h1-red">Smarter.</span>
+          <span class="hero__h1-out">Faster.</span>
+        </h1>
+        <p class="hero__sub"><strong>9 AI-powered tools</strong> for architects, engineers, contractors, and homeowners. Generate floor plans, estimate costs, find leads, manage projects — all under one subscription.</p>
+        <div class="hero__btns">
+          <a href="https://www.builtattic.com/collections/access" class="btn btn-ink btn-lg">Start Free <svg viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 4l3.5 3-3.5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#tools" class="btn btn-out btn-lg">Explore 9 Tools</a>
+        </div>
+        <div class="hero__trust">
+          <div><div class="hero__stat-num">9<span>+</span></div><div class="hero__stat-lbl">AI Tools</div></div>
+          <div class="hero__sep"></div>
+          <div><div class="hero__stat-num">12<span>K</span></div><div class="hero__stat-lbl">Plans Generated</div></div>
+          <div class="hero__sep"></div>
+          <div><div class="hero__stat-num">9<span>+</span></div><div class="hero__stat-lbl">Countries</div></div>
+          <div class="hero__sep"></div>
+          <div><div class="hero__stat-num">4.8<span>★</span></div><div class="hero__stat-lbl">User Rating</div></div>
+        </div>
+      </div>
+      <div class="hero__r">
+        <div class="hero__r-head"><span class="hero__r-title">All Builtattic Tools</span><span class="hero__r-count">9 Tools · 1 Subscription</span></div>
+        <div class="hero__grid">
+          <a href="pages/floor-plan-generator/homepage.html"            class="hero__tool"><span class="hero__tool-ico">🗺️</span><span class="hero__tool-name">AI Floor Plan Generator</span><span class="hero__tool-desc">2D plans, MEP &amp; 3D views</span></a>
+          <a href="pages/property-hotspot-finder/homepage.html"         class="hero__tool"><span class="hero__tool-ico">📍</span><span class="hero__tool-name">Property Hotspot Finder</span><span class="hero__tool-desc">High-growth area analysis</span></a>
+          <a href="pages/construction-management-app/homepage.html"     class="hero__tool"><span class="hero__tool-ico">📋</span><span class="hero__tool-name">Construction Management</span><span class="hero__tool-desc">Bills, attendance &amp; progress</span></a>
+          <a href="pages/ready-to-build-designs/homepage.html"          class="hero__tool"><span class="hero__tool-ico">🏛</span><span class="hero__tool-name">Ready-to-Build Designs</span><span class="hero__tool-desc">Architect-approved plans</span></a>
+          <a href="pages/construction-material-estimator/homepage.html" class="hero__tool"><span class="hero__tool-ico">🔢</span><span class="hero__tool-name">Material Estimator</span><span class="hero__tool-desc">Hardware &amp; cost calculator</span></a>
+          <a href="pages/hire-an-architect/homepage.html"               class="hero__tool"><span class="hero__tool-ico">👤</span><span class="hero__tool-name">Hire an Architect</span><span class="hero__tool-desc">Verified professionals near you</span></a>
+          <a href="pages/property-valuation-tool/homepage.html"         class="hero__tool"><span class="hero__tool-ico">💰</span><span class="hero__tool-name">Property Valuation Tool</span><span class="hero__tool-desc">Instant value estimates</span></a>
+          <a href="pages/construction-material-suppliers/homepage.html" class="hero__tool"><span class="hero__tool-ico">🧱</span><span class="hero__tool-name">Material Suppliers</span><span class="hero__tool-desc">Local hardware directory</span></a>
+          <a href="pages/construction-timeline-generator/homepage.html" class="hero__tool"><span class="hero__tool-ico">📅</span><span class="hero__tool-name">Timeline Generator</span><span class="hero__tool-desc">Build schedules &amp; analysis</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span class="ticker__item"><span>🇮🇳</span> India</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇬🇧</span> United Kingdom</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇺🇸</span> United States</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇨🇦</span> Canada</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇳🇱</span> Netherlands</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇦🇺</span> Australia</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇯🇵</span> Japan</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇦🇪</span> UAE</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇩🇪</span> Germany</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇮🇳</span> India</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇬🇧</span> United Kingdom</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇺🇸</span> United States</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇨🇦</span> Canada</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇳🇱</span> Netherlands</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇦🇺</span> Australia</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇯🇵</span> Japan</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇦🇪</span> UAE</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+        <span class="ticker__item"><span>🇩🇪</span> Germany</span><span class="ticker__item"><span class="ticker__dot"></span></span>
+      </div>
+    </div>
+
+    <!-- INTRO -->
+    <section class="intro" id="about">
+      <div class="wrap">
+        <div class="intro__grid">
+          <div class="rv"><div class="intro__lbl">What is Builtattic</div><div class="intro__num">01</div></div>
+          <div>
+            <h2 class="intro__title rv">The <span>Complete AI Platform</span> for Construction</h2>
+            <p class="intro__p rv d1"><strong>Builtattic</strong> is an AI-powered construction and architecture platform built for every professional and homeowner in the built environment. Whether you're an architect generating floor plans, a contractor estimating material costs, a homeowner planning a self-build, or a developer finding high-growth property hotspots — Builtattic has a dedicated AI tool for your workflow.</p>
+            <p class="intro__p rv d2">Unlike single-purpose tools, <strong>Builtattic's 9 tools work together under one subscription</strong> — your floor plan connects to the cost estimator, which connects to the timeline generator, which connects to the material supplier directory. The entire construction workflow from concept to completion. Everything on <strong>builtattic.in</strong> links directly to <a href="https://www.builtattic.com">builtattic.com</a> where you access and use each tool.</p>
+            <div class="intro__pills rv d3">
+              <div class="intro__pill"><div class="intro__pill-ico">🤖</div><div class="intro__pill-title">AI-Native</div><div class="intro__pill-body">Plain-language input, instant professional output. No CAD skills needed.</div></div>
+              <div class="intro__pill"><div class="intro__pill-ico">🌍</div><div class="intro__pill-title">Region-Aware</div><div class="intro__pill-body">Vastu for India, Part M for UK, NCC for Australia, NBC for Canada.</div></div>
+              <div class="intro__pill"><div class="intro__pill-ico">🔗</div><div class="intro__pill-title">All Connected</div><div class="intro__pill-body">Nine tools that pass data to each other under one subscription.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 TOOLS -->
+    <section class="tools" id="tools">
+      <div class="wrap">
+        <div class="tools__head">
+          <div><div class="tools__lbl">The Platform</div><h2 class="tools__title">9 Tools.<br><span>1 Subscription.</span></h2></div>
+          <p class="tools__sub">Every tool a construction professional actually needs — built with AI, connected by design.</p>
+        </div>
+        <div class="tools__grid">
+
+          <a href="pages/floor-plan-generator/homepage.html" class="tc"><div class="tc__corner"></div><div class="tc__num">01 / 09</div><div class="tc__ico">🗺️</div><div class="tc__name">AI Floor Plan Generator</div><p class="tc__desc">Generate professional 2D floor plans, MEP layouts, and 3D views from a plain-language brief. Vastu-compliant for India, Part M for UK, NCC for Australia.</p><div class="tc__kws"><span class="tc__kw">floor plan generator</span><span class="tc__kw">AI floor plan</span><span class="tc__kw">ghar ka naksha</span><span class="tc__kw">MEP layout</span><span class="tc__kw">2BHK planner</span></div><div class="tc__foot"><a href="pages/floor-plan-generator/homepage.html" class="tc__link">Explore guide <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://www.builtattic.com/pages/vitruviai" class="tc__link">Use tool ↗</a></div></a>
+
+          <a href="pages/property-hotspot-finder/homepage.html" class="tc"><div class="tc__num">02 / 09</div><div class="tc__ico">📍</div><div class="tc__name">Property Hotspot Finder</div><p class="tc__desc">AI-powered analysis of high-growth property markets in your city. Find client leads, undervalued areas, and emerging residential zones before they peak.</p><div class="tc__kws"><span class="tc__kw">property hotspot</span><span class="tc__kw">client leads</span><span class="tc__kw">real estate AI</span><span class="tc__kw">property growth</span></div><div class="tc__foot"><a href="pages/property-hotspot-finder/homepage.html" class="tc__link">Explore guide <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://www.builtattic.com/pages/faust" class="tc__link">Use tool ↗</a></div></a>
+
+          <a href="pages/construction-management-app/homepage.html" class="tc"><div class="tc__num">03 / 09</div><div class="tc__ico">📋</div><div class="tc__name">Construction Management App</div><p class="tc__desc">Track bills, site attendance, and project progress in real time. Built for contractors, project managers, and site engineers managing active construction sites.</p><div class="tc__kws"><span class="tc__kw">construction management</span><span class="tc__kw">site tracker</span><span class="tc__kw">contractor app</span></div><div class("tc__foot"><a href("pages/construction-management-app/homepage.html" class("tc__link">Explore guide <svg viewBox("0 0 12 12" fill("none"><path d("M2.5 6h7M6.5 3l3 3-3 3" stroke("currentColor" stroke-width("1.3" stroke-linecap("round" stroke-linejoin("round"/></svg></a><a href("https://matters-prod.vercel.app/" class("tc__link">Use tool ↗</a></div></a>
+
+          <a href="pages/ready-to-build-designs/homepage.html" class="tc"><div class="tc__num">04 / 09</div><div class="tc__ico">🏛</div><div class="tc__name">Ready-to-Build Designs</div><p class="tc__desc">Shop architect-approved, fully detailed construction plans. Residential, commercial, duplex, villa — ready to hand to your builder or submit for permits.</p><div class="tc__kws"><span class="tc__kw">ready to build plans</span><span class="tc__kw">house design plans</span><span class="tc__kw">architectural drawings</span></div><div class="tc__foot"><a href="pages/ready-to-build-designs/homepage.html" class="tc__link">Explore guide <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://www.builtattic.com/collections/design-studio" class="tc__link">Use tool ↗</a></div></a>
+
+          <a href="pages/construction-material-estimator/homepage.html" class="tc"><div class="tc__num">05 / 09</div><div class="tc__ico">🔢</div><div class="tc__name">Construction Material Estimator</div><p class="tc__desc">Calculate exactly how much concrete, steel, bricks, and hardware your project needs — and what it will cost — before breaking ground.</p><div class="tc__kws"><span class="tc__kw">construction cost estimator</span><span class="tc__kw">material calculator</span><span class="tc__kw">building cost India</span></div><div class="tc__foot"><a href="pages/construction-material-estimator/homepage.html" class="tc__link">Explore guide <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://www.builtattic.com/pages/vision" class="tc__link">Use tool ↗</a></div></a>
+
+          <a href="pages/hire-an-architect/homepage.html" class="tc"><div class="tc__num">06 / 09</div><div class="tc__ico">👤</div><div class="tc__name">Hire an Architect</div><p class="tc__desc">Browse and connect with verified architects and design professionals near you. Filter by city, project type, specialisation, and budget.</p><div class="tc__kws"><span class="tc__kw">hire architect online</span><span class="tc__kw">architect near me</span><span class="tc__kw">find architect India</span></div><div class="tc__foot"><a href="pages/hire-an-architect/homepage.html" class="tc__link">Explore guide <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://www.builtattic.com/collections/individuals" class="tc__link">Use tool ↗</a></div></a>
+
+          <a href="pages/property-valuation-tool/homepage.html" class="tc"><div class="tc__num">07 / 09</div><div class="tc__ico">💰</div><div class="tc__name">Property Valuation Tool</div><p class="tc__desc">Get an instant AI-generated valuation of any residential or commercial property based on location, construction quality, plot area, and current market data.</p><div class="tc__kws"><span class="tc__kw">property valuation</span><span class="tc__kw">building value calculator</span><span class="tc__kw">house valuation India</span></div><div class="tc__foot"><a href="pages/property-valuation-tool/homepage.html" class="tc__link">Explore guide <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://www.builtattic.com/pages/valuator" class="tc__link">Use tool ↗</a></div></a>
+
+          <a href="pages/construction-material-suppliers/homepage.html" class="tc"><div class="tc__num">08 / 09</div><div class="tc__ico">🧱</div><div class="tc__name">Construction Material Suppliers</div><p class="tc__desc">Find verified hardware and material suppliers near your project site. Compare prices on cement, steel, aggregates, tiles, and more — all locally sourced.</p><div class="tc__kws"><span class="tc__kw">material supplier</span><span class="tc__kw">hardware near me</span><span class="tc__kw">cement supplier India</span></div><div class="tc__foot"><a href="pages/construction-material-suppliers/homepage.html" class="tc__link">Explore guide <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://www.builtattic.com/pages/material-studio" class="tc__link">Use tool ↗</a></div></a>
+
+          <a href="pages/construction-timeline-generator/homepage.html" class="tc"><div class="tc__num">09 / 09</div><div class="tc__ico">📅</div><div class="tc__name">Construction Timeline Generator</div><p class="tc__desc">Generate realistic construction schedules based on project type, size, and location. For contractors, architects, and project owners across every region.</p><div class="tc__kws"><span class="tc__kw">construction timeline</span><span class="tc__kw">project schedule</span><span class="tc__kw">build schedule India</span></div><div class="tc__foot"><a href="pages/construction-timeline-generator/homepage.html" class="tc__link">Explore guide <svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://www.builtattic.com/pages/summaries-construction-analysis-tool" class="tc__link">Use tool ↗</a></div></a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->v
+    <section class="how" id="guide">
+      <div class="wrap">
+        <div class="how__head">
+          <div><div class="how__lbl">How It Works</div><h2 class="how__title">From Brief to <span>Built.</span></h2></div>
+          <p class="how__sub">Builtattic connects every stage of a construction project — from first idea to final handover — with AI at every step.</p>
+        </div>
+        <div class="how__steps">
+          <div class="how__step"><div class="how__step-n">01</div><div class="how__step-ico">📝</div><div class="how__step-title">Describe Your Project</div><p class="how__step-body">Enter your plot size, project type, number of rooms, budget, and location. Plain language — no technical knowledge needed.</p></div>
+          <div class="how__step"><div class="how__step-n">02</div><div class="how__step-ico">⬡</div><div class="how__step-title">AI Generates Your Plan</div><p class="how__step-body">VirtuviAI produces a complete floor plan in seconds. MEP overlays and 3D views follow automatically — no CAD skills required.</p></div>
+          <div class="how__step"><div class="how__step-n">03</div><div class="how__step-ico">🔢</div><div class="how__step-title">Estimate Cost &amp; Materials</div><p class="how__step-body">Feed your floor plan into the Material Estimator and Timeline Generator for a complete cost breakdown and build schedule.</p></div>
+          <div class="how__step"><div class="how__step-n">04</div><div class="how__step-ico">🏗️</div><div class="how__step-title">Build with Confidence</div><p class="how__step-body">Hire a verified architect, find local material suppliers, track your site's progress — all within the same Builtattic subscription.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUDIENCE -->
+    <section class="aud" id="audience">
+      <div class="wrap">
+        <div class="aud__head"><div class="aud__lbl">Who It's For</div><h2 class="aud__title">Every Role in <span>Construction</span></h2><p class="aud__sub">Builtattic is designed for every professional and homeowner in the built environment — with dedicated tools and guides for each role.</p></div>
+        <div class="aud__grid">
+          <div class="ac rv"><div class="ac__top"><div class="ac__ico">📐</div><div class="ac__title">Architects &amp; Designers</div><div class="ac__sub">Speed up your workflow</div></div><div class="ac__body"><p class="ac__desc">Cut concept-stage drafting time by 3×. Generate client-ready floor plans, MEP layouts, and 3D presentations in minutes — not hours.</p><div class="ac__links"><a href="/floor-plan-generator/" class="ac__link">AI Floor Plan Generator</a><a href="/floor-plan-generator/top-7-ai-tools/" class="ac__link">Top 7 AI Tools for Architecture</a><a href="/construction-material-estimator/" class="ac__link">Construction Material Estimator</a><a href="https://www.builtattic.com/collections/access" class="ac__link">Get Pro Subscription →</a></div></div></div>
+          <div class="ac rv d1"><div class="ac__top"><div class="ac__ico">🏗️</div><div class="ac__title">Contractors &amp; Engineers</div><div class="ac__sub">Manage every site</div></div><div class="ac__body"><p class="ac__desc">Track bills, site attendance, and project progress in real time. Generate construction timelines and material quantities before breaking ground.</p><div class="ac__links"><a href="/construction-management-app/" class="ac__link">Construction Management App</a><a href="/construction-timeline-generator/" class="ac__link">Construction Timeline Generator</a><a href="/construction-material-suppliers/" class="ac__link">Material Supplier Finder</a><a href="https://www.builtattic.com/collections/access" class="ac__link">Get Pro Subscription →</a></div></div></div>
+          <div class="ac rv d2"><div class="ac__top"><div class="ac__ico">🏡</div><div class="ac__title">Homeowners &amp; Self-Builders</div><div class="ac__sub">Build your own home</div></div><div class="ac__body"><p class="ac__desc">No architecture background needed. Describe your dream home, get a professional floor plan, estimate costs, find a local architect, and track your build.</p><div class="ac__links"><a href="/floor-plan-generator/use-cases/" class="ac__link">Floor Plan Use Cases</a><a href="/property-valuation-tool/" class="ac__link">Property Valuation Tool</a><a href="/hire-an-architect/" class="ac__link">Hire a Verified Architect</a><a href="https://www.builtattic.com/collections/access" class="ac__link">Start for Free →</a></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGIONS -->
+    <section class="reg" id="regions">
+      <div class="wrap">
+        <div class="reg__head"><div><div class="reg__lbl">Global Coverage</div><h2 class="reg__title">Built for <span>Your Market</span></h2></div></div>
+        <div class="reg__grid">
+          <div class="rc rv"><span class="rc__flag">🇮🇳</span><div class="rc__name">India</div><div class="rc__kws"><span class="rc__kw">ghar ka naksha</span><span class="rc__kw">vastu plan</span><span class="rc__kw">2BHK generator</span><span class="rc__kw">RERA</span></div></div>
+          <div class="rc rv d1"><span class="rc__flag">🇬🇧</span><div class="rc__name">United Kingdom</div><div class="rc__kws"><span class="rc__kw">planning permission</span><span class="rc__kw">self-build</span><span class="rc__kw">Part M</span><span class="rc__kw">loft conversion</span></div></div>
+          <div class="rc rv d2"><span class="rc__flag">🇺🇸</span><div class="rc__name">United States</div><div class="rc__kws"><span class="rc__kw">ADU floor plan</span><span class="rc__kw">house blueprint</span><span class="rc__kw">open floor plan</span><span class="rc__kw">permit drawings</span></div></div>
+          <div class="rc rv d1"><span class="rc__flag">🇦🇺</span><div class="rc__name">Australia</div><div class="rc__kws"><span class="rc__kw">DA floor plan</span><span class="rc__kw">NCC compliant</span><span class="rc__kw">granny flat</span><span class="rc__kw">owner-builder</span></div></div>
+          <div class="rc rv d2"><span class="rc__flag">🇳🇱</span><div class="rc__name">Netherlands</div><div class="rc__kws"><span class="rc__kw">plattegrond</span><span class="rc__kw">bouwtekening</span><span class="rc__kw">omgevingsvergunning</span></div></div>
+          <div class="rc rv d3"><span class="rc__flag">🇯🇵</span><div class="rc__name">Japan / 日本</div><div class="rc__kws"><span class="rc__kw">間取りAI</span><span class="rc__kw">LDK 平面図</span><span class="rc__kw">建築確認</span></div></div>
+          <div class="rc rv d2"><span class="rc__flag">🇨🇦</span><div class="rc__name">Canada</div><div class="rc__kws"><span class="rc__kw">NBC floor plan</span><span class="rc__kw">secondary suite</span><span class="rc__kw">permit drawings</span></div></div>
+          <div class="rc rv d3"><span class="rc__flag">🇦🇪</span><div class="rc__name">UAE</div><div class="rc__kws"><span class="rc__kw">villa floor plan</span><span class="rc__kw">DM approved</span><span class="rc__kw">majlis layout</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO CONTENT -->
+    <section class="seo" id="guide-content">
+      <div class="wrap">
+        <div class="seo__layout">
+          <aside class="seo__sidebar">
+            <div class="seo__toc">
+              <div class="seo__toc-head">On This Page</div>
+              <div class="seo__toc-links">
+                <a href="#s1" class="seo__toc-a">What is an AI floor plan generator?</a>
+                <a href="#s2" class="seo__toc-a">How accurate is a cost estimator?</a>
+                <a href="#s3" class="seo__toc-a">Can AI replace architects?</a>
+                <a href="#s4" class="seo__toc-a">How to generate a floor plan online</a>
+                <a href="#s5" class="seo__toc-a">Builtattic vs other tools</a>
+                <a href="#s6" class="seo__toc-a">AI for construction in India</a>
+              </div>
+            </div>
+          </aside>
+          <div class="seo__body">
+            <div class="seo__sec" id="s1">
+              <div class="seo__sec-lbl">Guide 01</div>
+              <h2 class="seo__sec-title">What is an <span>AI Floor Plan Generator</span>?</h2>
+              <p class="seo__p">An <strong>AI floor plan generator</strong> is a tool that uses artificial intelligence to automatically create architectural floor plans from a plain-language description — no CAD software, no drafting experience required. You describe your project (plot size, number of rooms, building type, orientation preferences), and the AI produces a complete, dimensioned 2D floor plan within seconds.</p>
+              <p class="seo__p">Traditional floor plan creation required an architect or draughtsperson to manually draw every wall, door, window, and room — a process that could take 3–6 hours for a simple residential plan. <strong>AI tools like VirtuviAI</strong> compress this to under 30 seconds, producing output that includes room labels, dimensions, north indicators, and automatic MEP layout overlays and 3D views.</p>
+              <ul class="seo__list">
+                <li class="seo__li">2D floor plans with accurate room dimensions and labels</li>
+                <li class="seo__li">MEP overlays — electrical, plumbing, HVAC automatically placed</li>
+                <li class="seo__li">3D walkthrough views from the same brief</li>
+                <li class="seo__li">Regional compliance — Vastu for India, Part M for UK, NCC for Australia</li>
+                <li class="seo__li">Export as PDF, high-res image, or DWG-compatible file</li>
+              </ul>
+              <p class="seo__p">Full guide: <a href="/floor-plan-generator/">AI Floor Plan Generator — VirtuviAI by Builtattic →</a></p>
+            </div>
+            <div class="seo__sec" id="s2">
+              <div class="seo__sec-lbl">Guide 02</div>
+              <h2 class="seo__sec-title">How accurate is a <span>Construction Cost Estimator</span>?</h2>
+              <p class="seo__p">A good <strong>construction cost estimator</strong> produces a bill of quantities accurate to within 10–15% of actual costs at concept stage — sufficient for budgeting decisions, loan applications, and initial contractor discussions. <strong>Builtattic's Vision tool</strong> calculates material quantities based on your floor plan area, building type, number of storeys, and construction quality grade, adjusting for regional material pricing across India, UK, US, Canada, and Australia.</p>
+              <p class="seo__p">The most accurate estimates come from feeding a <a href="/floor-plan-generator/">VirtuviAI floor plan</a> directly into the cost estimator — because the AI already knows the exact room dimensions, wall lengths, and window counts, it calculates quantities with precision rather than relying on generic area-based approximations. Full guide: <a href="/construction-material-estimator/">Construction Material Estimator →</a></p>
+            </div>
+            <div class="seo__sec" id="s3">
+              <div class="seo__sec-lbl">Guide 03</div>
+              <h2 class="seo__sec-title">Can AI <span>Replace Architects</span> for Floor Plans?</h2>
+              <p class="seo__p">For concept and planning-stage floor plans, <strong>AI is already faster and cheaper than manual drafting</strong>. For complex, high-stakes, or bespoke projects — AI does not replace an architect's expertise, judgement, and professional accountability. What AI tools like VirtuviAI replace is the repetitive part — producing initial floor plan sketches for client meetings, generating multiple layout options for a site, or creating permit drawings for straightforward residential projects.</p>
+              <p class="seo__p">If you need a licensed professional, Builtattic's <a href="/hire-an-architect/">Hire an Architect tool</a> connects you with verified professionals near you — an AI-first approach that still respects the value of human expertise when it matters.</p>
+            </div>
+            <div class="seo__sec" id="s4">
+              <div class="seo__sec-lbl">Guide 04</div>
+              <h2 class="seo__sec-title">How to Generate a <span>Floor Plan Online</span></h2>
+              <ul class="seo__list">
+                <li class="seo__li"><strong>Step 1 — Describe your project:</strong> Enter plot dimensions, number of floors, rooms, and any regional preferences (Vastu, orientation, accessibility).</li>
+                <li class="seo__li"><strong>Step 2 — Generate:</strong> VirtuviAI's AI produces a dimensioned 2D floor plan in under 30 seconds with room labels, dimensions, and north indicator.</li>
+                <li class="seo__li"><strong>Step 3 — Add MEP and 3D:</strong> One click adds electrical, plumbing, and HVAC overlays. Another produces a 3D view for client presentations.</li>
+                <li class="seo__li"><strong>Step 4 — Export and share:</strong> Download as PDF or DWG-compatible file. Submit to planning authorities or carry through to cost and timeline tools.</li>
+              </ul>
+              <p class="seo__p"><a href="/floor-plan-generator/">Generate Your First Floor Plan Free →</a></p>
+            </div>
+            <div class="seo__sec" id="s5">
+              <div class="seo__sec-lbl">Guide 05</div>
+              <h2 class="seo__sec-title">Builtattic vs <span>Other Tools</span></h2>
+              <p class="seo__p">Most floor plan and construction tools solve one problem. AutoCAD is for manual drafting — powerful but requires months of training and costs $60+/month. RoomSketcher is for interior layout visualisation — no AI, no MEP, no compliance. Planner 5D is for consumer home design — low resolution, not suitable for professional use.</p>
+              <p class="seo__p">Builtattic is the only platform covering the <strong>full construction workflow</strong> — not just floor plans, but cost estimation, project management, material sourcing, property valuation, and professional hiring — all connected, all AI-powered, all under one subscription starting at ₹999/month. <a href="/floor-plan-generator/comparison/">Full comparison →</a></p>
+            </div>
+            <div class="seo__sec" id="s6">
+              <div class="seo__sec-lbl">Guide 06</div>
+              <h2 class="seo__sec-title">AI for <span>Construction in India</span></h2>
+              <p class="seo__p"><strong>Builtattic is built specifically for the Indian construction context</strong> — with Vastu-compliant floor plan generation, RERA-format exports, INR pricing, and city-level contractor and supplier directories. Common use cases include ghar ka naksha generation for 2BHK and 3BHK homes, AI-assisted duplex and villa floor plan design, construction cost estimation per square foot in major Indian cities, and finding verified architects and material suppliers across Mumbai, Delhi, Bangalore, Hyderabad, Pune, Chennai, and Ahmedabad.</p>
+              <p class="seo__p">Builtattic is also particularly useful for the growing self-construction market in Tier 2 and Tier 3 cities, where professional architect access is limited but homeowners still need compliant, professional-quality floor plans and cost breakdowns to obtain bank loans and municipal approvals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="wrap">
+        <div class="faq__head">
+          <div><div class="faq__lbl">FAQ</div><h2 class="faq__title">Frequently Asked <span>Questions</span></h2></div>
+          <p class="faq__note">Marked up with FAQ Schema — eligible for Google rich results and People Also Ask.</p>
+        </div>
+        <div class="faq__grid" itemscope itemtype="https://schema.org/FAQPage">
+          <div class="fi" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="fi__q" itemprop="name">What does Builtattic do?<svg class="fi__chev" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="fi__a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="fi__a-in" itemprop="text">Builtattic is an AI-powered construction and architecture platform with 9 tools — covering floor plan generation, construction cost estimation, project management, property valuation, material sourcing, architect hiring, and more. Products are at <a href="https://www.builtattic.com">builtattic.com</a> with guides and SEO content at <a href="https://www.builtattic.in">builtattic.in</a>.</div></div></div>
+          <div class="fi" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="fi__q" itemprop="name">Is Builtattic free to use?<svg class="fi__chev" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="fi__a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="fi__a-in" itemprop="text">Yes — Builtattic has a free plan that includes 3 AI floor plan generations per month. The Pro plan (₹999/month) unlocks unlimited generations, MEP layouts, 3D views, and all 9 tools. Use code <strong>WELCOME99</strong> for your first month at ₹11.11.</div></div></div>
+          <div class="fi" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="fi__q" itemprop="name">Can I generate a Vastu-compliant floor plan?<svg class="fi__chev" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="fi__a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="fi__a-in" itemprop="text">Yes. VirtuviAI supports Vastu Shastra as an optional setting. Room placement follows Vastu directional guidelines — kitchen in the south-east, master bedroom in the south-west, puja room in the north-east. See: <a href="/floor-plan-generator/use-cases/">floor plan use cases →</a></div></div></div>
+          <div class="fi" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="fi__q" itemprop="name">Which countries does Builtattic support?<svg class="fi__chev" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="fi__a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="fi__a-in" itemprop="text">Builtattic supports India, United Kingdom, United States, Canada, Australia, Netherlands, Japan, UAE, and Germany — with region-specific building code compliance, local terminology, and currency support for each market.</div></div></div>
+          <div class="fi" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="fi__q" itemprop="name">How does builtattic.in relate to builtattic.com?<svg class="fi__chev" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="fi__a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="fi__a-in" itemprop="text">builtattic.in is the SEO and content hub — in-depth guides, comparisons, use case articles, and tool explainers. builtattic.com is the product platform — where you sign up, subscribe, and use the tools. Every article on .in links directly to the relevant product on .com.</div></div></div>
+          <div class="fi" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><button class="fi__q" itemprop="name">Can I use Builtattic floor plans for planning applications?<svg class="fi__chev" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="fi__a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div class="fi__a-in" itemprop="text">VirtuviAI generates professional, dimensioned floor plans that have been used in planning applications in the UK, India, Australia, and Canada. We recommend having a licensed architect or building professional review outputs before formal submission. See our <a href="/floor-plan-generator/comparison/">comparison guide</a> for details.</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-final">
+      <div class="wrap">
+        <div class="cta-final__inner">
+          <div>
+            <div class="cta-final__lbl">Get Started Today</div>
+            <h2 class="cta-final__title">Build Something<br><span>Fantastic.</span></h2>
+            <p class="cta-final__sub">One subscription. <strong>9 AI construction tools.</strong> Architects, engineers, contractors, and homeowners across 9 countries trust Builtattic to power their projects from first idea to final build.</p>
+            <div class="cta-final__btns">
+              <a href="https://www.builtattic.com/collections/access" class="btn btn-red btn-lg">Start Free on Builtattic.com <svg viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 4l3.5 3-3.5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <a href="/floor-plan-generator/" class="btn btn-lg" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.25);">Explore VirtuviAI First</a>
+            </div>
+          </div>
+          <div class="cta-final__promo">
+            <div class="cta-final__promo-lbl">Launch Offer</div>
+            <div class="cta-final__promo-code">WELCOME99</div>
+            <div class="cta-final__promo-detail">First month at <strong>₹11.11</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot__grid">
+        <div class="foot__brand">
+          <div class="foot__brand-name"><div class="foot__brand-box"><Image src="/assets/images/logo/logo.png" alt="Builtattic logo" width={120} height={32} /></div>Builtattic</div>
+          <p class="foot__brand-desc">AI-powered construction and architecture platform. 9 tools. 1 subscription. 9+ countries.</p>
+          <div class="foot__domains">
+            <div class="foot__domain"><span class="foot__badge foot__badge--in">.in</span><a href="https://www.builtattic.in" class="foot__domain-url">builtattic.in — SEO &amp; Guides</a></div>
+            <div class="foot__domain"><span class="foot__badge foot__badge--com">.com</span><a href="https://www.builtattic.com" class="foot__domain-url">builtattic.com — Product Platform</a></div>
+          </div>
+          <div class="foot__nl"><input type="email" placeholder="Stay inspired — email" aria-label="Newsletter"><button class="foot__nl-btn">→</button></div>
+          <div class="foot__social">
+            <a href="https://www.linkedin.com/company/builltattic" class="foot__social-a" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://www.instagram.com/builtattic/" class="foot__social-a" aria-label="Instagram" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.youtube.com/@Builtattic" class="foot__social-a" aria-label="YouTube" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="foot__col-title">Tools (.in Guides)</div>
+          <div class="foot__links">
+            <a href="/floor-plan-generator/"            class="foot__link">AI Floor Plan Generator <span class="foot__tag">Live</span></a>
+            <a href="/property-hotspot-finder/"         class="foot__link">Property Hotspot Finder</a>
+            <a href="/construction-management-app/"     class="foot__link">Construction Management</a>
+            <a href="/ready-to-build-designs/"          class="foot__link">Ready-to-Build Designs</a>
+            <a href="/construction-material-estimator/" class="foot__link">Material Estimator</a>
+            <a href="/hire-an-architect/"               class="foot__link">Hire an Architect</a>
+            <a href="/property-valuation-tool/"         class="foot__link">Property Valuation Tool</a>
+            <a href="/construction-material-suppliers/" class="foot__link">Material Suppliers</a>
+            <a href="/construction-timeline-generator/" class="foot__link">Timeline Generator</a>
+          </div>
+        </div>
+        <div>
+          <div class="foot__col-title">Floor Plan Guides</div>
+          <div class="foot__links">
+            <a href="/floor-plan-generator/"                class="foot__link">VirtuviAI — AI Floor Plan Tool</a>
+            <a href="/floor-plan-generator/blog/"           class="foot__link">Floor Plan Generator Blog</a>
+            <a href="/floor-plan-generator/comparison/"     class="foot__link">Free vs Paid Comparison</a>
+            <a href="/floor-plan-generator/top-7-ai-tools/" class="foot__link">Top 7 AI Architecture Tools</a>
+            <a href="/floor-plan-generator/use-cases/"      class="foot__link">2BHK, Villa &amp; Apartment Plans</a>
+          </div>
+        </div>
+        <div>
+          <div class="foot__col-title">On Builtattic.com</div>
+          <div class="foot__links">
+            <a href="https://www.builtattic.com/pages/vitruviai"           class="foot__link">VirtuviAI AI ↗</a>
+            <a href="https://www.builtattic.com/collections/access"        class="foot__link">Subscription Plans ↗</a>
+            <a href="https://www.builtattic.com/collections/design-studio" class="foot__link">Design Studio ↗</a>
+            <a href="https://www.builtattic.com/collections/individuals"   class="foot__link">Hire an Architect ↗</a>
+            <a href="https://www.builtattic.com/pages/register"            class="foot__link">Become a Vendor ↗</a>
+            <a href="https://www.builtattic.info"                          class="foot__link">About Builtattic ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="foot__bottom">
+        <div class="foot__copy">© 2026 Builtattic · builtattic.in — SEO &amp; Content Hub · Products at builtattic.com</div>
+        <div class="foot__policies">
+          <a href="https://www.builtattic.com/policies/privacy-policy"     class="foot__policy">Privacy</a>
+          <a href="https://www.builtattic.com/policies/terms-of-service"   class="foot__policy">Terms</a>
+          <a href="https://www.builtattic.com/policies/refund-policy"      class="foot__policy">Refunds</a>
+          <a href="https://www.builtattic.com/policies/contact-information" class="foot__policy">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    // Apply saved theme immediately
+    try {
+      const saved = localStorage.getItem('ba-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+      else if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } catch(e){}
+
+    // Navbar scroll shadow
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 30), { passive:true });
+
+    // Hamburger
+    const ham = document.getElementById('ham');
+    const mob = document.getElementById('mob');
+    ham.addEventListener('click', () => {
+      const open = mob.classList.toggle('open');
+      ham.querySelectorAll('span')[0].style.transform = open ? 'rotate(45deg) translate(4px,4px)' : '';
+      ham.querySelectorAll('span')[1].style.opacity   = open ? '0' : '1';
+      ham.querySelectorAll('span')[2].style.transform = open ? 'rotate(-45deg) translate(4px,-4px)' : '';
+    });
+
+    // Theme toggle
+    function applyTheme(dark) {
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      try { localStorage.setItem('ba-theme', dark ? 'dark' : 'light'); } catch(e){}
+    }
+    function toggle() {
+      applyTheme(document.documentElement.getAttribute('data-theme') !== 'dark');
+    }
+    document.getElementById('themeBtn').addEventListener('click', toggle);
+    document.getElementById('themeBtnMob').addEventListener('click', toggle);
+
+    // FAQ accordion
+    document.querySelectorAll('.fi__q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.fi');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.fi.open').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Scroll reveal
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior:'smooth', block:'start' }); }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
